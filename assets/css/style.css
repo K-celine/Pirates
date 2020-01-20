@@ -1,0 +1,350 @@
+/************************GLOBAL*****************************/
+
+html{
+
+	font-size: 62.5%;
+}
+
+body{
+
+    /*background: url('../images/pirates_bg1.jpg');
+    background-size: contain;*/
+    font-size:1.7rem;
+}
+
+/************************FIN GLOBAL**************************/
+
+/************************HEADER******************************/
+
+/*HEADER*/
+
+header{
+
+	background-color: #231e20;
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logoPirates{
+
+	width:13rem;
+}
+
+.menu a{
+
+	text-decoration: none;
+	color: white;
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 1.7rem;
+	padding:1.5rem;
+	border:0.05rem solid #231e20;
+
+}
+
+.menu a:hover{
+
+	color:#f1ba4d;
+	transition: all 1s ease;
+	border:0.1rem solid #332e30;
+	border-radius:0.5rem;
+}
+
+nav a:last-child{
+	color:#f1ba4d;
+}
+
+nav a:last-child:hover{
+	color:#da3730;
+}
+/************************FIN HEADER******************************/
+
+/************************PAGES CLUB******************************/
+
+
+
+#container_club{
+	min-height: 100rem;
+}
+
+#container_club .mx-auto{
+	width:60%; 
+}
+#container_club .fas{
+	color:#f1ba4d;
+}
+
+#container_club .card-body{
+	height:27rem;
+	overflow:scroll;
+}
+
+#palmares, #coach{
+	
+	background-image: url(../images/club/pirates_club5.jpg);
+	background-size: contain;
+	background-attachment: fixed;
+}	
+#palmares ul{
+	list-style-type: none; 
+	padding-left:0.1rem;
+}
+
+#chiffre_cle{
+background-image: url(../images/club/pirates_club3.jpg);
+	
+	background-size:cover;
+	background-attachment: fixed;
+
+	height: 60rem;
+	text-align: center;
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 1.7rem;
+
+}
+
+#chiffre_cle span{
+font-size: 6rem;
+border: 0.8rem solid #f1ba4d;
+border-radius: 0.4rem;
+padding:1.5rem;
+color:white;
+}
+
+#chiffre_cle h2{
+	font-size: 2rem;
+	margin-top: 5rem;
+	color: white;
+
+}	
+#coach, #planning{
+	padding:2rem;
+	text-align:center;
+}
+#planning h2{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 1.7rem;
+}
+#planning .fas{
+	font-size: 2rem;
+	color:#231e20;
+	color:white;
+}
+#planning .fas:hover{
+	transition: 1s;
+	color:#da3730;
+}
+
+
+/************************FIN PAGES CLUB******************************/
+
+/****************************PAGES TEAM******************************/
+#container_team{
+	color:white;
+	text-align: center;
+}
+#container_team h2{
+	font-family: 'Mitr', sans-serif;
+	padding-bottom: 2rem;
+	letter-spacing: 0.583rem;
+	color: #f1ba4d;
+}
+#container_team h3{
+	font-family: 'Mitr', sans-serif;
+	padding-bottom: 1.7rem;
+	letter-spacing: 0.5rem;
+	color: #f1ba4d;
+}
+#container_team ul{
+	list-style-type: none;
+	margin-left:0;
+	padding-left:0;
+}
+
+#team1, #team7{
+	background-image: url(../images/team/pirates_team_fond1.jpg);
+	background-size:cover;
+	background-attachment: fixed;
+}
+
+#team2{
+	background-image: url(../images/team/pirates_team_fond2.jpg);
+	background-size:contain;
+}
+
+#team3{
+	background-image: url(../images/team/pirates_team_fond3.jpg);
+	background-size:cover;
+	background-attachment: fixed;
+}
+
+#team4{
+	background-image: url(../images/team/pirates_team_fond4.jpg);
+	background-size: contain;	
+}
+
+#team5{
+	background-image: url(../images/team/pirates_team_fond2.jpg);
+	background-size:contain;
+	background-attachment: fixed;	
+}
+
+#team6{
+	background-image: url(../images/team/pirates_team_fond3.jpg);
+	background-size:contain;	
+}
+
+
+/**************************FIN PAGES/TEAM******************************/
+
+/****************************PAGES/CONTACT******************************/
+#nous_trouver, #nous_rejoindre{
+	text-align: center;
+}
+
+#nous_trouver h2, #nous_rejoindre h2, #nous_contacter h2{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 2rem;
+}
+#nous_rejoindre{
+	background-color: #231e20;
+	color: white;
+}
+#nous_rejoindre .far{
+	font-size:8rem;
+	margin-bottom:5rem;
+}
+
+#nous_rejoindre div:first-child>a{
+	color:#f1ba4d;
+}
+
+#nous_rejoindre div:first-child>a:hover{
+	transition:1s ease;
+	color:white;
+}
+
+#nous_rejoindre a{
+	text-decoration: none;
+	color: #9a9a9a;
+	font-family: 'Mitr', sans-serif;
+}
+
+#nous_rejoindre div:first-child>ul>li>a:hover{
+	transition:1s ease;
+	color:white;
+	font-size: 1.8rem;
+}
+
+#nous_rejoindre ul{
+	margin-top:7rem;
+	list-style-type: none;
+	margin-left:0;
+	padding-left:0;
+}
+
+#nous_contacter{
+	min-height:50rem;
+}
+
+#nous_contacter a{
+	text-decoration: none;
+	color:#537556;
+}
+#nous_contacter a:hover{
+	text-decoration: none;
+	color:#f1ba4d;
+}
+
+/************************FIN PAGES/CONTACT******************************/
+
+/******************************SHOP/HOME********************************/
+
+#title_shop h2{
+	padding: 3rem;
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 2rem;
+}
+#title_shop .fas{
+	color:#f1ba4d;
+}
+#container_home_shop a{
+	text-decoration: none;
+	color:#f1ba4d;
+}
+
+
+/**************************** FIN SHOP/HOME*****************************/
+
+
+/************************FOOTER******************************/
+
+
+footer{
+	text-align:center;
+}
+
+#foot{
+	background-color: #231e20;
+	display: flex;
+    align-items: center;
+    min-height: 40rem;
+
+}
+footer div{
+	box-sizing: border-box;
+	width:100%;
+}
+footer fieldset{
+	border:0.1rem solid #332e30;
+	border-radius: 0.5rem;
+	margin-left:2rem;
+}
+
+footer input[type=email]{
+  width: 30rem;
+  padding: 1.2rem 2rem;
+  margin: 0.8rem 0;
+  background-color: #231e20;
+  border-radius:0.5rem;
+  border:0.1rem solid #332e30;
+  color: white;
+}
+
+footer input[type=submit]{
+  padding: 1.2rem 2rem;
+  margin: 0.8rem 0;
+  background-color: #f1ba4d;
+  border-radius:0.5rem;
+  border:0.1rem solid black;
+  color: black;
+
+}
+
+footer legend{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.4rem;
+	font-size: 1.6rem;
+	color:white;
+}
+.fab{
+	color:white;
+	font-size: 4rem;
+	margin-left:1.2rem;
+}
+.fab:hover{
+	color:#f1ba4d;
+	transition: all 1s ease;
+}
+.logoPirates2{
+
+	width:30rem;
+}	
+
+
+
