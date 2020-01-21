@@ -5,7 +5,7 @@
 			<img class="img-fluid" src="<?php echo base_url()?>assets/images/club/pirates_club1.jpg" alt="Pirates_baseball_gants">
 		</div>
 	</div>
-	<div class="row align-items-center">
+	<div class="row align-items-center" id="histoire">
 		<div class="col-7">
 			<div class="mx-auto">
 				<h2>Histoire du club</h2><br>
@@ -232,9 +232,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row" id="terrain">
 		<div class="col-12 p-0">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2112.2362382353126!2d3.1867514432174704!3d43.33278625812674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b10edaa1ddfc77%3A0xaa7c59117f6c3485!2sBaseball%20Club%20Biterrois-Pirates!5e0!3m2!1sfr!2sfr!4v1579328567899!5m2!1sfr!2sfr" width="1440" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2112.2362382353126!2d3.1867514432174704!3d43.33278625812674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b10edaa1ddfc77%3A0xaa7c59117f6c3485!2sBaseball%20Club%20Biterrois-Pirates!5e0!3m2!1sfr!2sfr!4v1579328567899!5m2!1sfr!2sfr" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 		</div>
 	</div>		
 </div>

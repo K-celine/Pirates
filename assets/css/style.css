@@ -11,7 +11,14 @@ body{
     background-size: contain;*/
     font-size:1.7rem;
 }
+.success{
+	font-family: 'Mitr', sans-serif;
+	font-size: 1.7rem;
+	background-color: rgba(255, 255, 255,0.4);
+	border-radius: 0.5rem;
+	color:#1f5d19;
 
+}
 /************************FIN GLOBAL**************************/
 
 /************************HEADER******************************/
@@ -19,7 +26,6 @@ body{
 /*HEADER*/
 
 header{
-
 	background-color: #231e20;
 	display: flex;
     align-items: center;
@@ -27,12 +33,16 @@ header{
 }
 
 .logoPirates{
-
 	width:13rem;
 }
 
-.menu a{
+.menu ul{
+	display:flex;
+	list-style-type: none;
+	
+}
 
+.menu>ul>li>a{
 	text-decoration: none;
 	color: white;
 	font-family: 'Mitr', sans-serif;
@@ -43,22 +53,202 @@ header{
 
 }
 
-.menu a:hover{
-
+.menu>ul>li>a:hover{
 	color:#f1ba4d;
+	
+	
+}
+
+.sous_menu ul{
+	  flex-flow: column wrap;
+	   position: absolute;
+	   background:#231e20;
+	   z-index:1;
+	   border-radius:0.5rem;
+	list-style-type: none;
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 1.7rem;
+	padding:1.5rem;
+	display:none;
+	min-height: 12rem;
+	padding-top:2rem;
+
+}
+
+.sous_menu a{
+	text-decoration: none;
+	color:white;
+	font-size: 1.3rem;
+}
+
+.sous_menu a:hover{
+	color:#f1ba4d;
+}
+.menu>ul>li:hover .sous_menu>ul{
+    display: flex;  
+}
+
+#compte{
+	color:#f1ba4d;
+}
+
+#compte:hover{
+	color:#da3730;
 	transition: all 1s ease;
 	border:0.1rem solid #332e30;
 	border-radius:0.5rem;
 }
 
-nav a:last-child{
+
+/************************FIN HEADER******************************/
+
+/****************************HOME********************************/
+
+.carousel-item h4{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 2rem;
+	color:#231e20;
+	border-radius:0.5rem;
+
+
+}
+#carousel_item_1 h4{
+	
+	background-color: rgba(255, 255, 255,0.06);
+	
+}
+#carousel_item_2 a{
+	color:#231e20;
+	padding: 1.3rem;
+	font-size:1.3rem;
+	text-decoration: none;
+	background-color:#f1ba4d ;
+	border-radius:0.5rem;
+
+}
+#carousel_item_2  a:hover{
 	color:#f1ba4d;
+	background-color: #231e20;
+
+}
+#carousel_item_3 h4{
+	
+	
+	background-color: rgba(255, 255, 255,0.6);
+	
+
+}
+#carousel_item_3 a{
+	color:#231e20;
+	padding: 1.5rem;
+	font-size:1.5rem;
+	text-decoration: none;
+	background-color:#f1ba4d ;
+	border-radius:0.5rem;
 }
 
-nav a:last-child:hover{
-	color:#da3730;
+#carousel_item_3  a:hover{
+	color:#f1ba4d;
+	background-color: #231e20;
+
 }
-/************************FIN HEADER******************************/
+
+#prochains_matchs{
+	background-color: #231e20;
+	text-align:center;
+}
+
+#prochains_matchs h2{
+font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 1.7rem;
+	color:#f1ba4d;
+	border: 0.2rem solid #f1ba4d ;
+	padding:2rem;
+	border-radius:0.5rem;
+	margin: 0 3rem 5rem 3rem;
+
+}
+
+#prochains_matchs strong, p>span{
+	color: white;
+	font-size:3rem;
+	font-family: 'Mitr', sans-serif;
+
+}
+
+
+#actus h2{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 4rem;
+	color:#231e20;
+	
+}
+
+#actus h4{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 2rem;
+	color:#231e20;
+	
+}
+
+#actus h4 .far{
+	font-size: 2rem;
+	color:#f1ba4d;
+	
+}
+
+/*.img_actu{
+	margin-right:3rem; 
+}
+#actus{
+	display: flex;
+	align-content: flex-start;
+	flex-wrap: wrap;
+
+}
+
+
+.div_actu{
+	display: flex;
+	flex-direction: column;
+}
+.content_actu{
+	display: flex;
+	flex-direction: row
+}*/
+#buttons_home{
+	background-color: #231e20;
+	justify-content: space-around;
+	display: flex;
+	padding:2rem;
+}
+
+#buttons_home a{
+	color:white;
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 1.7rem;
+	text-decoration: none;
+	border:0.1rem solid #332e30;
+	border-radius:0.5rem;
+	padding:1.5rem;
+}
+
+#buttons_home a:hover{
+color:#da3730;
+transition: all 1s ease;
+	
+
+
+}
+	
+
+/****************************FIN HOME********************************/
 
 /************************PAGES CLUB******************************/
 
@@ -201,6 +391,9 @@ color:white;
 /**************************FIN PAGES/TEAM******************************/
 
 /****************************PAGES/CONTACT******************************/
+#container_contact .fas{
+	color:#f1ba4d;
+}
 #nous_trouver, #nous_rejoindre{
 	text-align: center;
 }
@@ -263,6 +456,13 @@ color:white;
 /************************FIN PAGES/CONTACT******************************/
 
 /******************************SHOP/HOME********************************/
+#container_home_shop a{
+	text-decoration: none;
+	color:#f1ba4d;
+}
+#container_home_shop a:hover{
+	color:#da3730;
+}
 
 #title_shop h2{
 	padding: 3rem;
@@ -270,13 +470,11 @@ color:white;
 	letter-spacing: 0.583rem;
 	font-size: 2rem;
 }
+
 #title_shop .fas{
 	color:#f1ba4d;
 }
-#container_home_shop a{
-	text-decoration: none;
-	color:#f1ba4d;
-}
+
 
 
 /**************************** FIN SHOP/HOME*****************************/
