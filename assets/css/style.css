@@ -168,12 +168,12 @@ font-family: 'Mitr', sans-serif;
 	border: 0.2rem solid #f1ba4d ;
 	padding:2rem;
 	border-radius:0.5rem;
-	margin: 0 3rem 5rem 3rem;
+	margin: 0 3rem 2rem 3rem;
 
 }
 
-#prochains_matchs strong, p>span{
-	color: white;
+#prochains_matchs strong{
+	color: #e1e1de;
 	font-size:3rem;
 	font-family: 'Mitr', sans-serif;
 
@@ -188,6 +188,19 @@ font-family: 'Mitr', sans-serif;
 	
 }
 
+#prochains_matchs span{
+	color: #5a5a57;
+	font-size:2rem;
+	font-family: 'Mitr', sans-serif;
+	padding:0 6rem 5rem 6rem;
+	display:inline-block;
+}
+#prochains_matchs p{
+	color: #144d1e;
+	font-size:1.5rem;
+	font-family: 'Mitr', sans-serif;
+
+}
 #actus h4{
 	font-family: 'Mitr', sans-serif;
 	letter-spacing: 0.583rem;
@@ -202,25 +215,6 @@ font-family: 'Mitr', sans-serif;
 	
 }
 
-/*.img_actu{
-	margin-right:3rem; 
-}
-#actus{
-	display: flex;
-	align-content: flex-start;
-	flex-wrap: wrap;
-
-}
-
-
-.div_actu{
-	display: flex;
-	flex-direction: column;
-}
-.content_actu{
-	display: flex;
-	flex-direction: row
-}*/
 #buttons_home{
 	background-color: #231e20;
 	justify-content: space-around;
@@ -246,7 +240,20 @@ transition: all 1s ease;
 
 
 }
-	
+
+#home{
+	display: flex;
+	flex-direction: column;
+}
+
+#visitor{
+	display: flex;
+	flex-direction: column;
+}
+
+#mat{
+	display:flex;
+}	
 
 /****************************FIN HOME********************************/
 

@@ -43,17 +43,23 @@
 	<div class="row">
 		<div class="col-4" id="prochains_matchs">
 			<div class="mx-auto">
-				<h2>PROCHAINS MATCHS</h2>
-				<img id="logo_home" src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:15rem">
+				<h2>PROCHAINS MATCHS</h2><br>
+				<span>HOME</span>
+				<span>VISITOR</span><br>
+				<div id="mat">
+				<div id="home">
+				<?php foreach($matchs_home as $match_home): ?>
+				<img id="logo_home" src="<?php echo base_url()?><?php echo $match_home->image_logo; ?>" alt="" style="width:15rem"/>
 				<strong>VS</strong>
-				<img id="logo_visitor"src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:15rem">
-				<p><span>DATE</span></p>
+				<?php endforeach; ?>
+</div>
+<div id="visitor">
+				<?php foreach($matchs_visitor as $match_visitor): ?>
+				<img id="logo_home" src="<?php echo base_url()?><?php echo $match_visitor->image_logo; ?>" alt="" style="width:15rem"/>
+				<p><?php echo $match_visitor->match_datetime; ?>
 				<br>
-				<img src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:15rem">
-				<strong>VS</strong>
-				<img src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:15rem">
-				<p><span>DATE</span></p>
-				<br>
+				<?php endforeach; ?></div>
+			</div>
 			</div>	
 		</div>
 		<div class="col-8 p-5" id="actus">
