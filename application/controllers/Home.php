@@ -8,7 +8,7 @@ class Home extends CI_Controller
 	{
 		$data['actus'] = $this->home_model->get_actus();
 
-		$data['matchs'] = $this->home_model->get_matchs();
+		$data['matchs'] = $this->match_model->get_matchs();
 
 		$data['main_view'] = "home_view";
 
@@ -32,7 +32,7 @@ class Home extends CI_Controller
 
     		if($this->home_model->post_email()){
 
-        	$this->session->set_flashdata('newsletter_subscribed', "INSCRIPTION A LA NEWSLETTER DES PIRATES REALISEE AVEC SUCCES !");
+        	$this->session->set_flashdata('newsletter_subscribed', "INSCRIPTION A LA NEWSLETTER REALISEE AVEC SUCCES !");
         
         	redirect('home/index');
 

@@ -8,6 +8,9 @@
 	<?php if($this->session->flashdata('newsletter_subscribed')):?>
 		<?php echo 	$this->session->flashdata('newsletter_subscribed');?>
 	<?php endif; ?>
+	<?php if($this->session->flashdata('message_sent')):?>
+		<?php echo 	$this->session->flashdata('message_sent');?>
+	<?php endif; ?>
 </p>
 				<h4>BIENVENUE CHEZ LES PIRATES</h4>
 				<p><img src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:30rem"></p>
@@ -34,9 +37,9 @@
 </div>
 <div class="row align-items-center">
 	<div class="col-12" id="buttons_home">
-		<a href="<?php echo base_url();?>">RESERVER UNE PLACE</a>
-		<a href="<?php echo base_url();?>">VOIR LES RESULTATS</a>
-		<a href="<?php echo base_url();?>">VOIR LE CLASSEMENT</a>
+		<a href="<?php echo base_url();?>match/infos/#booking">RESERVER UNE PLACE</a>
+		<a href="<?php echo base_url();?>match/infos/#scores">VOIR LES RESULTATS</a>
+		<a href="<?php echo base_url();?>match/infos/#standing">VOIR LE CLASSEMENT</a>
 	</div>
 </div>
 <div class="container mw-100" id="container_home">
@@ -47,7 +50,7 @@
 				<span>HOME</span>
 				<span>VISITOR</span><br>
 				<?php foreach($matchs as $match): ?>
-				<p><?php echo date('d-m-Y H:i', strtotime($match->match_datetime)); ?></p>	
+				<p><?php echo date('d/m/Y H:i', strtotime($match->match_datetime)); ?></p>	
 				<img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="" style="width:15rem"/>
 				<strong>VS</strong>
 				<img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="" style="width:15rem"/>

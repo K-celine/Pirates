@@ -97,9 +97,9 @@
 		
 
 
-				<a href="#"><i class="fab fa-facebook-square"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>
-				<a href="#"><i class="fab fa-twitter-square"></i></a>
+				<a href="https://fr-fr.facebook.com/bcbpirates"><i class="fab fa-facebook-square"></i></a>
+				<a href="https://www.instagram.com/frenchbaseballsoftball/"><i class="fab fa-instagram"></i></a>
+				<a href="https://twitter.com/ffbs_baseball"><i class="fab fa-twitter-square"></i></a>
 
 			</lengend>
 		</nav>

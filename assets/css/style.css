@@ -199,7 +199,6 @@ font-family: 'Mitr', sans-serif;
 	color: #5a5a57;
 	font-size:1.7rem;
 	font-family: 'Mitr', sans-serif;
-	/*padding: 2rem;*/
 }
 #actus h4{
 	font-family: 'Mitr', sans-serif;
@@ -247,6 +246,116 @@ margin:2rem 2rem 5rem 2rem;
 }
 
 /****************************FIN HOME********************************/
+
+/*****************************INFO MATCH*****************************/
+
+#score_titre, #score{
+	display:flex;
+	justify-content: space-around;
+	border: 1px solid #404040 ;
+	border-radius: 0.5rem;
+	list-style-type: none;
+	align-items: center;
+	font-family: 'Mitr', sans-serif;
+
+}
+#booking{
+	background-color:#231e20;
+	}
+
+
+#seats, #choice_matchs{
+	font-size: 1.5rem;
+	border-radius: 0.5rem;
+}
+
+#booking label{
+	font-family: 'Mitr', sans-serif;
+	font-size: 1.7rem;
+	margin-top: 2rem;
+	color:#f1ba4d;
+
+}
+
+#booking h2, #resultat_match h2{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.7rem;
+	font-size: 2.1rem;
+	color: #f1ba4d;
+
+}
+#btn_booking{
+	font-family: 'Mitr', sans-serif;
+	margin-top: 2rem;
+	margin-bottom: 5rem;
+	border-radius: 0.5rem;
+	background-color: #f1ba4d ;
+	color: #231e20;
+	padding: 1rem;
+	font-size: 1.7rem;
+}
+#scores{
+	background-color: #231e20;
+	padding: 5rem 10rem 5rem 10rem;
+}
+#score_titre, #standing_titre{
+	color: #f1ba4d;
+	
+	font-size: 2.1rem;
+}
+
+#score{
+	color: #5a5a57;
+	
+}
+
+#resultat_match{
+	background-color: #6d6d6c;
+}
+#resultats{
+background-image: url(../images/match/pirates_match_results.jpg);
+	background-size:cover;
+	background-attachment: fixed;
+	height: 30rem;
+	text-align: center;
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	
+}
+
+#resultats span{
+font-size: 5rem;
+border: 0.5rem solid #f1ba4d;
+border-radius: 0.6rem;
+background-color: rgba(255, 255, 255,0.3);
+color:#231e20;
+
+}
+#standing{
+	padding: 5rem;
+	background-image: url(../images/club/pirates_club5.jpg);
+
+}
+#standing h2{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.7rem;
+	font-size: 2.1rem;
+	color: #231e20;
+}
+#standing_titre, #stand{
+	display:flex;
+	justify-content: space-around;
+	border-bottom: 0.2rem solid #f1ba4d ;
+	list-style-type: none;
+	align-items: center;
+	font-family: 'Mitr', sans-serif;
+	color: #231e20;
+}
+
+
+
+/*****************************FIN INFO MATCH*****************************/
+
 
 /************************PAGES CLUB******************************/
 

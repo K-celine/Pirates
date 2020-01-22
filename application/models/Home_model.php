@@ -13,14 +13,6 @@ class Home_model extends CI_Model
 		return $query->result();
 	}
 
-	public function get_matchs()
-	{
-
-		$query = $this->db->get('matchs');
-		
-		return $query->result();
-	}
-		
 
 	public function post_email()
 	{

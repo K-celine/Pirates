@@ -38,23 +38,23 @@
 	<div class="row align-items-center" id="nous_contacter">
 		<div class="col-7">
 			<h2><i class="fas fa-envelope"></i> NOUS CONTACTER</h2><br>
-			<form>
+			<form method="post" action="<?php echo base_url();?>pages/contact">
  				<div class="row form-group">
     				<div class="col">
-      					<input type="text" class="form-control form-control-lg" placeholder="Nom">
+      					<input type="text" class="form-control form-control-lg" name="last_name" placeholder="Nom">
     				</div>
     				<div class="col">
-      					<input type="text" class="form-control form-control-lg" placeholder="Prenom">
+      					<input type="text" class="form-control form-control-lg" name="first_name" placeholder="Prenom">
     				</div>
   				</div>
   				<div class="form-group">
-    				<input type="email" class="form-control form-control-lg" placeholder="Email">
+    				<input type="email" class="form-control form-control-lg" name="email" placeholder="Email">
   				</div>
   				<div class="form-group">
-    				<input type="text" class="form-control form-control-lg" placeholder="Objet">
+    				<input type="text" class="form-control form-control-lg" name="subject_message" placeholder="Objet">
   				</div>
   				<div class="form-group">
-    				<textarea class="form-control form-control-lg" placeholder="Votre message..." rows="5"></textarea>
+    				<textarea class="form-control form-control-lg" name="content_message" placeholder="Votre message..." rows="5"></textarea>
   				</div>
   				 <button type="submit" class="btn btn-warning btn-lg">ENVOYER</button>
 			</form>
