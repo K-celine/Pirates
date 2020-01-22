@@ -192,14 +192,14 @@ font-family: 'Mitr', sans-serif;
 	color: #5a5a57;
 	font-size:2rem;
 	font-family: 'Mitr', sans-serif;
-	padding:0 6rem 5rem 6rem;
+	padding:0 7.5rem 5rem 7.5rem;
 	display:inline-block;
 }
 #prochains_matchs p{
-	color: #144d1e;
-	font-size:1.5rem;
+	color: #5a5a57;
+	font-size:1.7rem;
 	font-family: 'Mitr', sans-serif;
-
+	/*padding: 2rem;*/
 }
 #actus h4{
 	font-family: 'Mitr', sans-serif;
@@ -241,19 +241,10 @@ transition: all 1s ease;
 
 }
 
-#home{
-	display: flex;
-	flex-direction: column;
-}
+#logo{
+margin:2rem 2rem 5rem 2rem;
 
-#visitor{
-	display: flex;
-	flex-direction: column;
 }
-
-#mat{
-	display:flex;
-}	
 
 /****************************FIN HOME********************************/
 

@@ -46,20 +46,13 @@
 				<h2>PROCHAINS MATCHS</h2><br>
 				<span>HOME</span>
 				<span>VISITOR</span><br>
-				<div id="mat">
-				<div id="home">
-				<?php foreach($matchs_home as $match_home): ?>
-				<img id="logo_home" src="<?php echo base_url()?><?php echo $match_home->image_logo; ?>" alt="" style="width:15rem"/>
+				<?php foreach($matchs as $match): ?>
+				<p><?php echo date('d-m-Y H:i', strtotime($match->match_datetime)); ?></p>	
+				<img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="" style="width:15rem"/>
 				<strong>VS</strong>
+				<img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="" style="width:15rem"/>
+				
 				<?php endforeach; ?>
-</div>
-<div id="visitor">
-				<?php foreach($matchs_visitor as $match_visitor): ?>
-				<img id="logo_home" src="<?php echo base_url()?><?php echo $match_visitor->image_logo; ?>" alt="" style="width:15rem"/>
-				<p><?php echo $match_visitor->match_datetime; ?>
-				<br>
-				<?php endforeach; ?></div>
-			</div>
 			</div>	
 		</div>
 		<div class="col-8 p-5" id="actus">

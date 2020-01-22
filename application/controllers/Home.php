@@ -8,9 +8,7 @@ class Home extends CI_Controller
 	{
 		$data['actus'] = $this->home_model->get_actus();
 
-		$data['matchs_home'] = $this->home_model->get_matchs_home();
-
-		$data['matchs_visitor'] = $this->home_model->get_matchs_visitor();
+		$data['matchs'] = $this->home_model->get_matchs();
 
 		$data['main_view'] = "home_view";
 
