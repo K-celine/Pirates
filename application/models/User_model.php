@@ -38,14 +38,14 @@ class User_model extends CI_Model {
 	}
 
 
-	public function login_user($username, $password)
+	/*public function login_user($username, $password)
 	{
 		
 		$this->db->where('username', $username);
 
 		$result = $this->db->get('users');
 
-		/*$db_password = $result->row(6)->password;*/
+		$db_password = $result->row(6)->password;
 
 		if(password_verify($password, $db_password)) {
 
