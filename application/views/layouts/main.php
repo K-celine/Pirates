@@ -56,15 +56,73 @@
             		</ul>
             	</div></li>
 			<li><a href="<?php echo base_url();?>shop/home">SHOP</a></li>
-			<li><a id="compte" href="<?php echo base_url();?>users">COMPTE</a></li>
+			<li><a id="compte" data-toggle="modal" data-target="#modal_compte" href="<?php echo base_url();?>users">COMPTE</a></li>
 		</ul>
 		</nav>
 	</header>
 
-	
+<div class="modal fade" id="modal_compte" tabindex="-1" role="dialog" aria-labelledby="modal_compte_label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal_compte_label">ESPACE MEMBRE </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form>
+  <div class="form-group">
+    <label for="InputEmail1">Adresse Email </label>
+    <input type="email" class="form-control form-control-lg" id="InputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">blablabli</small>
+  </div>
+  <div class="form-group">
+    <label for="InputPassword">Mot de passe</label>
+    <input type="password" class="form-control form-control-lg" id="InputPassword">
+  </div>
+  <button type="submit" class="btn btn-lg btn-secondary">SE CONNECTER</button>
+
+</form>
+
+
+      </div>
+      <div class="modal-footer">
+      	 <p><small>Pas encore membre ?</small></p>
+      	<a type="button" class="btn btn-lg btn-warning" href="<?php echo base_url();?>users/register">CREER UN COMPTE</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main>	
 		<?php $this->load->view($main_view); ?>
 	
-
+</main>
 	
 	
 

@@ -7,19 +7,31 @@ class User_model extends CI_Model {
 	public function create_user()
 	{
 
-		$options = ['cost' => 12];
-
-		$encrypted_pass = password_hash($this->input->post('password'), PASSWORD_BCRYPT, $options);
+		$pass_encrypted = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
 
 		$data = array(
 
-			'first_name' => $this->input->post('first_name'),
-			'last_name'  => $this->input->post('last_name'),
-			'email'		 => $this->input->post('email'),
-			'username' 	 => $this->input->post('username'),
-			'password'	 => $encrypted_pass
+			'first_name' 	=> $this->input->post('first_name'),
+			'last_name' 	=> $this->input->post('last_name'),
+			'email'		 	=> $this->input->post('email'),
+			'username' 	 	=> $this->input->post('username'),
+			'password'	 	=> $pass_encrypted,
+			'news_subscribe'=> $this->input->post('news_subscribe')
 		);
-		
+
+
+			if($this->input->post('news_subscribe') == 1){
+
+				$data_news = array(
+			
+				'email_subscribe'	=> $this->input->post('email'),
+			
+				);
+
+			$insert_data_news = $this->db->insert('newsletter', $data_news);
+			
+			}
+
 		$insert_data = $this->db->insert('users', $data);
 
 		return $insert_data;
@@ -33,7 +45,7 @@ class User_model extends CI_Model {
 
 		$result = $this->db->get('users');
 
-		$db_password = $result->row(6)->password;
+		/*$db_password = $result->row(6)->password;*/
 
 		if(password_verify($password, $db_password)) {
 
@@ -42,7 +54,7 @@ class User_model extends CI_Model {
 
 			return false;
 		}
-	}
+	}*/
 }
 
 ?>

@@ -214,6 +214,20 @@ font-family: 'Mitr', sans-serif;
 	
 }
 
+#savoir_plus{
+	color: #f1ba4d;
+	font-family: 'Mitr', sans-serif;
+	text-decoration: none;
+
+
+}
+
+#savoir_plus:hover{
+	color:#da3730;
+	transition: all 1s ease;
+
+
+}
 #buttons_home{
 	background-color: #231e20;
 	justify-content: space-around;
@@ -246,6 +260,45 @@ margin:2rem 2rem 5rem 2rem;
 }
 
 /****************************FIN HOME********************************/
+
+/****************************ACTU********************************/
+#one_actu h2{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 2.3rem;
+}
+
+#one_actu .fas{
+	color: #f1ba4d;
+}
+
+/**************************** FIN ACTU********************************/
+/****************************USERS********************************/
+
+#container_register h2{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 2.3rem;
+
+}
+#container_register label{
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 1.3rem;
+	
+}
+#container_register .fas{
+	color: #f1ba4d;
+}
+.form-check-input-newsletter{
+	margin-left: -47.5rem;
+	margin-top: 0.9rem;
+	
+
+}
+
+
+/****************************FIN USERS********************************/
 
 /*****************************INFO MATCH*****************************/
 

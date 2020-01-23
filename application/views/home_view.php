@@ -11,6 +11,9 @@
 	<?php if($this->session->flashdata('message_sent')):?>
 		<?php echo 	$this->session->flashdata('message_sent');?>
 	<?php endif; ?>
+	<?php if($this->session->flashdata('user_registered')):?>
+		<?php echo 	$this->session->flashdata('user_registered');?>
+	<?php endif; ?>
 </p>
 				<h4>BIENVENUE CHEZ LES PIRATES</h4>
 				<p><img src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:30rem"></p>
@@ -38,7 +41,7 @@
 <div class="row align-items-center">
 	<div class="col-12" id="buttons_home">
 		<a href="<?php echo base_url();?>match/infos/#booking">RESERVER UNE PLACE</a>
-		<a href="<?php echo base_url();?>match/infos/#scores">VOIR LES RESULTATS</a>
+		<a href="<?php echo base_url();?>match/infos/#resultats">VOIR LES RESULTATS</a>
 		<a href="<?php echo base_url();?>match/infos/#standing">VOIR LE CLASSEMENT</a>
 	</div>
 </div>
@@ -67,8 +70,9 @@
 				</div>
 				<div class="col-8" id="content_actu">
 					<h4 class="pl-3"><i class="far fa-newspaper"></i> <?php echo $actu->title; ?></h4>
-					<p class="p-3"> <?php echo $actu->content; ?></p>
-					<p class="pl-3"><small><?php echo $actu->date; ?></small></p>	
+					<p class="p-3"> <?php echo substr($actu->content,0, 100) ?>...</p>
+					<p class="pl-3"><a id="savoir_plus" href="<?php echo base_url()?>home/actu/<?php echo $actu->id; ?> "><small><em>en savoir <i class="fas fa-plus"></i></em> </small></a></p>
+					<p class="pl-3"><small><?php echo date('d/m/Y', strtotime($actu->date)) ; ?></small></p>	
 				</div>
 			</div>					
 			<?php endforeach; ?>
@@ -76,70 +80,3 @@
 	</div>
 </div>
 
-<!--<?php if(isset($projects)):?>
-	
-	<h1>Projects</h1>
-
-	<table class="table table-hover table-bordered">
-		<thead class=''>
-			<tr>
-				<th>
-					Project Name
-				</th>
-				<th>
-					Project Description
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php foreach($projects as $project): ?>
-				<tr>
-					<td> <?php echo $project->project_name; ?> </td>
-					<td> <?php echo $project->project_body; ?> </td>
-					<td><a href=" <?php echo base_url(); ?>projects/display/<?php echo $project->id;?>">View</a></td>
-				</tr>				
-			<?php endforeach; ?>
-		</tbody>
-	</table>
-<?php endif; ?>
-<?php if(isset($tasks)):?>
-
-	<h1>Tasks</h1>
-	<table class="table table-hover table-bordered">
-		<thead class=''>
-			<tr>
-				<th>
-					Task Name
-				</th>
-				<th>
-					Task Description
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php foreach($tasks as $task): ?>
-				<tr>
-					<td> <?php echo $task->task_name; ?> </td>
-					<td> <?php echo $task->task_body; ?> </td>
-					<td><a href=" <?php echo base_url(); ?>tasks/display/<?php echo $task->id;?>">View</a></td>
-				</tr>				
-			<?php endforeach; ?>
-		</tbody>
-	</table>
-<?php endif; ?>
-<p class="alert-success">
-	<?php if($this->session->flashdata('login_success')):?>
-		<?php echo 	$this->session->flashdata('login_success');?>
-	<?php endif; ?>
-	<?php if($this->session->flashdata('user_registered')):?>
-		<?php echo 	$this->session->flashdata('user_registered');?>
-	<?php endif; ?>
-</p>
-<p class="alert-danger">
-	<?php if($this->session->flashdata('login_failed')):?>
-		<?php echo 	$this->session->flashdata('login_failed');?>
-	<?php endif;?>
-	<?php if($this->session->flashdata('no_access')):?>
-		<?php echo 	$this->session->flashdata('no_access');?>
-	<?php endif; ?>
-</p>-->

@@ -15,6 +15,14 @@ class Home extends CI_Controller
 		$this->load->view('layouts/main', $data);
 	}
 
+	public function actu($id_actu)
+	{
+		$data['one_actu'] = $this->home_model->get_one_actu($id_actu);
+
+		$data['main_view'] = "actu_view";
+
+		$this->load->view('layouts/main', $data);
+	}
 
 
 	public function subscribe_newsletter()

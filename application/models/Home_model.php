@@ -12,6 +12,16 @@ class Home_model extends CI_Model
 		
 		return $query->result();
 	}
+	
+	public function get_one_actu($id_actu)
+	{
+
+		$this->db->where('id', $id_actu);
+
+		$query = $this->db->get('actus');
+		
+		return $query->row();
+	}
 
 
 	public function post_email()
