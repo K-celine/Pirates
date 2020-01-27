@@ -38,23 +38,70 @@ class User_model extends CI_Model {
 	}
 
 
-	/*public function login_user($username, $password)
+	public function login_user($email, $password)
 	{
 		
-		$this->db->where('username', $username);
+		$this->db->where('email', $email);
 
 		$result = $this->db->get('users');
 
-		$db_password = $result->row(6)->password;
+		$db_password = $result->row(5)->password;
 
 		if(password_verify($password, $db_password)) {
 
-			return $result->row(0)->id;
+			return $result->row();
 		}else{
 
 			return false;
 		}
+	}
+
+	public function get_list_sub_newsletter()
+	{
+
+		$query = $this->db->get('newsletter');
+		
+		return $query->result();
+	}
+
+	public function get_list_booking()
+	{
+
+		$query = $this->db->get('booking');
+		
+		return $query->result();
+	}
+
+	public function get_list_messages()
+	{
+
+		$query = $this->db->get('messages');
+		
+		return $query->result();
+	}
+
+	public function edit_actu($id_actu, $data)
+	{
+
+		$this->db->where('id' , $id_actu);
+
+		$this->db->update('actus', $data);
+
+		return true;
+	}
+
+	/*public function delete_actu($id_actu)
+	{
+
+		$this->db->where('id' , $id_actu);
+
+		$this->db->delete('actus');	
 	}*/
+
+
+
+
+
 }
 
 ?>

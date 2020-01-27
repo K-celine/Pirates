@@ -14,6 +14,9 @@
 	<?php if($this->session->flashdata('user_registered')):?>
 		<?php echo 	$this->session->flashdata('user_registered');?>
 	<?php endif; ?>
+	<?php if($this->session->flashdata('login_success')):?>
+		<?php echo 	$this->session->flashdata('login_success');?>
+	<?php endif; ?>
 </p>
 				<h4>BIENVENUE CHEZ LES PIRATES</h4>
 				<p><img src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:30rem"></p>

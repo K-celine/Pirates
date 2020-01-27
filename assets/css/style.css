@@ -495,58 +495,27 @@ color:white;
 #container_team{
 	color:white;
 	text-align: center;
+	background-image: url(../images/team/pirates_team_fond.jpg);
+	background-size:contain;
+	background-attachment: fixed;
 }
 #container_team h2{
 	font-family: 'Mitr', sans-serif;
 	padding-bottom: 2rem;
 	letter-spacing: 0.583rem;
 	color: #f1ba4d;
-}
-#container_team h3{
-	font-family: 'Mitr', sans-serif;
-	padding-bottom: 1.7rem;
-	letter-spacing: 0.5rem;
-	color: #f1ba4d;
-}
-#container_team ul{
-	list-style-type: none;
-	margin-left:0;
-	padding-left:0;
+	margin-top: 2rem;
 }
 
-#team1, #team7{
-	background-image: url(../images/team/pirates_team_fond1.jpg);
-	background-size:cover;
-	background-attachment: fixed;
+#container_team p{
+	text-align:center;
+	margin: 2rem 12rem 3rem 12rem;
 }
-
-#team2{
-	background-image: url(../images/team/pirates_team_fond2.jpg);
-	background-size:contain;
+#container_team img{
+	width:70%; 
+	border-radius: 1rem;
+	border: 4mm ridge rgba(80, 80, 79, .6);
 }
-
-#team3{
-	background-image: url(../images/team/pirates_team_fond3.jpg);
-	background-size:cover;
-	background-attachment: fixed;
-}
-
-#team4{
-	background-image: url(../images/team/pirates_team_fond4.jpg);
-	background-size: contain;	
-}
-
-#team5{
-	background-image: url(../images/team/pirates_team_fond2.jpg);
-	background-size:contain;
-	background-attachment: fixed;	
-}
-
-#team6{
-	background-image: url(../images/team/pirates_team_fond3.jpg);
-	background-size:contain;	
-}
-
 
 /**************************FIN PAGES/TEAM******************************/
 
@@ -638,6 +607,31 @@ color:white;
 
 
 /**************************** FIN SHOP/HOME*****************************/
+
+/**************************** ADMIN*****************************/
+
+.admin_sub , .admin_book , .admin_actu{
+	display:flex;
+	justify-content: space-between;
+	border-bottom: 0.2rem solid #f1ba4d ;
+	list-style-type: none;
+	align-items: center;
+	font-family: 'Mitr', sans-serif;
+	color: #231e20;
+}
+
+#btn_sub_news , #btn_book{
+	text-decoration: none;
+font-family: 'Mitr', sans-serif;
+	border-radius: 0.5rem;
+	background-color: #f1ba4d ;
+	color: #231e20;
+	padding: 1rem;
+	font-size: 1.3rem;
+
+
+}
+/**************************** FIN ADMIN*****************************/
 
 
 /************************FOOTER******************************/

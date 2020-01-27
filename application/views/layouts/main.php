@@ -56,7 +56,14 @@
             		</ul>
             	</div></li>
 			<li><a href="<?php echo base_url();?>shop/home">SHOP</a></li>
-			<li><a id="compte" data-toggle="modal" data-target="#modal_compte" href="<?php echo base_url();?>users">COMPTE</a></li>
+				<?php if($this->session->userdata('logged_in')): ?>
+			
+				<li><a href="<?php echo base_url();?>users/logout">SE DECONNECTER</a></li>
+			<?php endif; ?>
+			<?php if($this->session->userdata('logged_in')== FALSE): ?>
+				<li><a id="compte" data-toggle="modal" data-target="#modal_compte" href="<?php echo base_url();?>users">COMPTE</a></li>
+			<?php endif; ?>
+			
 		</ul>
 		</nav>
 	</header>
@@ -71,15 +78,15 @@
         </button>
       </div>
       <div class="modal-body">
-       <form>
+       <form action="<?php echo base_url();?>users/login" method="post">
   <div class="form-group">
     <label for="InputEmail1">Adresse Email </label>
-    <input type="email" class="form-control form-control-lg" id="InputEmail1" aria-describedby="emailHelp">
+    <input type="email" name="email" class="form-control form-control-lg" id="InputEmail1" aria-describedby="emailHelp">
     <small id="emailHelp" class="form-text text-muted">blablabli</small>
   </div>
   <div class="form-group">
     <label for="InputPassword">Mot de passe</label>
-    <input type="password" class="form-control form-control-lg" id="InputPassword">
+    <input type="password" name="password" class="form-control form-control-lg" id="InputPassword">
   </div>
   <button type="submit" class="btn btn-lg btn-secondary">SE CONNECTER</button>
 
@@ -94,29 +101,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <main>	
