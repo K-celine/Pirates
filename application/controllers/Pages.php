@@ -54,6 +54,15 @@ class Pages extends CI_Controller
 			}
 		}
 	}
+	public function message($id_message)
+	{
+		$data['one_message'] = $this->contact_model->get_one_message($id_message);
+
+		$data['main_view'] = "pages/message_view";
+
+		$this->load->view('layouts/main', $data);
+	}
+	
 }		
 
 ?>

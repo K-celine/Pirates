@@ -72,31 +72,9 @@ class User_model extends CI_Model {
 		return $query->result();
 	}
 
-	public function get_list_messages()
-	{
+	
 
-		$query = $this->db->get('messages');
-		
-		return $query->result();
-	}
 
-	public function edit_actu($id_actu, $data)
-	{
-
-		$this->db->where('id' , $id_actu);
-
-		$this->db->update('actus', $data);
-
-		return true;
-	}
-
-	/*public function delete_actu($id_actu)
-	{
-
-		$this->db->where('id' , $id_actu);
-
-		$this->db->delete('actus');	
-	}*/
 
 
 

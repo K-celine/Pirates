@@ -1,16 +1,16 @@
-<!-- ici Admin_actu_view -->
+<!-- ici Actu_edit_view -->
 <div id="container_admin_actu">
 
 <div class="row row align-items-center p-5">
 		<div class="col-3 pl-5">
-<h2>Modifier Actu</h2>
+<h3><i class="fas fa-pen"></i> MODIFIER UNE ACTU</h3>
 </div>
 <div class="col-9">
 <?php $attributes = array('id' => 'edit_form', 'class' => 'form_horizontal'); ?>
 
 <!--<?php echo validation_errors("<p class='alert alert-danger'>"); ?>-->
 
-<?php echo form_open('users/admin_actu/'.$one_actu->id.'' , $attributes);?>
+<?php echo form_open('actus/edit_actu/'.$one_actu->id.'' , $attributes);?>
 
 <div class="form-group">
 	
@@ -93,9 +93,11 @@
 
 </div>
 
-
 <?php echo form_close();?>
+<div>
 
+		<a class="btn btn-danger" href="<?php echo base_url()?>users/admin">ANNULER</a>
+			</div>	
 </div>
 </div>
 </div>

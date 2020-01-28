@@ -21,6 +21,26 @@ class Contact_model extends CI_Model
 		return $insert_query;
 	}
 
+
+	public function get_list_messages()
+	{
+
+		$query = $this->db->get('messages');
+		
+		return $query->result();
+	}
+	
+	public function get_one_message($id_message)
+	{
+		
+		$this->db->where('id', $id_message);
+
+		$query = $this->db->get('messages');
+		
+		return $query->row();
+	}
+
+	
 }
 		
 

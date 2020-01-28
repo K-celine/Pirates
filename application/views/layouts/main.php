@@ -57,8 +57,8 @@
             	</div></li>
 			<li><a href="<?php echo base_url();?>shop/home">SHOP</a></li>
 				<?php if($this->session->userdata('logged_in')): ?>
-			
-				<li><a href="<?php echo base_url();?>users/logout">SE DECONNECTER</a></li>
+				<li><a href="<?php echo base_url();?>users/logout">SE DECONNECTER</a></li><br>
+				<li><a href="#">SALUT <?php echo $this->session->userdata('username');?></a></li>
 			<?php endif; ?>
 			<?php if($this->session->userdata('logged_in')== FALSE): ?>
 				<li><a id="compte" data-toggle="modal" data-target="#modal_compte" href="<?php echo base_url();?>users">COMPTE</a></li>

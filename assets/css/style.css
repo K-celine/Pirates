@@ -297,8 +297,9 @@ margin:2rem 2rem 5rem 2rem;
 
 }
 
-
 /****************************FIN USERS********************************/
+
+
 
 /*****************************INFO MATCH*****************************/
 
@@ -593,7 +594,7 @@ color:white;
 	color:#da3730;
 }
 
-#title_shop h2{
+#title_shop h2, #container_admin h2 {
 	padding: 3rem;
 	font-family: 'Mitr', sans-serif;
 	letter-spacing: 0.583rem;
@@ -620,7 +621,7 @@ color:white;
 	color: #231e20;
 }
 
-#btn_sub_news , #btn_book{
+#btn_sub_news , #btn_book, #btn_create_actu{
 	text-decoration: none;
 font-family: 'Mitr', sans-serif;
 	border-radius: 0.5rem;
@@ -631,6 +632,7 @@ font-family: 'Mitr', sans-serif;
 
 
 }
+
 /**************************** FIN ADMIN*****************************/
 
 
