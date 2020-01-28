@@ -72,13 +72,46 @@ class User_model extends CI_Model {
 		return $query->result();
 	}
 
-	
+	public function get_list_admin()
+	{
 
+		$this->db->where('role =' , 1);
 
+		$query = $this->db->get('users');
+		
+		return $query->result();
+	}
 
+	public function delete_admin($id_user)
+	{
 
+		$this->db->where('id' , $id_user);
 
+		$this->db->delete('users');	
+	}
 
+	public function get_one_admin($id_user)
+	{
+
+		$this->db->where('id', $id_user);
+
+		$query = $this->db->get('users');
+		
+		return $query->row();
+	}
+
+	public function edit_admin($id_user)
+	{
+		
+		$this->db->where('id' , $id_user);
+
+		$this->db->set('role =' , 0);
+
+		$this->db->update('users');
+
+		return true;
+
+	}
 
 }
 

@@ -39,7 +39,7 @@
 
       			$data['one_actu'] = $this->home_model->get_one_actu($id_actu);
 
-     			$data['main_view'] = 'actus/actu_edit_view';
+     			  $data['main_view'] = 'actus/actu_edit_view';
 
       			$this->load->view('layouts/main', $data);
 
@@ -47,7 +47,6 @@
       
         		$data = array(
         
-       			/*id' => $this->session->userdata('user_id'),*/
         		'title' => $this->input->post('title'),
         		'content' => $this->input->post('content'),
         		'photo' => $this->input->post('photo'),

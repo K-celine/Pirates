@@ -32,6 +32,10 @@
           };
       };
     }
+
+
+
+
   
     public function login()
     {
@@ -82,6 +86,10 @@
       }
     }
 
+
+
+
+
     public function logout()
     {
 
@@ -89,6 +97,9 @@
 
       redirect('home/index');
     }
+
+
+
 
      
     public function admin()
@@ -102,15 +113,54 @@
 
       $data['list_book'] = $this->user_model->get_list_booking();
 
+      $data['list_admin'] = $this->user_model->get_list_admin();
+
       $data['main_view'] = "users/admin_view";
 
       $this->load->view('layouts/main', $data);
 
     }
 
-    
+
+
+
+    public function delete_admin($id_user)
+    {
+
+      $this->user_model->delete_admin($id_user);
+
+      $this->session->set_flashdata('admin_delete' , "ADMIN SUPPRIMEE AVEC SUCCES ! ");
+
+      redirect("users/admin");
+    }
+
+
+
+
+    public function detail_profil($id_user)
+    {
+
+      $data['one_admin'] = $this->user_model->get_one_admin($id_user);
+
+      $data['main_view'] = "users/profil_edit_view";
+
+      $this->load->view('layouts/main', $data);
+    }
+
+  
     
 
+    public function edit_admin($id_user)
+    {
+
+          
+      $this->user_model->edit_admin($id_user);
+
+      $this->session->set_flashdata('profil_edited' , "LE PROFIL A ETE MODIFIE AVEC SUCCES ! ");
+
+      redirect("users/admin");
+    }
+          
   
   
 }

@@ -10,7 +10,7 @@
 
 <!--<?php echo validation_errors("<p class='alert alert-danger'>"); ?>-->
 
-<?php echo form_open('actus/edit_actu/'.$one_actu->id.'' , $attributes);?>
+<?php echo form_open('users/admin' , $attributes);?>
 
 <div class="form-group">
 	

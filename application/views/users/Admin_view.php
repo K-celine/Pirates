@@ -22,6 +22,20 @@
 			</div>
 		</div>	
 	<?php endif; ?>
+	<?php if($this->session->flashdata('admin_delete')):?>
+		<div class="row row align-items-center p-5">
+			<div class="col-12 pl-5">
+				<p class="success"><?php echo $this->session->flashdata('admin_delete');?></p>
+			</div>
+		</div>	
+	<?php endif; ?>
+	<?php if($this->session->flashdata('profil_edited')):?>
+		<div class="row row align-items-center p-5">
+			<div class="col-12 pl-5">
+				<p class="success"><?php echo $this->session->flashdata('profil_edited');?></p>
+			</div>
+		</div>	
+	<?php endif; ?>
 		<div class="row align-items-center p-5" id="admin_newsletter">
 			<div class="col-3 pl-5">
 				<h3>GESTION DES ACTUS</h3>
@@ -56,16 +70,18 @@
 				<ul class="admin_actu">
 					<li>USERNAME</li>
 					<li>EMAIL</li>
+					<li>role</li>
+					<li>ACTION</li>
 				</ul>
-				<!--<?php foreach($profils as $profil): ?>
+				<?php foreach($list_admin as $admin): ?>
 				<ul class="admin_actu">
-					<li><?php echo $profil->username; ?></li>
-					<li><?php echo $profil->email; ?></li>
-					<li><a href="<?php echo base_url()?>profils/delete_profil/<?php echo $profil->id;?>"><i class="fas fa-pen"></i></a></li>
+					<li><?php echo $admin->username; ?></li>
+					<li><?php echo $admin->email; ?></li>
+					<li><?php echo $admin->role; ?></li>
+					<li><li><a href="<?php echo base_url()?>users/detail_profil/<?php echo $admin->id;?>"><i class="fas fa-pen"></i></a> <a href="<?php echo base_url()?>users/delete_admin/<?php echo $admin->id;?>"><i class="fas fa-trash-alt"></i></a></li>
 				</ul>
-				<?php endforeach; ?>-->
-				<br><a id="btn_create_actu" href="<?php echo base_url()?>profils/create_profil">TRANSFORMER UN USER EN ADMIN</a>
-				<a id="btn_create_actu" href="<?php echo base_url()?>profils/create_profil">TRANSFORMER UN ADMIN EN USER</a>
+				<?php endforeach; ?>
+				<!--<br><a id="btn_create_actu" href="<?php echo base_url()?>users/edit_profil">CHANGER UN PROFIL</a>-->
 			</div>
 		</div>
 		<div class="row align-items-center p-5" id="admin_newsletter">
