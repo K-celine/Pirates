@@ -56,6 +56,9 @@
             		</ul>
             	</div></li>
 			<li><a href="<?php echo base_url();?>shop/home">SHOP</a></li>
+			<?php if($this->session->userdata('role') == 1): ?>
+				<li><a href="<?php echo base_url();?>users/admin">ADMIN</a></li><br>
+			<?php endif; ?>
 				<?php if($this->session->userdata('logged_in')): ?>
 				<li><a href="<?php echo base_url();?>users/logout">SE DECONNECTER</a></li><br>
 				<li><a href="#">SALUT <?php echo $this->session->userdata('username');?></a></li>

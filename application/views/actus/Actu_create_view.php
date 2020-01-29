@@ -9,7 +9,7 @@
 
 			<?php echo validation_errors("<p class='alert alert-danger'>"); ?>
 
-			<?php echo form_open('actus/create_actu' , $attributes);?>
+			<?php echo form_open_multipart('actus/create_actu' , $attributes);?>
 
 			<div class="form-group pr-5">
 				<?php echo form_label('TITRE');

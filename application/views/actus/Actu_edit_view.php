@@ -6,11 +6,11 @@
 <h3><i class="fas fa-pen"></i> MODIFIER UNE ACTU</h3>
 </div>
 <div class="col-9">
-<?php $attributes = array('id' => 'edit_form', 'class' => 'form_horizontal'); ?>
+<?php $attributes = array('id' => 'edit_actu_form', 'class' => 'form_horizontal'); ?>
 
 <!--<?php echo validation_errors("<p class='alert alert-danger'>"); ?>-->
 
-<?php echo form_open('users/admin' , $attributes);?>
+<?php echo form_open('actus/edit_actu/'.$one_actu->id.'' , $attributes);?>
 
 <div class="form-group">
 	
@@ -51,7 +51,7 @@
 
 	<?php $data = array(
 		'class' => 'form-control',
-		'name' => 'content',
+		'name' => 'date',
 		'type' => 'date',
 		'value' => $one_actu->date
 	
@@ -68,7 +68,7 @@
 
 	<?php $data = array(
 		'class' => 'form-control',
-		'name' => 'content',
+		'name' => 'photo',
 		'type' =>'file',
 		'value' => $one_actu->photo
 	

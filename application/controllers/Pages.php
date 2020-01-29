@@ -30,13 +30,14 @@ class Pages extends CI_Controller
 	}
 
 
+
 	public function contact()
 	{
-		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required|min_length[2]|alpha');
-    	$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|min_length[2]|alpha');
+		$this->form_validation->set_rules('first_name', 'Prénom', 'trim|required|min_length[2]|alpha');
+    	$this->form_validation->set_rules('last_name', 'Nom', 'trim|required|min_length[2]|alpha');
     	$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-    	$this->form_validation->set_rules('subject_message', 'Sujet', 'required|min_length[2]|alpha');
-    	$this->form_validation->set_rules('content_message', 'Message', 'required|min_length[2]|alpha');
+    	$this->form_validation->set_rules('subject_message', 'Sujet', 'required|min_length[2]');
+    	$this->form_validation->set_rules('content_message', 'Message', 'required|min_length[2]');
 	
 
 		if($this->form_validation->run() == FALSE){
@@ -48,12 +49,15 @@ class Pages extends CI_Controller
 
       		if($this->contact_model->post_message()){
 
-        	$this->session->set_flashdata('message_sent', "VOTRE MESSAGE A ETE ENVOYE AVEC SUCCES ! ");
+        	$this->session->set_flashdata('message_sent', "MESSAGE ENVOYE AVEC SUCCES ! ");
         	redirect('home/index');
 
 			}
 		}
 	}
+
+
+
 	public function message($id_message)
 	{
 		$data['one_message'] = $this->contact_model->get_one_message($id_message);
@@ -62,6 +66,17 @@ class Pages extends CI_Controller
 
 		$this->load->view('layouts/main', $data);
 	}
+
+	public function delete_message($id_message)
+    	{
+
+      		$this->contact_model->delete_message($id_message);
+
+      		$this->session->set_flashdata('message_deleted' , "MESSAGE SUPPRIME AVEC SUCCES ! ");
+
+      		redirect("users/admin");
+    	}
+  	
 	
 }		
 

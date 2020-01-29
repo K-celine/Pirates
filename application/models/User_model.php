@@ -19,6 +19,18 @@ class User_model extends CI_Model {
 			'news_subscribe'=> $this->input->post('news_subscribe')
 		);
 
+		$this->db->where('email', $this->input->post('email'));
+		$email_exist = $this->db->get('users');
+		$result = $email_exist->row();
+
+		if(isset($result)){
+
+			$this->session->set_flashdata('registration_failed', "VOUS AVEZ DEJA UN COMPTE AVEC CETTE ADRESSE EMAIL !");
+        
+        	redirect('home/index');
+		}else{
+
+			$insert_data = $this->db->insert('users', $data);
 
 			if($this->input->post('news_subscribe') == 1){
 
@@ -32,12 +44,12 @@ class User_model extends CI_Model {
 			
 			}
 
-		$insert_data = $this->db->insert('users', $data);
+		
 
 		return $insert_data;
 	}
 
-
+}
 	public function login_user($email, $password)
 	{
 		
@@ -82,36 +94,37 @@ class User_model extends CI_Model {
 		return $query->result();
 	}
 
-	public function delete_admin($id_user)
-	{
-
-		$this->db->where('id' , $id_user);
-
-		$this->db->delete('users');	
-	}
-
-	public function get_one_admin($id_user)
-	{
-
-		$this->db->where('id', $id_user);
-
-		$query = $this->db->get('users');
-		
-		return $query->row();
-	}
-
 	public function edit_admin($id_user)
 	{
 		
 		$this->db->where('id' , $id_user);
 
-		$this->db->set('role =' , 0);
+		$this->db->set('role' , 0);
 
 		$this->db->update('users');
 
 		return true;
 
 	}
+
+	public function create_admin($email)
+	{
+	
+		
+		$this->db->where('email', $email);
+
+		$this->db->set('role' , 1);
+
+		$this->db->update('users');
+
+		return true;
+	
+	}
+	
+	
+	
+
+
 
 }
 

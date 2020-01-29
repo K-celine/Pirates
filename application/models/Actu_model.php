@@ -11,7 +11,7 @@ class Actu_model extends CI_Model
 
 			'title' => $this->input->post('title'),
 			'content' => $this->input->post('content'),
-			'photo' => $this->input->post('photo'),
+			'photo' => 'assets/images/actu/'.$this->input->post('photo'),
 			'date' => $this->input->post('date')
 			);
 

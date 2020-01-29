@@ -8,7 +8,6 @@
     	{
       		$this->form_validation->set_rules('title', 'Titre', 'trim|required|min_length[2]');
       		$this->form_validation->set_rules('content', 'Contenu', 'trim|required|min_length[2]');
-      		$this->form_validation->set_rules('photo', 'Photo', 'trim|required');
       		$this->form_validation->set_rules('date', 'Date', 'required');
   
 
@@ -21,9 +20,25 @@
 
           		if($this->actu_model->create_actu()){
 
-          			$this->session->set_flashdata('actu_sent', "NOUVELLE ACTU AJOUTEE AVEC SUCCES ! ");
+                $config['upload_path']          = './assets/images/actu/';
+                $config['allowed_types']        = 'gif|jpg|png';
+                $config['max_size']             = 1000000;
+                $config['max_width']            = 4000;
+                $config['max_height']           = 4000;
+
+                $this->load->library('upload', $config);
+                
+            if($this->upload->do_upload('photo')){
+
+$this->session->set_flashdata('actu_created', "ACTU AJOUTEE AVEC SUCCES ! ");
+                
+                redirect('users/admin');
+
+
+               }
+
+
           			
-          			redirect('users/admin');
 
          		}
         	}
@@ -55,7 +70,7 @@
 
         		if($this->actu_model->edit_actu($id_actu , $data)){
 
-        			$this->session->set_flashdata('actu_modif' , "actu updated");
+        			$this->session->set_flashdata('actu_updated' , "ACTU MODIFIEE AVEC SUCCES ! ");
 
         			redirect("users/admin");
         		}
@@ -68,7 +83,7 @@
 
       		$this->actu_model->delete_actu($id_actu);
 
-      		$this->session->set_flashdata('actu_delete' , "ACTU SUPPRIMEE AVEC SUCCES ! ");
+      		$this->session->set_flashdata('actu_deleted' , "ACTU SUPPRIMEE AVEC SUCCES ! ");
 
       		redirect("users/admin");
     	}

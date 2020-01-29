@@ -40,6 +40,15 @@ class Contact_model extends CI_Model
 		return $query->row();
 	}
 
+
+public function delete_message($id_message)
+	{
+
+		$this->db->where('id' , $id_message);
+
+		$this->db->delete('messages');	
+	}
+
 	
 }
 		

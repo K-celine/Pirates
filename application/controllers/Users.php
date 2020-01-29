@@ -58,14 +58,15 @@
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $user = $this->user_model->login_user($email, $password);
+        
 
         if($user) {
 
           $user_data = array(
          		'id' => $user->id,
-          	'email' => $email->email,
-            'role' =>$role->role,
-            'username'=>$username->username,
+          	'email' => $user->email,
+            'role' => $user->role,
+            'username'=>$user->username,
           	'logged_in' => true
             );
 
@@ -115,52 +116,56 @@
 
       $data['list_admin'] = $this->user_model->get_list_admin();
 
+      $data['list_match'] = $this->match_model->get_list_match();
+
+      $data['standing'] = $this->match_model->get_standing();
+
       $data['main_view'] = "users/admin_view";
 
       $this->load->view('layouts/main', $data);
 
     }
-
-
-
-
-    public function delete_admin($id_user)
-    {
-
-      $this->user_model->delete_admin($id_user);
-
-      $this->session->set_flashdata('admin_delete' , "ADMIN SUPPRIMEE AVEC SUCCES ! ");
-
-      redirect("users/admin");
-    }
-
-
-
-
-    public function detail_profil($id_user)
-    {
-
-      $data['one_admin'] = $this->user_model->get_one_admin($id_user);
-
-      $data['main_view'] = "users/profil_edit_view";
-
-      $this->load->view('layouts/main', $data);
-    }
-
-  
     
 
     public function edit_admin($id_user)
     {
-
-          
+   
       $this->user_model->edit_admin($id_user);
 
       $this->session->set_flashdata('profil_edited' , "LE PROFIL A ETE MODIFIE AVEC SUCCES ! ");
 
       redirect("users/admin");
     }
-          
+
+
+    public function form_create_admin()
+    {
+
+      $data['main_view'] = "users/admin_create_view";
+
+      $this->load->view('layouts/main', $data);
+    }  
+    
+        
+    public function create_admin()
+    {
+
+      $email = $this->input->post('email');
+
+      $result = $this->user_model->create_admin($email);
+
+      if($result){
+
+        $this->session->set_flashdata('admin_created' , "NOUVEL ADMIN CREE AVEC SUCCES ! ");
+
+        redirect("users/admin");
+      }
+
+    }
+    
+
+
+    
   
   
 }

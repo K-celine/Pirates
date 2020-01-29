@@ -39,6 +39,7 @@
 		<div class="col-7">
 			<h2><i class="fas fa-envelope"></i> NOUS CONTACTER</h2><br>
 			<form method="post" action="<?php echo base_url();?>pages/contact">
+				<?php echo validation_errors("<p class='alert alert-danger'>"); ?>
  				<div class="row form-group">
     				<div class="col">
       					<input type="text" class="form-control form-control-lg" name="last_name" placeholder="Nom">

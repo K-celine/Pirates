@@ -24,16 +24,29 @@ class Home_model extends CI_Model
 	}
 
 
-	public function post_email()
+	public function subscribe_newsletter()
 	{
+		$email = $this->input->post('email_newsletter');
 		$data = array(
 
-			'email_subscribe' => $this->input->post('email_newsletter')
+			'email_subscribe' => $email
 		);
+		$this->db->where('email_subscribe', $email);
+		$email_exist = $this->db->get('newsletter');
+		$result = $email_exist->row();
 
-		$insert_query = $this->db->insert('newsletter', $data);
+		if(isset($result)){
+
+			$this->session->set_flashdata('newsletter_failed', "VOUS ETES DEJA INSCRIT A LA NEWSLETTER !");
+        
+        	redirect('home/index');
+		}else{
+
+			$insert_query = $this->db->insert('newsletter', $data);
 
 		return $insert_query;
+		}
+		
 	}
 
 }

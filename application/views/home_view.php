@@ -15,6 +15,14 @@
 		<?php echo 	$this->session->flashdata('user_registered');?>
 	<?php endif; ?>
 </p>
+<p class="fail">
+<?php if($this->session->flashdata('newsletter_failed')):?>
+		<?php echo 	$this->session->flashdata('newsletter_failed');?>
+	<?php endif; ?>
+	<?php if($this->session->flashdata('registration_failed')):?>
+		<?php echo 	$this->session->flashdata('registration_failed');?>
+	<?php endif; ?>
+	</p>
 				<h4>BIENVENUE CHEZ LES PIRATES</h4>
 				<p><img src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:30rem"></p>
 
@@ -40,9 +48,9 @@
 </div>
 <div class="row align-items-center">
 	<div class="col-12" id="buttons_home">
-		<a href="<?php echo base_url();?>match/infos/#booking">RESERVER UNE PLACE</a>
-		<a href="<?php echo base_url();?>match/infos/#resultats">VOIR LES RESULTATS</a>
-		<a href="<?php echo base_url();?>match/infos/#standing">VOIR LE CLASSEMENT</a>
+		<a href="<?php echo base_url();?>matchs/infos/#booking">RESERVER UNE PLACE</a>
+		<a href="<?php echo base_url();?>matchs/infos/#resultats">VOIR LES RESULTATS</a>
+		<a href="<?php echo base_url();?>matchs/infos/#standing">VOIR LE CLASSEMENT</a>
 	</div>
 </div>
 <div class="container mw-100" id="container_home">
@@ -66,7 +74,7 @@
 			<?php foreach($actus as $actu): ?>
 			<div class="row mb-5">
 				<div class="col-4" id="img_actu">
-					<img class="img_actu" src="<?php echo base_url()?><?php echo $actu->photo; ?>" alt="<?php echo $actu->photo;?>" style="width:30rem"/>
+					<img class="img_actu" src="<?php echo base_url()?>assets/images/actu/<?php echo $actu->photo; ?>" alt="<?php echo $actu->photo;?>" style="width:30rem"/>
 				</div>
 				<div class="col-8" id="content_actu">
 					<h4 class="pl-3"><i class="far fa-newspaper"></i> <?php echo $actu->title; ?></h4>
