@@ -4,7 +4,7 @@
 		<div class="col-12 p-5">
 			<div class="row mb-5">
 				<div class="col-8">
-					<img class="img_actu" src="<?php echo base_url()?><?php echo $one_actu->photo;?>" alt="<?php echo $one_actu->photo;?> " style="width:70rem"/>
+					<img class="img_actu" src="<?php echo base_url()?>assets/images/actu/<?php echo $one_actu->photo;?>" alt="<?php echo $one_actu->photo;?> " style="width:70rem"/>
 				</div>
 				<div class="col-4" id="one_actu">
 					<h2><i class="fas fa-newspaper"></i> <?php echo $one_actu->title;?></h2>

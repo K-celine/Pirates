@@ -36,11 +36,10 @@
 
 					$data = array(
 						'class' => 'form-control form-control-lg',
-						'type'=> 'file',
 						'name' => 'photo',
-						'value'=>set_value('photo'));
+						);
 
-					echo form_input($data);?>
+					echo form_upload($data);?>
 			</div>
 			<div class="form-group pr-5">
 				<?php echo form_label('DATE'); 
