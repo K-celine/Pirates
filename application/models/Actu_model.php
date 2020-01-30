@@ -14,6 +14,7 @@ class Actu_model extends CI_Model
 			'photo' => $_FILES['photo']['name'],
 			'date' => $this->input->post('date')
 			);
+		$data = $this->security->xss_clean($data);
 
 		$insert_query = $this->db->insert('actus', $data);
 

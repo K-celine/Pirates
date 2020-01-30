@@ -7,7 +7,7 @@
 	</div>
 	<div class="row align-items-center" id="booking">
 		<div class="col-3">
-			<h2>RESERVATION</h2>
+			<h5>RESERVATION</h5>
 		</div>
 		<div class="col-9"id="seat_form">
 			<form method="post" action="<?php echo base_url();?>matchs/booking" target=_blank>
@@ -67,7 +67,7 @@
 	</div>
 	<div class="row align-items-center" id="standing">
 		<div class="col-3">
-			<h2>CLASSEMENT</h2>
+			<h5>CLASSEMENT</h5>
 		</div>
 		<div class="col-9" >
 			<ul id="standing_titre">

@@ -14,13 +14,16 @@
 	<?php if($this->session->flashdata('user_registered')):?>
 		<?php echo 	$this->session->flashdata('user_registered');?>
 	<?php endif; ?>
-	<?php if($this->session->flashdata('booking_ok')):?>
-		<?php echo 	$this->session->flashdata('booking_ok');?>
+	<?php if($this->session->flashdata('loggin_ok')): ?>
+		<?php echo $this->session->flashdata('loggin_ok');?> 
 	<?php endif; ?>
 </p>
 <p class="fail">
 <?php if($this->session->flashdata('newsletter_failed')):?>
 		<?php echo 	$this->session->flashdata('newsletter_failed');?>
+	<?php endif; ?>
+	<?php if($this->session->flashdata('loggin_failed')):?>
+		<?php echo 	$this->session->flashdata('loggin_failed');?>
 	<?php endif; ?>
 	<?php if($this->session->flashdata('registration_failed')):?>
 		<?php echo 	$this->session->flashdata('registration_failed');?>
@@ -33,7 +36,7 @@
 	<?php endif; ?>
 
 	</p>
-				<h4>BIENVENUE CHEZ LES PIRATES</h4>
+				<h5>BIENVENUE CHEZ LES PIRATES</h5>
 				<p><img src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:30rem"></p>
 
 			</div>
@@ -48,8 +51,8 @@
 		<div class="carousel-item" id="carousel_item_3">
 			<img src="<?php echo base_url()?>assets/images/home/pirates_home_slide3.jpg" class="d-block w-100" alt="pirates_home_slide3">
 			<div class="carousel-caption d-none d-md-block">
-				<h4>12U : CHAMPION D'OCCITANIE 2019</h4>
-				<h4>SOFTBALL FEMININ : CHAMPIONNE D'OCCITANIE 2019</h4>
+				<h5>12U : CHAMPION D'OCCITANIE 2019</h5>
+				<h5>SOFTBALL FEMININ : CHAMPIONNE D'OCCITANIE 2019</h5>
 				<p><img src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:30rem"></p>
 				<p><a type="button" class="btn" href="<?php echo base_url();?>pages/club/#palmares"><strong>VOIR LE PALMARES</strong></a></p>
 			</div>
@@ -67,7 +70,7 @@
 	<div class="row">
 		<div class="col-4" id="prochains_matchs">
 			<div class="mx-auto">
-				<h2>PROCHAINS MATCHS</h2><br>
+				<h6>PROCHAINS MATCHS</h6><br>
 				<span>HOME</span>
 				<span>VISITOR</span><br>
 				<?php foreach($matchs as $match): ?>
@@ -87,7 +90,7 @@
 					<img class="img_actu" src="<?php echo base_url()?>assets/images/actu/<?php echo $actu->photo; ?>" alt="<?php echo $actu->photo;?>" style="width:30rem"/>
 				</div>
 				<div class="col-8" id="content_actu">
-					<h4 class="pl-3"><i class="far fa-newspaper"></i> <?php echo $actu->title; ?></h4>
+					<h5 class="pl-3"><i class="far fa-newspaper"></i> <?php echo $actu->title; ?></h5>
 					<p class="p-3"> <?php echo substr($actu->content,0, 100) ?>...</p>
 					<p class="pl-3"><a id="savoir_plus" href="<?php echo base_url()?>home/actu/<?php echo $actu->id; ?> "><small><em>en savoir <i class="fas fa-plus"></i></em> </small></a></p>
 					<p class="pl-3"><small><?php echo date('d/m/Y', strtotime($actu->date)) ; ?></small></p>	

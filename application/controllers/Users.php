@@ -7,12 +7,14 @@
     {
 
 
-      $this->form_validation->set_rules('first_name', 'Prénom', 'trim|required|min_length[2]|alpha');
-      $this->form_validation->set_rules('last_name', 'Nom', 'trim|required|min_length[2]|alpha');
-      $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-      $this->form_validation->set_rules('username', 'Pseudo', 'trim|required|min_length[3]');
-      $this->form_validation->set_rules('password', 'Mot de passe', 'trim|required|min_length[3]');
-      $this->form_validation->set_rules('confirm_password', 'Confirmation du mot de passe', 'trim|required|matches[password]');
+      $this->form_validation->set_rules('first_name', 'Prénom', 'htmlspecialchars|trim|required|min_length[2]|alpha');
+      $this->form_validation->set_rules('last_name', 'Nom', 'htmlspecialchars|trim|required|min_length[2]|alpha');
+      $this->form_validation->set_rules('email', 'Email', 'htmlspecialchars|trim|required|valid_email');
+      $this->form_validation->set_rules('username', 'Pseudo', 'htmlspecialchars|trim|required|min_length[3]');
+      $this->form_validation->set_rules('password', 'Mot de passe', 'htmlspecialchars|trim|required|min_length[3]');
+      $this->form_validation->set_rules('confirm_password', 'Confirmation du mot de passe', 'htmlspecialchars|trim|required|matches[password]');
+      $this->form_validation->set_rules('news_suscribe', 'Souscription', 'htmlspecialchars');
+
 
 
       if($this->form_validation->run() == FALSE){
@@ -24,7 +26,7 @@
 
         if($this->user_model->create_user()){
 
-          $this->session->set_flashdata('user_registered', "VOTRE COMPTE A ETE CREE AVEC SUCCES ! ");
+          $this->session->set_flashdata('user_registered', " COMPTE CREE AVEC SUCCES ! ");
           redirect('home/index');
 
         }else{
@@ -40,8 +42,8 @@
     public function login()
     {
 
-      $this->form_validation->set_rules('email', 'Email', 'trim|required');
-      $this->form_validation->set_rules('password', 'Mot de passe', 'trim|required');
+      $this->form_validation->set_rules('email', 'Email', 'htmlspecialchars|trim|required');
+      $this->form_validation->set_rules('password', 'Mot de passe', 'htmlspecialchars|trim|required');
 
 
       if($this->form_validation->run() == FALSE){
@@ -57,13 +59,19 @@
 
         $email = $this->input->post('email');
         $password = $this->input->post('password');
+        $email = $this->security->xss_clean($email);
+        $password = $this->security->xss_clean($password);
+
         $user = $this->user_model->login_user($email, $password);
+        
         
 
         if($user) {
 
           $user_data = array(
          		'id' => $user->id,
+            'first_name' => $user->first_name,
+            'last_name' => $user->last_name,
           	'email' => $user->email,
             'role' => $user->role,
             'username'=>$user->username,
@@ -71,16 +79,14 @@
             );
 
           $this->session->set_userdata($user_data);
-        
-          //$data['main_view'] = "home_view";
-
-          //$this->load->view('layouts/main', $data);
+          $this->session->set_flashdata('loggin_ok', 'BONJOUR '.$this->session->userdata('username').' ! ');
+          
 
           redirect('home/index');
       
         }else{
 
-          $this->session->set_flashdata('login_failed', "Tu n'es pas connecté");
+          $this->session->set_flashdata('loggin_failed', "ECHEC DE CONNEXION : EMAIL OU MOT DE PASSE INCORRECT ");
         
           redirect('home/index');
         }
@@ -150,7 +156,10 @@
     public function create_admin()
     {
 
+      $this->form_validation->set_rules('email', 'Email', 'htmlspecialchars|trim|required|valid_email');
+
       $email = $this->input->post('email');
+      $email = $this->security->xss_clean($email);
 
       $result = $this->user_model->create_admin($email);
 

@@ -2,7 +2,7 @@
 <div class="container mw-100" id="container_home_shop">
 	<div class="row align-items-center" id="title_shop">	
 		<div class="col-12">
-	<h2><i class="fas fa-gem"></i> SHOP</h2>
+	<h5><i class="fas fa-gem"></i> SHOP</h5>
 </div>
 </div>
 	<div class="row align-items-center justify-content-center pb-5">	

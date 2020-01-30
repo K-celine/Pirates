@@ -15,6 +15,7 @@ class Contact_model extends CI_Model
 			'subject_message' => $this->input->post('subject_message'),
 			'content_message' => $this->input->post('content_message')
 		);
+		$data = $this->security->xss_clean($data);
 
 		$insert_query = $this->db->insert('messages', $data);
 

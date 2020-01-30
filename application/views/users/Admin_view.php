@@ -1,6 +1,7 @@
 <!-- ici Admin_view-->
 <div id="container_admin">
-	<h2>PANNEAU D'ADMINISTRATION</h2>
+	<h5>PANNEAU D'ADMINISTRATION</h5>
+	<nav class="menu_admin">
 	<a href="#admin_actu">ACTU</a>
 	<a href="#admin_profil">PROFIL</a>
 	<a href="#admin_newsletter">NEWSLETTER</a>
@@ -8,6 +9,7 @@
 	<a href="#admin_standing">CLASSEMENT</a>
 	<a href="#admin_message">MESSAGE</a>
 	<a href="#admin_booking">RESERVATION</a>
+	</nav>
 	<?php if($this->session->flashdata('actu_created')):?>
 		<div class="row row align-items-center p-5">
 			<div class="col-12 pl-5">
@@ -80,7 +82,7 @@
 	<?php endif; ?>
 		<div class="row align-items-center p-5" id="admin_actu">
 			<div class="col-3 pl-5">
-				<h3>GESTION DES ACTUS</h3>
+				<h6>GESTION DES ACTUS</h6>
 			</div>
 			<div class="col-9">
 				<ul class="admin_actu">
@@ -103,7 +105,7 @@
 		</div>
 		<div class="row align-items-center p-5" id="admin_profil">
 			<div class="col-3 pl-5">
-				<h3>GESTION DES PROFILS</h3>
+				<h6>GESTION DES PROFILS</h6>
 			</div>
 			<div class="col-9">
 				<ul class="admin_actu">
@@ -126,7 +128,7 @@
 		</div>
 		<div class="row align-items-center p-5" id="admin_newsletter">
 			<div class="col-3 pl-5">
-				<h3>GESTION DE LA NEWSLETTER</h3>
+				<h6>GESTION DE LA NEWSLETTER</h6>
 			</div>
 			<div class="col-9">
 				<ul class="admin_actu">
@@ -153,7 +155,7 @@
 		</div>
 		<div class="row align-items-center p-5" id="admin_match">	
 		<div class="col-3 pl-5">
-			<h3>GESTION DES MATCHS</h3>
+			<h6>GESTION DES MATCHS</h6>
 		</div>
 		<div class="col-9">
 				<ul class="admin_actu">
@@ -170,9 +172,9 @@
 			<?php foreach($list_match as $match): ?>
 			<ul class="admin_actu">
 				<li><?php echo date('d/m/Y H:i', strtotime($match->match_datetime)); ?></li>
-				<li><?php echo $match->name_home ?><img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="" style="width:7rem"/></li>
+				<li><?php echo $match->name_home ?><img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="" style="width:5rem"/></li>
 				<li><?php echo $match->score_home ?></li>
-				<li><?php echo $match->name_visitor ?><img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="" style="width:7rem"/></li>
+				<li><?php echo $match->name_visitor ?><img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="" style="width:5rem"/></li>
 				<li><?php echo $match->score_visitor ?></li>
 				<li><a href="<?php echo base_url()?>matchs/edit_match/<?php echo $match->id;?>"><i class="fas fa-pen"></i></a> <a href="<?php echo base_url()?>matchs/delete_match/<?php echo $match->id;?>"><i class="fas fa-trash-alt"></i></a></li>
 			</ul>
@@ -182,7 +184,7 @@
 	</div>
 	<div class="row align-items-center p-5" id="admin_standing">
 			<div class="col-3 pl-5">
-				<h3>GESTION DU CLASSEMENT</h3>
+				<h6>GESTION DU CLASSEMENT</h6>
 			</div>
 			<div class="col-9">
 			<ul class="admin_actu">
@@ -206,7 +208,7 @@
 	</div>
 		<div class="row align-items-center p-5" id="admin_message">
 			<div class="col-3 pl-5">
-				<h3>GESTION DES MESSAGES </h3>
+				<h6>GESTION DES MESSAGES </h6>
 			</div>
 			<div class="col-9">
 				<ul class="admin_actu">
@@ -214,7 +216,6 @@
 					<li>NOM</li>
 					<li>EMAIL</li>
 					<li>SUJET</li>
-					<!--<li>CONTENU</li>-->
 					<li>ACTION</li>
 				</ul>
 				<?php foreach($messages as $message): ?>
@@ -223,7 +224,6 @@
 					<li><?php echo $message->last_name; ?></li>
 					<li><?php echo $message->email; ?></li>
 					<li><?php echo substr($message->subject_message,0, 10); ?>...</li>
-					<!--<li><?php echo substr($message->content_message,0, 10) ?>...</li>-->
 					<li><a href="<?php echo base_url()?>pages/message/<?php echo $message->id;?>"><i class="fas fa-glasses"></i></a> <a href="<?php echo base_url()?>pages/delete_message/<?php echo $message->id;?>"><i class="fas fa-trash-alt"></i></a></li>
 				</ul>
 				<?php endforeach; ?>
@@ -231,7 +231,7 @@
 		</div>
 		<div class="row align-items-center p-5" id="admin_booking">
 			<div class="col-3 pl-5">
-				<h3>APERCU DES RESERVATIONS</h3>
+				<h6>APERCU DES RESERVATIONS</h6>
 			</div>
 			<div class="col-9">
 				<ul class="admin_book">

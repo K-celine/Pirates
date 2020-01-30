@@ -2,7 +2,7 @@
 <div id="container_register">
 	<div class="row row align-items-center p-5">
 		<div class="col-3 pl-5">
-			<h2><i class="fas fa-hand-peace"></i>CREATION D'UN COMPTE</h2>
+			<h5><i class="fas fa-hand-peace"></i>CREATION D'UN COMPTE</h5>
 		</div>
 		<div class="col-9">
 			<?php $attributes = array('id' => 'register_form', 'class' => 'form_horizontal'); ?>

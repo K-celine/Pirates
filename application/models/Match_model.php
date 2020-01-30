@@ -78,6 +78,8 @@ class Match_model extends CI_Model
 			'score_visitor' => $this->input->post('score_visitor')
 			);
 
+		$data = $this->security->xss_clean($data);
+
 		$insert_query = $this->db->insert('matchs', $data);
 
 		return $insert_query;
@@ -117,7 +119,7 @@ class Match_model extends CI_Model
 
 		if(!$this->session->userdata('logged_in')){
 
-			$this->session->set_flashdata('booking_failed' , "TU DOIS ETRE LOGGE ! ");
+			$this->session->set_flashdata('booking_failed' , "CONNEXION NECESSAIRE POUR EFFECTUER UNE RESERVATION ");
 
               redirect("home/index");
 
@@ -131,9 +133,10 @@ $data = array(
 			'user_id' => $this->session->userdata('id')
 
 		);
+			$data = $this->security->xss_clean($data);
 
 		$booked = $this->db
-		->group_start()->where('match_id' , $this->input->post('match_id'))
+		->group_start()->where('match_id' , $data['match_id'])
 		->where('user_id' , $this->session->userdata('id'))->group_end()->get('booking');
 
 		$user_book = $booked->row();
@@ -151,7 +154,6 @@ $insert_query = $this->db->insert('booking', $data);
 
 $this->session->set_flashdata('booking_ok' , "OK BOOK ! ");
 
-              redirect("home/index");
 
 return $insert_query;
 
@@ -165,6 +167,20 @@ return $insert_query;
 
 		}
 		
+	}
+	public function get_one_book($id_match)
+	{
+
+		$booked = $this->db
+          			->group_start()
+                ->where('match_id', $id_match)
+                ->where('user_id', $this->session->userdata('id'))
+         		->group_end()
+    			->get('booking');
+
+  $user_book = $booked->row();
+
+  return $user_book;
 	}
 
 }

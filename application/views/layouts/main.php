@@ -50,18 +50,17 @@
 			<li><a href="<?php echo base_url();?>pages/contact">CONTACT</a>
 				<div class="sous_menu">
             		<ul>
-            			<li><a href="<?php echo base_url();?>pages/contact/#nous_trouver">NOUS TROUVER</a></li>
-            			<li><a href="<?php echo base_url();?>pages/contact/#nous_rejoindre">NOUS REJOINDRE</a></li>
             			<li><a href="<?php echo base_url();?>pages/contact/#nous_contacter">NOUS CONTACTER</a></li>
+            			<li><a href="<?php echo base_url();?>pages/contact/#nous_rejoindre">NOUS REJOINDRE</a></li>
+            			<li><a href="<?php echo base_url();?>pages/contact/#nous_trouver">NOUS TROUVER</a></li>
             		</ul>
             	</div></li>
 			<li><a href="<?php echo base_url();?>shop/home">SHOP</a></li>
 			<?php if($this->session->userdata('role') == 1): ?>
-				<li><a href="<?php echo base_url();?>users/admin">ADMIN</a></li><br>
+				<li><a id="admin" href="<?php echo base_url();?>users/admin">ADMIN</a></li><br>
 			<?php endif; ?>
 				<?php if($this->session->userdata('logged_in')): ?>
-				<li><a href="<?php echo base_url();?>users/logout">SE DECONNECTER</a></li><br>
-				<li><a href="#">SALUT <?php echo $this->session->userdata('username');?></a></li>
+				<li><a id="deco" href="<?php echo base_url();?>users/logout">SE DECONNECTER</a></li><br>
 			<?php endif; ?>
 			<?php if($this->session->userdata('logged_in')== FALSE): ?>
 				<li><a id="compte" data-toggle="modal" data-target="#modal_compte" href="<?php echo base_url();?>users">COMPTE</a></li>
@@ -85,7 +84,6 @@
   <div class="form-group">
     <label for="InputEmail1">Adresse Email </label>
     <input type="email" name="email" class="form-control form-control-lg" id="InputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">blablabli</small>
   </div>
   <div class="form-group">
     <label for="InputPassword">Mot de passe</label>

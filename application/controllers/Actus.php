@@ -6,9 +6,10 @@
 
     	public function create_actu()
     	{
-      		$this->form_validation->set_rules('title', 'Titre', 'trim|required|min_length[2]');
-      		$this->form_validation->set_rules('content', 'Contenu', 'trim|required|min_length[2]');
-      		$this->form_validation->set_rules('date', 'Date', 'required');
+      		$this->form_validation->set_rules('title', 'Titre', 'trim|htmlspecialchars|required|min_length[2]');
+      		$this->form_validation->set_rules('content', 'Contenu', 'trim|htmlspecialchars|required|min_length[2]');
+          $this->form_validation->set_rules('photo', 'Photo', 'htmlspecialchars');
+      		$this->form_validation->set_rules('date', 'Date', 'required|htmlspecialchars');
   
 
       		if($this->form_validation->run() == FALSE){
@@ -47,8 +48,10 @@ $this->session->set_flashdata('actu_created', "ACTU AJOUTEE AVEC SUCCES ! ");
     	public function edit_actu($id_actu)
     	{
 
-      		$this->form_validation->set_rules('title', 'Titre', 'trim|required');
-      		$this->form_validation->set_rules('content', 'Contenu', 'trim|required');
+      		$this->form_validation->set_rules('title', 'Titre', 'trim|htmlspecialchars|required');
+      		$this->form_validation->set_rules('content', 'Contenu', 'trim|htmlspecialchars|required');
+          $this->form_validation->set_rules('photo', 'Photo', 'htmlspecialchars');
+          $this->form_validation->set_rules('date', 'Date', 'required|htmlspecialchars');
 
       		if($this->form_validation->run()== FALSE){
 
@@ -67,6 +70,8 @@ $this->session->set_flashdata('actu_created', "ACTU AJOUTEE AVEC SUCCES ! ");
         		'photo' => $this->input->post('photo'),
         		'date' => $this->input->post('date')
         		);
+
+            $data = $this->security->xss_clean($data);
 
         		if($this->actu_model->edit_actu($id_actu , $data)){
 

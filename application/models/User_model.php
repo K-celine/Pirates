@@ -19,6 +19,8 @@ class User_model extends CI_Model {
 			'news_subscribe'=> $this->input->post('news_subscribe')
 		);
 
+		$data = $this->security->xss_clean($data);
+
 		$this->db->where('email', $this->input->post('email'));
 		$email_exist = $this->db->get('users');
 		$result = $email_exist->row();
@@ -32,13 +34,15 @@ class User_model extends CI_Model {
 
 			$insert_data = $this->db->insert('users', $data);
 
-			if($this->input->post('news_subscribe') == 1){
+			if($data['news_subscribe'] == 1){
 
 				$data_news = array(
 			
 				'email_subscribe'	=> $this->input->post('email'),
 			
 				);
+				$data_news = $this->security->xss_clean($data_news);
+				
 
 			$insert_data_news = $this->db->insert('newsletter', $data_news);
 			

@@ -33,11 +33,11 @@ class Pages extends CI_Controller
 
 	public function contact()
 	{
-		$this->form_validation->set_rules('first_name', 'Prénom', 'trim|required|min_length[2]|alpha');
-    	$this->form_validation->set_rules('last_name', 'Nom', 'trim|required|min_length[2]|alpha');
-    	$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-    	$this->form_validation->set_rules('subject_message', 'Sujet', 'required|min_length[2]');
-    	$this->form_validation->set_rules('content_message', 'Message', 'required|min_length[2]');
+		$this->form_validation->set_rules('first_name', 'Prénom', 'htmlspecialchars|trim|required|min_length[2]|alpha');
+    	$this->form_validation->set_rules('last_name', 'Nom', 'htmlspecialchars|trim|required|min_length[2]|alpha');
+    	$this->form_validation->set_rules('email', 'Email', 'htmlspecialchars|trim|required|valid_email');
+    	$this->form_validation->set_rules('subject_message', 'Sujet', 'htmlspecialchars|required|min_length[2]');
+    	$this->form_validation->set_rules('content_message', 'Message', 'htmlspecialchars|required|min_length[2]');
 	
 
 		if($this->form_validation->run() == FALSE){

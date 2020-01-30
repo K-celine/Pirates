@@ -27,6 +27,7 @@ class Home_model extends CI_Model
 	public function subscribe_newsletter()
 	{
 		$email = $this->input->post('email_newsletter');
+		$email = $this->security->xss_clean($email);
 		$data = array(
 
 			'email_subscribe' => $email
@@ -37,7 +38,7 @@ class Home_model extends CI_Model
 
 		if(isset($result)){
 
-			$this->session->set_flashdata('newsletter_failed', "VOUS ETES DEJA INSCRIT A LA NEWSLETTER !");
+			$this->session->set_flashdata('newsletter_failed', "VOUS ETES DEJA INSCRIT A LA NEWSLETTER");
         
         	redirect('home/index');
 		}else{

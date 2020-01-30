@@ -8,7 +8,7 @@
 	<div class="row align-items-center" id="histoire">
 		<div class="col-7">
 			<div class="mx-auto">
-				<h2>Histoire du club</h2><br>
+				<h6>Histoire du club</h6><br>
 				<p>Né en 1987 grâce à l’impulsion d’un garçon discret mais passionné par ce sport, le club de Baseball de Béziers fondé par Jean-Pierre BENEZECH, a su séduire assez de licenciés pour s’engager en championnat dès le début de l’aventure (uniquement Sénoirs au départ, puis Cadets et Juniors dans les années 90 et pour finir, la création d'une section de Softball). Les joueurs ont toujours su porter fièrement les couleurs du Club des Pirates et ont pu évoluer au niveau Régional et National.</p>
 			</div>	
 		</div>
@@ -19,15 +19,15 @@
 	<div class="row align-items-center p-0" id="chiffre_cle">	
 		<div class="col-sm">
 			<span>1987</span>
-			<h2>DATE DE CREATION DU CLUB</h2>
+			<h5>DATE DE CREATION DU CLUB</h5>
 		</div>
 		<div class="col-sm">
 			<span>130</span>
-			<h2>NOMBRE D'ADHERENTS</h2>
+			<h5>NOMBRE D'ADHERENTS</h5>
 		</div>
 		<div class="col-sm">
 			<span>2FOIS</span>
-			<h2>CHAMPION OCCITANIE 2019</h2>
+			<h5>CHAMPION OCCITANIE 2019</h5>
 		</div>
 	</div>
 	<div class="row" id="palmares">
@@ -109,15 +109,15 @@
 	<div class="row align-items-center" id="organigramme">
 		<div class="col-7">
 			<div class="mx-auto">
-				<h2>Organigramme</h2><br>
-				<h3>Le Comité Directeur</h3>
+				<h5>Organigramme</h5><br>
+				<p><strong>Le Comité Directeur</strong></p>
 				<ul>
 					<li>BONNET François : Président</li>
 					<li>TEIXIDOR Lionel : Vice-président</li>
 					<li>ROUSSET Gilles : Trésorier</li>
 					<li>CASTELLI Sébastien : Secrétaire</li>
 				</ul>
-				<h3>Les autres membres du Bureau </h3>
+				<p><strong>Les autres membres du Bureau</strong></p>
 				<ul>
 					<li>FAURIE Fanny : Correspondant 12U</li>
 					<li>BAZIN Sophie : Référente 6U et 9U</li>
@@ -132,25 +132,25 @@
 	<div class="row align-items-center" id="coach">
 		<div class="col-sm">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach1.jpg" alt="BAZIN_Christophe">
-			<h3>BAZIN Christophe</h3>
+			<h6>BAZIN Christophe</h6>
 			<p>Coaching 6U 9U</p>
 			<p>06.21.04.55.36</p>
 		</div>
 		<div class="col-sm">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach2.jpg" alt="RUF_Caroline">
-			<h3>RUF Caroline</h3>
+			<h6>RUF Caroline</h6>
 			<p>Coaching 6U 9U</p>
 			<p>06 86 78 55 35</p>
 		</div>
 		<div class="col-sm">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach3.jpg" alt="OBERMAYER_Bryan">
-			<h3>OBERMAYER Bryan</h3>
+			<h6>OBERMAYER Bryan</h6>
 			<p>Coaching 12U 15U</p>
 			<p>06 69 90 59 32</p>
 		</div>
 		<div class="col-sm">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach4.jpg" alt="BEZOMBES_Laura">
-			<h3>BEZOMBES Laura</h3>
+			<h6>BEZOMBES Laura</h6>
 			<p>Coaching équipe féminine</p>
 			<p>06 24 75 59 64</p>
 		</div> 
@@ -158,7 +158,7 @@
 	<div class="row align-items-center" id="planning">
 		<div class="col-12">
 			<div class="table-responsive">
-				<h2>PLANNING DES ENTRAINEMENTS</h2>
+				<h5>PLANNING DES ENTRAINEMENTS</h5>
 				<table class="table table-bordered table-striped">
 					<thead class=" bg-warning">
 						<tr>

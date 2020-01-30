@@ -6,27 +6,72 @@ html{
 }
 
 body{
-
-    /*background: url('../images/pirates_bg1.jpg');
-    background-size: contain;*/
     font-size:1.7rem;
 }
+h2, h3, h4, h5, h6{
+	font-family: 'Mitr', sans-serif;
+	
+	
+}
+
+h2{
+	
+	font-size: 4rem;
+	letter-spacing: 0.6rem;
+	text-transform:uppercase;
+
+}
+h3{
+	font-size: 3rem;
+	letter-spacing: 0.595rem;
+	text-transform:uppercase;
+
+}
+h4{
+	font-size: 2.5rem;
+	letter-spacing: 0.583rem;
+	color: #f1ba4d;
+	text-transform:uppercase;
+}
+h5{
+	font-size: 2rem;
+	letter-spacing: 0.7rem;
+	color: #231e20;
+	text-transform:uppercase;
+}
+h6{
+	font-size: 1.8rem;
+	letter-spacing: 0.5rem;
+	color: #231e20;
+}
+
+.fas, .far{
+	color:#f1ba4d;
+}
+
 .success{
 	font-family: 'Mitr', sans-serif;
-	font-size: 1.7rem;
 	background-color: rgba(255, 255, 255,0.4);
 	border-radius: 0.5rem;
 	color:#1f5d19;
+	text-transform:uppercase;
+
+}
+.fail{
+	font-family: 'Mitr', sans-serif;
+	background-color: rgba(255, 255, 255,0.4);
+	border-radius: 0.5rem;
+	color:#B22222;
 
 }
 
 .admin-success{
 	font-family: 'Mitr', sans-serif;
-	font-size: 1.7rem;
 	border-radius: 0.5rem;
 	color:#1f5d19;
 	background-color: rgba(22, 110, 22,0.3);
 	text-align: center;
+
 
 }
 /************************FIN GLOBAL**************************/
@@ -57,7 +102,6 @@ header{
 	color: white;
 	font-family: 'Mitr', sans-serif;
 	letter-spacing: 0.583rem;
-	font-size: 1.7rem;
 	padding:1.5rem;
 	border:0.05rem solid #231e20;
 
@@ -78,7 +122,6 @@ header{
 	list-style-type: none;
 	font-family: 'Mitr', sans-serif;
 	letter-spacing: 0.583rem;
-	font-size: 1.7rem;
 	padding:1.5rem;
 	display:none;
 	min-height: 12rem;
@@ -99,15 +142,18 @@ header{
     display: flex;  
 }
 
-#compte{
+#compte, #deco{
 	color:#f1ba4d;
 }
 
-#compte:hover{
+#compte:hover , #deco:hover{
 	color:#da3730;
 	transition: all 1s ease;
 	border:0.1rem solid #332e30;
 	border-radius:0.5rem;
+}
+#admin{
+	color:#da3730;
 }
 
 
@@ -115,16 +161,13 @@ header{
 
 /****************************HOME********************************/
 
-.carousel-item h4{
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	font-size: 2rem;
+.carousel-item h5{
 	color:#231e20;
 	border-radius:0.5rem;
 
 
 }
-#carousel_item_1 h4{
+#carousel_item_1 h5{
 	
 	background-color: rgba(255, 255, 255,0.06);
 	
@@ -143,7 +186,7 @@ header{
 	background-color: #231e20;
 
 }
-#carousel_item_3 h4{
+#carousel_item_3 h5{
 	
 	
 	background-color: rgba(255, 255, 255,0.6);
@@ -170,10 +213,10 @@ header{
 	text-align:center;
 }
 
-#prochains_matchs h2{
-font-family: 'Mitr', sans-serif;
+#prochains_matchs h6{
+
 	letter-spacing: 0.583rem;
-	font-size: 1.7rem;
+	
 	color:#f1ba4d;
 	border: 0.2rem solid #f1ba4d ;
 	padding:2rem;
@@ -190,10 +233,8 @@ font-family: 'Mitr', sans-serif;
 }
 
 
-#actus h2{
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	font-size: 4rem;
+#actus h2, #actus h6{
+	
 	color:#231e20;
 	
 }
@@ -210,19 +251,11 @@ font-family: 'Mitr', sans-serif;
 	font-size:1.7rem;
 	font-family: 'Mitr', sans-serif;
 }
-#actus h4{
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	font-size: 2rem;
-	color:#231e20;
-	
-}
 
-#actus h4 .far{
-	font-size: 2rem;
+/*#actus h6 .far{
 	color:#f1ba4d;
 	
-}
+}*/
 
 #savoir_plus{
 	color: #f1ba4d;
@@ -272,23 +305,15 @@ margin:2rem 2rem 5rem 2rem;
 /****************************FIN HOME********************************/
 
 /****************************ACTU********************************/
-#one_actu h2{
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	font-size: 2.3rem;
-}
 
-#one_actu .fas{
+
+/*#one_actu .fas{
 	color: #f1ba4d;
-}
+}*/
 
 /**************************** FIN ACTU********************************/
 /****************************USERS********************************/
 
-#container_register h2{
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	font-size: 2.3rem;
 
 }
 #container_register label{
@@ -297,9 +322,9 @@ margin:2rem 2rem 5rem 2rem;
 	font-size: 1.3rem;
 	
 }
-#container_register .fas{
+/*#container_register .fas{
 	color: #f1ba4d;
-}
+}*/
 .form-check-input-newsletter{
 	margin-left: -47.5rem;
 	margin-top: 0.9rem;
@@ -341,10 +366,7 @@ margin:2rem 2rem 5rem 2rem;
 
 }
 
-#booking h2, #resultat_match h2{
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.7rem;
-	font-size: 2.1rem;
+#booking h5, #resultat_match h5{
 	color: #f1ba4d;
 
 }
@@ -400,10 +422,7 @@ color:#231e20;
 	background-image: url(../images/club/pirates_club5.jpg);
 
 }
-#standing h2{
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.7rem;
-	font-size: 2.1rem;
+#standing h5{
 	color: #231e20;
 }
 #standing_titre, #stand{
@@ -460,9 +479,7 @@ background-image: url(../images/club/pirates_club3.jpg);
 
 	height: 60rem;
 	text-align: center;
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	font-size: 1.7rem;
+	
 
 }
 
@@ -472,10 +489,10 @@ border: 0.8rem solid #f1ba4d;
 border-radius: 0.4rem;
 padding:1.5rem;
 color:white;
+font-family: 'Mitr', sans-serif;
 }
 
-#chiffre_cle h2{
-	font-size: 2rem;
+#chiffre_cle h5{
 	margin-top: 5rem;
 	color: white;
 
@@ -484,11 +501,7 @@ color:white;
 	padding:2rem;
 	text-align:center;
 }
-#planning h2{
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	font-size: 1.7rem;
-}
+
 #planning .fas{
 	font-size: 2rem;
 	color:#231e20;
@@ -510,13 +523,10 @@ color:white;
 	background-size:contain;
 	background-attachment: fixed;
 }
-#container_team h2{
-	font-family: 'Mitr', sans-serif;
-	padding-bottom: 2rem;
-	letter-spacing: 0.583rem;
+/*#container_team h5{
 	color: #f1ba4d;
 	margin-top: 2rem;
-}
+}*/
 
 #container_team p{
 	text-align:center;
@@ -538,13 +548,11 @@ color:white;
 	text-align: center;
 }
 
-#nous_trouver h2, #nous_rejoindre h2, #nous_contacter h2{
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	font-size: 2rem;
-}
 #nous_rejoindre{
 	background-color: #231e20;
+	color: white;
+}
+#nous_rejoindre h4{
 	color: white;
 }
 #nous_rejoindre .far{
@@ -589,14 +597,13 @@ color:white;
 	color:#537556;
 }
 #nous_contacter a:hover{
-	text-decoration: none;
 	color:#f1ba4d;
 }
 
 /************************FIN PAGES/CONTACT******************************/
 
 /******************************SHOP/HOME********************************/
-#container_home_shop a{
+/*#container_home_shop a{
 	text-decoration: none;
 	color:#f1ba4d;
 }
@@ -604,16 +611,13 @@ color:white;
 	color:#da3730;
 }
 
-#title_shop h2, #container_admin h2 {
+#title_shop h5, #container_admin h5 {
 	padding: 3rem;
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	font-size: 2rem;
 }
 
 #title_shop .fas{
 	color:#f1ba4d;
-}
+}*/
 
 
 
@@ -641,6 +645,23 @@ font-family: 'Mitr', sans-serif;
 	font-size: 1.3rem;
 
 
+}
+
+.menu_admin a{
+	text-decoration: none;
+	color: black;
+	font-family: 'Mitr', sans-serif;
+	letter-spacing: 0.583rem;
+	font-size: 1.7rem;
+	padding:1.5rem;
+}
+.menu_admin a:hover{
+	color: #537556;
+	transition: all 1s ease;
+}
+#container_admin h5,#container_admin nav{
+	text-align:center;
+	background-color: #f1ba4d;
 }
 
 /**************************** FIN ADMIN*****************************/
