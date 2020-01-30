@@ -132,7 +132,7 @@
    
       $this->user_model->edit_admin($id_user);
 
-      $this->session->set_flashdata('profil_edited' , "LE PROFIL A ETE MODIFIE AVEC SUCCES ! ");
+      $this->session->set_flashdata('admin_edited' , "PROFIL MODIFIE AVEC SUCCES ! ");
 
       redirect("users/admin");
     }
@@ -156,7 +156,7 @@
 
       if($result){
 
-        $this->session->set_flashdata('admin_created' , "NOUVEL ADMIN CREE AVEC SUCCES ! ");
+        $this->session->set_flashdata('admin_created' , "ADMIN AJOUTE AVEC SUCCES ! ");
 
         redirect("users/admin");
       }

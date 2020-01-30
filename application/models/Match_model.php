@@ -54,6 +54,17 @@ class Match_model extends CI_Model
 		return $query->row();
 	}
 
+	public function edit_standing($id_stand, $data)
+	{
+
+		$this->db->where('id' , $id_stand);
+
+		$this->db->update('standing', $data);
+
+		return true;
+	}
+
+
 	public function create_match()
 	{
 		$data = array(
@@ -99,6 +110,61 @@ class Match_model extends CI_Model
 		$this->db->where('id' , $id_match);
 
 		$this->db->delete('matchs');	
+	}
+
+	public function post_booking()
+	{
+
+		if(!$this->session->userdata('logged_in')){
+
+			$this->session->set_flashdata('booking_failed' , "TU DOIS ETRE LOGGE ! ");
+
+              redirect("home/index");
+
+
+		}else{
+
+$data = array(
+
+			'number_seat' => $this->input->post('number_seat'),
+			'match_id' => $this->input->post('match_id'),
+			'user_id' => $this->session->userdata('id')
+
+		);
+
+		$booked = $this->db
+		->group_start()->where('match_id' , $this->input->post('match_id'))
+		->where('user_id' , $this->session->userdata('id'))->group_end()->get('booking');
+
+		$user_book = $booked->row();
+
+		if(isset($user_book)){
+
+			$this->session->set_flashdata('booking_failed2' , "deja reserve ! ");
+			redirect("home/index");
+
+		}else{
+
+$insert_query = $this->db->insert('booking', $data);
+
+		
+
+$this->session->set_flashdata('booking_ok' , "OK BOOK ! ");
+
+              redirect("home/index");
+
+return $insert_query;
+
+
+
+
+
+		}
+
+		
+
+		}
+		
 	}
 
 }

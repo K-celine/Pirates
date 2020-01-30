@@ -10,21 +10,20 @@
 			<h2>RESERVATION</h2>
 		</div>
 		<div class="col-9"id="seat_form">
-			<form>
+			<form method="post" action="<?php echo base_url();?>matchs/booking" target=_blank>
 				<div class="form-group" >
     				<label for="choice_matchs">MATCHS : </label>
-    				<select multiple class="form-control form-control-lg" id="choice_matchs">
-      					<option>MATCH DU XX/XX/XX A XX:XX : XXX vs XXX</option>
-      					<option>MATCH DU XX/XX/XX A XX:XX : XXX vs XXX</option>
-      					<option>MATCH DU XX/XX/XX A XX:XX : XXX vs XXX</option>
-      					<option>MATCH DU XX/XX/XX A XX:XX : XXX vs XXX</option>
-      					<option>MATCH DU XX/XX/XX A XX:XX : XXX vs XXX</option>
-      					<option>MATCH DU XX/XX/XX A XX:XX : XXX vs XXX</option>
-       					<option>MATCH DU XX/XX/XX A XX:XX : XXX vs XXX</option>
-       					<option>MATCH DU XX/XX/XX A XX:XX : XXX vs XXX</option>
+    				<select multiple class="form-control form-control-lg" name="match_id" id="choice_matchs">
+    					<?php foreach($matchs as $match): ?>
+      					<option value="<?php echo $match->id; ?>">
+      						Match du <?php echo date('d/m/Y H:i', strtotime($match->match_datetime)); ?> : 
+      						<?php echo $match->name_home; ?> VS <?php echo $match->name_visitor; ?> 
+      						</option>
+      					<?php endforeach; ?>
+
     				</select>
     				<label for="seats">NOMBRE DE PLACES : </label>
-    				<select class="form-control form-control-lg" id="seats">
+    				<select name="number_seat" class="form-control form-control-lg" id="seats">
       					<option>1</option>
      					<option>2</option>
       					<option>3</option>
@@ -33,6 +32,8 @@
       					<option>6</option>
       					<option>7</option>
       					<option>8</option>
+      					<option>9</option>
+      					<option>10</option>
       				</select>
   				</div>
   				<button type="submit" class="btn" id="btn_booking">RESERVER</button>

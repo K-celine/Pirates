@@ -78,6 +78,9 @@ class User_model extends CI_Model {
 
 	public function get_list_booking()
 	{
+		$this->db->join('users', "users.id = booking.user_id" );
+		$this->db->join('matchs', "matchs.id = booking.match_id");
+
 
 		$query = $this->db->get('booking');
 		

@@ -70,7 +70,7 @@ $this->session->set_flashdata('actu_created', "ACTU AJOUTEE AVEC SUCCES ! ");
 
         		if($this->actu_model->edit_actu($id_actu , $data)){
 
-        			$this->session->set_flashdata('actu_updated' , "ACTU MODIFIEE AVEC SUCCES ! ");
+        			$this->session->set_flashdata('actu_edited' , "ACTU MODIFIEE AVEC SUCCES ! ");
 
         			redirect("users/admin");
         		}

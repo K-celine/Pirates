@@ -19,6 +19,16 @@ body{
 	color:#1f5d19;
 
 }
+
+.admin-success{
+	font-family: 'Mitr', sans-serif;
+	font-size: 1.7rem;
+	border-radius: 0.5rem;
+	color:#1f5d19;
+	background-color: rgba(22, 110, 22,0.3);
+	text-align: center;
+
+}
 /************************FIN GLOBAL**************************/
 
 /************************HEADER******************************/

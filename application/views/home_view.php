@@ -14,6 +14,9 @@
 	<?php if($this->session->flashdata('user_registered')):?>
 		<?php echo 	$this->session->flashdata('user_registered');?>
 	<?php endif; ?>
+	<?php if($this->session->flashdata('booking_ok')):?>
+		<?php echo 	$this->session->flashdata('booking_ok');?>
+	<?php endif; ?>
 </p>
 <p class="fail">
 <?php if($this->session->flashdata('newsletter_failed')):?>
@@ -22,6 +25,13 @@
 	<?php if($this->session->flashdata('registration_failed')):?>
 		<?php echo 	$this->session->flashdata('registration_failed');?>
 	<?php endif; ?>
+	<?php if($this->session->flashdata('booking_failed')):?>
+		<?php echo 	$this->session->flashdata('booking_failed');?>
+	<?php endif; ?>
+	<?php if($this->session->flashdata('booking_failed2')):?>
+		<?php echo 	$this->session->flashdata('booking_failed2');?>
+	<?php endif; ?>
+
 	</p>
 				<h4>BIENVENUE CHEZ LES PIRATES</h4>
 				<p><img src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:30rem"></p>
