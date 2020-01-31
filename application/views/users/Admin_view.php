@@ -108,22 +108,22 @@
 				<h6>GESTION DES PROFILS</h6>
 			</div>
 			<div class="col-9">
-				<ul class="admin_actu">
+				<ul class="admin_profil">
 					<li>LISTE DES ADMINS : </li>	
 				</ul>
-				<ul class="admin_actu">
+				<ul class="admin_profil">
 					<li>USERNAME</li>
 					<li>EMAIL</li>
 					<li>SUPPRIMER ADMIN</li>
 				</ul>
 				<?php foreach($list_admin as $admin): ?>
-				<ul class="admin_actu">
+				<ul class="admin_profil">
 					<li><?php echo $admin->username; ?></li>
 					<li><?php echo $admin->email; ?></li>
 					<li><a href="<?php echo base_url()?>users/edit_admin/<?php echo $admin->id;?>"><i class="fas fa-user-times"></i></i></a></li>
 				</ul>
 				<?php endforeach; ?>
-				<br><a id="btn_create_actu" href="<?php echo base_url()?>users/form_create_admin">CREER UN NOUVEL ADMIN</a>
+				<br><a id="btn_create_admin" href="<?php echo base_url()?>users/form_create_admin">CREER UN NOUVEL ADMIN</a>
 			</div>
 		</div>
 		<div class="row align-items-center p-5" id="admin_newsletter">
@@ -131,15 +131,15 @@
 				<h6>GESTION DE LA NEWSLETTER</h6>
 			</div>
 			<div class="col-9">
-				<ul class="admin_actu">
+				<ul class="admin_newsletter">
 					<li>LISTE DES INSCRITS : </li>	
 				</ul>
-				<ul class="admin_sub">
+				<ul class="admin_newsletter">
 					<li>EMAIL</li>
 					<li>IDENTIFIANT</li>
 				</ul>
 				<?php foreach($sub_newsletter as $subscribers): ?>
-				<ul class="admin_sub">
+				<ul class="admin_newsletter">
 					<li><?php echo $subscribers->email_subscribe; ?></li>
 					<li><?php echo $subscribers->id; ?></li>
 				</ul>
@@ -150,7 +150,7 @@
 			<div class="col-3 pl-5">
 			</div>
 			<div class="col-9 mb-5">
-				<a id="btn_sub_news" href="mailto:<?php foreach($sub_newsletter as $subscribers): ?><?php echo $subscribers->email_subscribe.', ' ?><?php endforeach; ?>?subject=La%20nouvelle%20Newsletter%20des%20Pirates%20est%20arrivée%20%21%20&body=Chers Supporters,%0D%0A%0D%0AVous trouverez%20ci-joint%20la%20nouvelle%20Newsletter%20des%20Pirates%20en%20attendant%20le%20prochain match.%0D%0A%0D%0ABien%20%C3%A0%20vous,%0D%0A%0D%0ALET'S%20GO%20PIRATES%20%21%20">ENVOYER NEWSLETTER</a>
+				<a id="btn_sub_newsletter" href="mailto:<?php foreach($sub_newsletter as $subscribers): ?><?php echo $subscribers->email_subscribe.', ' ?><?php endforeach; ?>?subject=La%20nouvelle%20Newsletter%20des%20Pirates%20est%20arrivée%20%21%20&body=Chers Supporters,%0D%0A%0D%0AVous trouverez%20ci-joint%20la%20nouvelle%20Newsletter%20des%20Pirates%20en%20attendant%20le%20prochain match.%0D%0A%0D%0ABien%20%C3%A0%20vous,%0D%0A%0D%0ALET'S%20GO%20PIRATES%20%21%20">ENVOYER NEWSLETTER</a>
 			</div>
 		</div>
 		<div class="row align-items-center p-5" id="admin_match">	
@@ -158,10 +158,10 @@
 			<h6>GESTION DES MATCHS</h6>
 		</div>
 		<div class="col-9">
-				<ul class="admin_actu">
+				<ul class="admin_match">
 					<li>LISTE DES MATCHS: </li>	
 				</ul>
-			<ul class="admin_actu">
+			<ul class="admin_match">
 				<li>DATE  ET  HEURE</li>
 				<li>TEAM 1</li>
 				<li>SCORE 1</li>
@@ -170,7 +170,7 @@
 				<li>ACTION</li>
 			</ul>
 			<?php foreach($list_match as $match): ?>
-			<ul class="admin_actu">
+			<ul class="admin_match">
 				<li><?php echo date('d/m/Y H:i', strtotime($match->match_datetime)); ?></li>
 				<li><?php echo $match->name_home ?><img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="" style="width:5rem"/></li>
 				<li><?php echo $match->score_home ?></li>
@@ -179,7 +179,7 @@
 				<li><a href="<?php echo base_url()?>matchs/edit_match/<?php echo $match->id;?>"><i class="fas fa-pen"></i></a> <a href="<?php echo base_url()?>matchs/delete_match/<?php echo $match->id;?>"><i class="fas fa-trash-alt"></i></a></li>
 			</ul>
 			<?php endforeach; ?>
-			<br><a id="btn_create_actu" href="<?php echo base_url()?>matchs/create_match">CREER NOUVEAU MATCH</a>
+			<br><a id="btn_create_match" href="<?php echo base_url()?>matchs/create_match">CREER NOUVEAU MATCH</a>
 		</div>
 	</div>
 	<div class="row align-items-center p-5" id="admin_standing">

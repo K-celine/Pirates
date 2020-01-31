@@ -77,7 +77,52 @@ class Pages extends CI_Controller
       		redirect("users/admin");
     	}
   	
-	
+
+
+
+	public function chat()
+    	{
+
+    		$this->input->get('task');
+    		if($this->input->get('task')== 'write'){
+
+    			$data = array(
+
+			'author' => $this->input->post('author'),
+			'content' => $this->input->post('content')
+			
+			);
+		
+			$data = $this->security->xss_clean($data);
+
+			if(!$data['author'] || !$data['content']){
+
+			//$this->session->set_flashdata('comment_failed' , "comment failed ! ");
+
+      		//redirect("/");
+	//echo json_encode(["status" =>"error" , "message"=>'one field or many are not blabla!']);
+
+			}else{
+				$this->media_model->post_comment($data);
+
+				//$this->session->set_flashdata('comment_created' , "comment created ! ");
+
+      		//redirect("/");
+				//echo json_encode(["status" =>"success" , "message"=>'comment ok!']);
+			}
+    	
+
+    		}else{
+    			
+    			$comment = $this->media_model->get_comment();
+
+    			echo json_encode($comment);
+
+    		}
+
+
+
+    	}
 }		
 
 ?>

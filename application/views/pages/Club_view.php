@@ -73,11 +73,11 @@
 				<div class="card">
 					<img src="<?php echo base_url()?>assets/images/club/pirates_club_palm4.png" class="card-img-top rounded-top" alt="pirates_club_palm4">
 					<div class="card-body">
-						<h5 class="card-title">Féminin</h5>
+						<p class="card-title">Féminin</p>
 						<ul class="card-text">
 							<li>2019 <i class="fas fa-trophy"></i> Championne d'Occitanie</li>
 						</ul>
-						<h5 class="card-title">Mixte</h5>
+						<p class="card-title">Mixte</p>
 						<ul class="card-text">	
 							<li>2019 <i class="fas fa-trophy"></i> Champion Winter Series</li>
 							<li>2019 <i class="fas fa-trophy"></i> Champion du TDP</li>
@@ -132,25 +132,25 @@
 	<div class="row align-items-center" id="coach">
 		<div class="col-sm">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach1.jpg" alt="BAZIN_Christophe">
-			<h6>BAZIN Christophe</h6>
+			<p><b>BAZIN Christophe</b></p>
 			<p>Coaching 6U 9U</p>
 			<p>06.21.04.55.36</p>
 		</div>
 		<div class="col-sm">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach2.jpg" alt="RUF_Caroline">
-			<h6>RUF Caroline</h6>
+			<p><b>RUF Caroline</b></p>
 			<p>Coaching 6U 9U</p>
 			<p>06 86 78 55 35</p>
 		</div>
 		<div class="col-sm">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach3.jpg" alt="OBERMAYER_Bryan">
-			<h6>OBERMAYER Bryan</h6>
+			<p><b>OBERMAYER Bryan</b></p>
 			<p>Coaching 12U 15U</p>
 			<p>06 69 90 59 32</p>
 		</div>
 		<div class="col-sm">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach4.jpg" alt="BEZOMBES_Laura">
-			<h6>BEZOMBES Laura</h6>
+			<p><b>BEZOMBES Laura</b></p>
 			<p>Coaching équipe féminine</p>
 			<p>06 24 75 59 64</p>
 		</div> 

@@ -134,7 +134,7 @@
 				<?php 
 
 				$data = array(
-					'class' => 'btn btn-dark btn-lg',
+					'class' => 'btn btn-secondary btn-lg',
 					'name' => 'submit',
 					'value' => 'CREER SON COMPTE'	
 				);

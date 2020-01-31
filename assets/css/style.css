@@ -1,86 +1,89 @@
-/************************GLOBAL*****************************/
+/*_____________________________________ GLOBAL ___________________________________________*/
 
 html{
-
 	font-size: 62.5%;
 }
 
 body{
+	font-family: 'Mitr', sans-serif;	
     font-size:1.7rem;
 }
-h2, h3, h4, h5, h6{
-	font-family: 'Mitr', sans-serif;
-	
-	
-}
+
+h2, h3, h4, h5, label{
+	text-transform:uppercase;	
+}*/
 
 h2{
-	
 	font-size: 4rem;
 	letter-spacing: 0.6rem;
-	text-transform:uppercase;
-
+	color:#231e20;	
 }
+
 h3{
 	font-size: 3rem;
 	letter-spacing: 0.595rem;
-	text-transform:uppercase;
-
 }
+
 h4{
 	font-size: 2.5rem;
 	letter-spacing: 0.583rem;
 	color: #f1ba4d;
-	text-transform:uppercase;
 }
+
 h5{
 	font-size: 2rem;
 	letter-spacing: 0.7rem;
 	color: #231e20;
-	text-transform:uppercase;
 }
+
 h6{
 	font-size: 1.8rem;
 	letter-spacing: 0.5rem;
 	color: #231e20;
 }
+label{
+	font-size: 1.5rem;
+	letter-spacing: 0.5rem;
+	text-transform:uppercase;
+}
 
 .fas, .far{
 	color:#f1ba4d;
 }
+.fas:hover, .far:hover{
+	color:#231e20;
+}
+
+.success , .fail, .admin-success{
+	background-color: rgba(255, 255, 255,0.4);
+	border-radius: 0.5rem;	
+}
 
 .success{
-	font-family: 'Mitr', sans-serif;
-	background-color: rgba(255, 255, 255,0.4);
-	border-radius: 0.5rem;
 	color:#1f5d19;
 	text-transform:uppercase;
-
 }
 .fail{
-	font-family: 'Mitr', sans-serif;
-	background-color: rgba(255, 255, 255,0.4);
-	border-radius: 0.5rem;
 	color:#B22222;
-
 }
 
 .admin-success{
-	font-family: 'Mitr', sans-serif;
-	border-radius: 0.5rem;
 	color:#1f5d19;
 	background-color: rgba(22, 110, 22,0.3);
 	text-align: center;
-
-
 }
-/************************FIN GLOBAL**************************/
 
-/************************HEADER******************************/
+#container_actu p,#container_club p, #container_club li, #container_club th, #container_club td,#container_team p{
+	font-family:monospace;
+}
 
-/*HEADER*/
+/*_____________________________________ FIN GLOBAL ___________________________________________*/
 
-header{
+
+/*_____________________________________ HEADER ___________________________________________*/
+
+
+header{	
 	background-color: #231e20;
 	display: flex;
     align-items: center;
@@ -93,40 +96,36 @@ header{
 
 .menu ul{
 	display:flex;
-	list-style-type: none;
-	
+	list-style-type: none;	
 }
 
 .menu>ul>li>a{
 	text-decoration: none;
 	color: white;
-	font-family: 'Mitr', sans-serif;
 	letter-spacing: 0.583rem;
 	padding:1.5rem;
 	border:0.05rem solid #231e20;
-
 }
 
+.menu>ul>li:hover .sous_menu>ul{
+    display: flex;  
+}
 .menu>ul>li>a:hover{
-	color:#f1ba4d;
-	
-	
+	color:#f1ba4d;	
 }
 
 .sous_menu ul{
-	  flex-flow: column wrap;
-	   position: absolute;
-	   background:#231e20;
-	   z-index:1;
-	   border-radius:0.5rem;
+	flex-flow: column wrap;
+	position: absolute;
+	background:#231e20;
+	z-index:1;
+	border-radius:0.5rem;
 	list-style-type: none;
-	font-family: 'Mitr', sans-serif;
 	letter-spacing: 0.583rem;
 	padding:1.5rem;
 	display:none;
 	min-height: 12rem;
 	padding-top:2rem;
-
 }
 
 .sous_menu a{
@@ -137,9 +136,6 @@ header{
 
 .sous_menu a:hover{
 	color:#f1ba4d;
-}
-.menu>ul>li:hover .sous_menu>ul{
-    display: flex;  
 }
 
 #compte, #deco{
@@ -152,60 +148,46 @@ header{
 	border:0.1rem solid #332e30;
 	border-radius:0.5rem;
 }
+
 #admin{
 	color:#da3730;
 }
 
+/*_____________________________________ FIN HEADER ___________________________________________*/
 
-/************************FIN HEADER******************************/
-
-/****************************HOME********************************/
-
-.carousel-item h5{
-	color:#231e20;
-	border-radius:0.5rem;
+/*_______________________________________  HOME  ___________________________________________*/
 
 
-}
 #carousel_item_1 h5{
-	
-	background-color: rgba(255, 255, 255,0.06);
-	
+	border-radius:0.5rem;
+	background-color: rgba(255, 255, 255,0.06);	
 }
-#carousel_item_2 a{
+
+#carousel_item_3 h5{
+	border-radius:0.5rem;
+	background-color: rgba(255, 255, 255,0.6);
+}
+
+#carousel_item_2 a, #carousel_item_3 a{
 	color:#231e20;
+	text-decoration: none;
+	background-color:#f1ba4d ;
+	border-radius:0.5rem;
+}
+
+#carousel_item_2 a{
 	padding: 1.3rem;
 	font-size:1.3rem;
-	text-decoration: none;
-	background-color:#f1ba4d ;
-	border-radius:0.5rem;
-
 }
-#carousel_item_2  a:hover{
-	color:#f1ba4d;
-	background-color: #231e20;
 
-}
-#carousel_item_3 h5{
-	
-	
-	background-color: rgba(255, 255, 255,0.6);
-	
-
-}
 #carousel_item_3 a{
-	color:#231e20;
 	padding: 1.5rem;
-	font-size:1.5rem;
-	text-decoration: none;
-	background-color:#f1ba4d ;
-	border-radius:0.5rem;
+	font-size:1.5rem;	
 }
 
-#carousel_item_3  a:hover{
+#carousel_item_2  a:hover, #carousel_item_3  a:hover{
 	color:#f1ba4d;
 	background-color: #231e20;
-
 }
 
 #prochains_matchs{
@@ -214,63 +196,39 @@ header{
 }
 
 #prochains_matchs h6{
-
 	letter-spacing: 0.583rem;
-	
 	color:#f1ba4d;
 	border: 0.2rem solid #f1ba4d ;
 	padding:2rem;
 	border-radius:0.5rem;
 	margin: 0 3rem 2rem 3rem;
-
 }
 
 #prochains_matchs strong{
 	color: #e1e1de;
 	font-size:3rem;
-	font-family: 'Mitr', sans-serif;
-
-}
-
-
-#actus h2, #actus h6{
-	
-	color:#231e20;
-	
 }
 
 #prochains_matchs span{
 	color: #5a5a57;
 	font-size:2rem;
-	font-family: 'Mitr', sans-serif;
 	padding:0 7.5rem 5rem 7.5rem;
 	display:inline-block;
 }
 #prochains_matchs p{
 	color: #5a5a57;
-	font-size:1.7rem;
-	font-family: 'Mitr', sans-serif;
 }
-
-/*#actus h6 .far{
-	color:#f1ba4d;
-	
-}*/
 
 #savoir_plus{
 	color: #f1ba4d;
-	font-family: 'Mitr', sans-serif;
 	text-decoration: none;
-
-
 }
 
 #savoir_plus:hover{
 	color:#da3730;
 	transition: all 1s ease;
-
-
 }
+
 #buttons_home{
 	background-color: #231e20;
 	justify-content: space-around;
@@ -280,9 +238,7 @@ header{
 
 #buttons_home a{
 	color:white;
-	font-family: 'Mitr', sans-serif;
 	letter-spacing: 0.583rem;
-	font-size: 1.7rem;
 	text-decoration: none;
 	border:0.1rem solid #332e30;
 	border-radius:0.5rem;
@@ -290,169 +246,117 @@ header{
 }
 
 #buttons_home a:hover{
-color:#da3730;
-transition: all 1s ease;
-	
-
-
+	color:#da3730;
+	transition: all 1s ease;
 }
 
 #logo{
-margin:2rem 2rem 5rem 2rem;
-
+	margin:2rem 2rem 5rem 2rem;
 }
 
-/****************************FIN HOME********************************/
 
-/****************************ACTU********************************/
+/*_______________________________________  FIN HOME  ___________________________________________*/
 
+/*_______________________________________  CREER UN COMPTE  _________________________________________*/
 
-/*#one_actu .fas{
-	color: #f1ba4d;
-}*/
-
-/**************************** FIN ACTU********************************/
-/****************************USERS********************************/
-
-
-}
-#container_register label{
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	font-size: 1.3rem;
-	
-}
-/*#container_register .fas{
-	color: #f1ba4d;
-}*/
 .form-check-input-newsletter{
-	margin-left: -47.5rem;
-	margin-top: 0.9rem;
-	
-
+	margin-left: -48rem;
+	margin-top: 1rem;
 }
 
-/****************************FIN USERS********************************/
+/*_______________________________________  FIN CREER UN COMPTE  _________________________________________*/
 
-
-
-/*****************************INFO MATCH*****************************/
+/*_______________________________________  PAGE INFO MATCHS  _________________________________________*/
 
 #score_titre, #score{
+	border: 1px solid #404040;
+	border-radius: 0.5rem;
+}
+
+#standing_titre, #stand{
+	border-bottom: 0.2rem solid #f1ba4d ;
+	color: #231e20;	
+}
+
+#standing_titre, #score_titre{
+	font-size: 2.1rem;
+}
+
+#standing_titre, #stand, #score_titre, #score{
 	display:flex;
 	justify-content: space-around;
-	border: 1px solid #404040 ;
-	border-radius: 0.5rem;
 	list-style-type: none;
-	align-items: center;
-	font-family: 'Mitr', sans-serif;
-
+	align-items: center;	
 }
-#booking{
-	background-color:#231e20;
-	}
 
+#score_titre{
+	color: #f1ba4d;
+}
+
+#score{
+	color: #5a5a57;	
+}
+
+#booking, #scores{
+	background-color:#231e20;
+}
 
 #seats, #choice_matchs{
 	font-size: 1.5rem;
 	border-radius: 0.5rem;
 }
 
-#booking label{
-	font-family: 'Mitr', sans-serif;
-	font-size: 1.7rem;
+#booking label, #booking h5, #resultat_match h5{
 	margin-top: 2rem;
 	color:#f1ba4d;
-
 }
 
-#booking h5, #resultat_match h5{
-	color: #f1ba4d;
-
-}
 #btn_booking{
-	font-family: 'Mitr', sans-serif;
 	margin-top: 2rem;
 	margin-bottom: 5rem;
 	border-radius: 0.5rem;
 	background-color: #f1ba4d ;
 	color: #231e20;
 	padding: 1rem;
-	font-size: 1.7rem;
-}
-#scores{
-	background-color: #231e20;
-	padding: 5rem 10rem 5rem 10rem;
-}
-#score_titre, #standing_titre{
-	color: #f1ba4d;
-	
-	font-size: 2.1rem;
+	font-size:1.5rem;
 }
 
-#score{
-	color: #5a5a57;
-	
+#scores{
+	padding: 5rem 10rem 5rem 10rem;
 }
 
 #resultat_match{
 	background-color: #6d6d6c;
 }
+
 #resultats{
-background-image: url(../images/match/pirates_match_results.jpg);
+	background-image: url(../images/match/pirates_match_results.jpg);
 	background-size:cover;
 	background-attachment: fixed;
 	height: 30rem;
 	text-align: center;
-	font-family: 'Mitr', sans-serif;
-	letter-spacing: 0.583rem;
-	
+	letter-spacing: 0.583rem;	
 }
 
 #resultats span{
-font-size: 5rem;
-border: 0.5rem solid #f1ba4d;
-border-radius: 0.6rem;
-background-color: rgba(255, 255, 255,0.3);
-color:#231e20;
-
+	font-size: 5rem;
+	border: 0.5rem solid #f1ba4d;
+	border-radius: 0.6rem;
+	background-color: rgba(255, 255, 255,0.3);
+	color:#231e20;
 }
+
 #standing{
 	padding: 5rem;
 	background-image: url(../images/club/pirates_club5.jpg);
-
-}
-#standing h5{
-	color: #231e20;
-}
-#standing_titre, #stand{
-	display:flex;
-	justify-content: space-around;
-	border-bottom: 0.2rem solid #f1ba4d ;
-	list-style-type: none;
-	align-items: center;
-	font-family: 'Mitr', sans-serif;
-	color: #231e20;
 }
 
+/*_______________________________________  FIN PAGE INFO MATCHS  _________________________________________*/
 
-
-/*****************************FIN INFO MATCH*****************************/
-
-
-/************************PAGES CLUB******************************/
-
-
-
-#container_club{
-	min-height: 100rem;
-}
+/*__________________________________________  PAGE CLUB  ____________________________________________*/
 
 #container_club .mx-auto{
 	width:60%; 
-}
-#container_club .fas{
-	color:#f1ba4d;
 }
 
 #container_club .card-body{
@@ -461,35 +365,30 @@ color:#231e20;
 }
 
 #palmares, #coach{
-	
 	background-image: url(../images/club/pirates_club5.jpg);
 	background-size: contain;
 	background-attachment: fixed;
-}	
+}
+
 #palmares ul{
 	list-style-type: none; 
 	padding-left:0.1rem;
 }
 
 #chiffre_cle{
-background-image: url(../images/club/pirates_club3.jpg);
-	
+	background-image: url(../images/club/pirates_club3.jpg);
 	background-size:cover;
 	background-attachment: fixed;
-
 	height: 60rem;
 	text-align: center;
-	
-
 }
 
 #chiffre_cle span{
-font-size: 6rem;
-border: 0.8rem solid #f1ba4d;
-border-radius: 0.4rem;
-padding:1.5rem;
-color:white;
-font-family: 'Mitr', sans-serif;
+	font-size: 6rem;
+	border: 0.8rem solid #f1ba4d;
+	border-radius: 0.4rem;
+	padding:1.5rem;
+	color:white;
 }
 
 #chiffre_cle h5{
@@ -507,15 +406,17 @@ font-family: 'Mitr', sans-serif;
 	color:#231e20;
 	color:white;
 }
+
 #planning .fas:hover{
 	transition: 1s;
 	color:#da3730;
 }
 
+/*__________________________________________  FIN PAGE CLUB  ____________________________________________*/
 
-/************************FIN PAGES CLUB******************************/
+/*__________________________________________  PAGE TEAM  ____________________________________________*/
 
-/****************************PAGES TEAM******************************/
+
 #container_team{
 	color:white;
 	text-align: center;
@@ -523,27 +424,38 @@ font-family: 'Mitr', sans-serif;
 	background-size:contain;
 	background-attachment: fixed;
 }
-/*#container_team h5{
-	color: #f1ba4d;
-	margin-top: 2rem;
-}*/
 
 #container_team p{
 	text-align:center;
 	margin: 2rem 12rem 3rem 12rem;
 }
+
 #container_team img{
 	width:70%; 
 	border-radius: 1rem;
 	border: 4mm ridge rgba(80, 80, 79, .6);
 }
 
-/**************************FIN PAGES/TEAM******************************/
+/*__________________________________________  FIN PAGE TEAM  ____________________________________________*/
 
-/****************************PAGES/CONTACT******************************/
-#container_contact .fas{
-	color:#f1ba4d;
+/*___________________________________________  PAGE MEDIA  ______________________________________________*/
+/*********************CHAT****************************/
+#container_media span{
+	font-family: monospace;
+	font-size: 1.5rem;
 }
+
+.message{
+	background-color: #231e20;
+	border-radius: 1rem;
+	color: #f1ba4d;
+	
+}
+/*********************FINCHAT****************************/
+/*__________________________________________  FIN PAGE MEDIA  ____________________________________________*/
+
+/*__________________________________________  PAGE CONTACT  ____________________________________________*/
+
 #nous_trouver, #nous_rejoindre{
 	text-align: center;
 }
@@ -552,6 +464,7 @@ font-family: 'Mitr', sans-serif;
 	background-color: #231e20;
 	color: white;
 }
+
 #nous_rejoindre h4{
 	color: white;
 }
@@ -572,7 +485,6 @@ font-family: 'Mitr', sans-serif;
 #nous_rejoindre a{
 	text-decoration: none;
 	color: #9a9a9a;
-	font-family: 'Mitr', sans-serif;
 }
 
 #nous_rejoindre div:first-child>ul>li>a:hover{
@@ -596,12 +508,12 @@ font-family: 'Mitr', sans-serif;
 	text-decoration: none;
 	color:#537556;
 }
+
 #nous_contacter a:hover{
 	color:#f1ba4d;
 }
 
-/************************FIN PAGES/CONTACT******************************/
-
+/*__________________________________________  FIN PAGE CONTACT  ____________________________________________*/
 /******************************SHOP/HOME********************************/
 /*#container_home_shop a{
 	text-decoration: none;
@@ -623,52 +535,50 @@ font-family: 'Mitr', sans-serif;
 
 /**************************** FIN SHOP/HOME*****************************/
 
-/**************************** ADMIN*****************************/
+/*__________________________________________  PAGE ADMIN ____________________________________________*/
 
-.admin_sub , .admin_book , .admin_actu{
+.admin_newsletter , .admin_book , .admin_actu, .admin_profil, .admin_match{
 	display:flex;
 	justify-content: space-between;
 	border-bottom: 0.2rem solid #f1ba4d ;
 	list-style-type: none;
 	align-items: center;
-	font-family: 'Mitr', sans-serif;
 	color: #231e20;
 }
 
-#btn_sub_news , #btn_book, #btn_create_actu{
+#btn_sub_newsletter , #btn_book, #btn_create_actu, #btn_create_admin, #btn_create_match{
 	text-decoration: none;
-font-family: 'Mitr', sans-serif;
 	border-radius: 0.5rem;
 	background-color: #f1ba4d ;
 	color: #231e20;
 	padding: 1rem;
 	font-size: 1.3rem;
-
-
 }
 
 .menu_admin a{
 	text-decoration: none;
-	color: black;
-	font-family: 'Mitr', sans-serif;
+	color: #231e20;
 	letter-spacing: 0.583rem;
-	font-size: 1.7rem;
 	padding:1.5rem;
 }
+
 .menu_admin a:hover{
 	color: #537556;
 	transition: all 1s ease;
 }
+
 #container_admin h5,#container_admin nav{
 	text-align:center;
 	background-color: #f1ba4d;
+	
 }
+#container_admin h5{
+	height: 10rem;
+	padding-top: 4rem;
+}
+/*__________________________________________  FIN PAGE ADMIN  ____________________________________________*/
 
-/**************************** FIN ADMIN*****************************/
-
-
-/************************FOOTER******************************/
-
+/*____________________________________________  FOOTER  _______________________________________________*/
 
 footer{
 	text-align:center;
@@ -679,12 +589,13 @@ footer{
 	display: flex;
     align-items: center;
     min-height: 40rem;
-
 }
+
 footer div{
 	box-sizing: border-box;
 	width:100%;
 }
+
 footer fieldset{
 	border:0.1rem solid #332e30;
 	border-radius: 0.5rem;
@@ -708,28 +619,30 @@ footer input[type=submit]{
   border-radius:0.5rem;
   border:0.1rem solid black;
   color: black;
-
 }
 
 footer legend{
-	font-family: 'Mitr', sans-serif;
 	letter-spacing: 0.4rem;
 	font-size: 1.6rem;
 	color:white;
 }
+
 .fab{
 	color:white;
 	font-size: 4rem;
 	margin-left:1.2rem;
 }
+
 .fab:hover{
 	color:#f1ba4d;
 	transition: all 1s ease;
 }
+
 .logoPirates2{
 
 	width:30rem;
 }	
 
+/*____________________________________________  FIN FOOTER  _______________________________________________*/
 
 

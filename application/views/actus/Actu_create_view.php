@@ -14,53 +14,52 @@
 			<div class="form-group pr-5">
 				<?php echo form_label('TITRE');
 
-					$data = array(
-						'class' => 'form-control form-control-lg',
-						'name' => 'title',
-						'value'=>set_value('title'));
+				$data = array(
+				'class' => 'form-control form-control-lg',
+				'name' => 'title',
+				'value'=>set_value('title'));
 
-					echo form_input($data); ?>
+				echo form_input($data); ?>
 			</div>
 			<div class="form-group pr-5">
 				<?php echo form_label('CONTENU');
 
-					$data = array(
-						'class' => 'form-control form-control-lg',
-						'name' => 'content',
-						'value'=>set_value('content'));
+				$data = array(
+				'class' => 'form-control form-control-lg',
+				'name' => 'content',
+				'value'=>set_value('content'));
 
-					echo form_textarea($data); ?>
+				echo form_textarea($data); ?>
 			</div>
 			<div class="form-group pr-5">
 				<?php echo form_label('CHARGER IMAGE');
 
-					$data = array(
-						'class' => 'form-control form-control-lg',
-						'name' => 'photo',
-						);
+				$data = array(
+				'class' => 'form-control form-control-lg',
+				'name' => 'photo');
 
-					echo form_upload($data);?>
+				echo form_upload($data);?>
 			</div>
 			<div class="form-group pr-5">
 				<?php echo form_label('DATE'); 
 
-					$data = array(
-						'class' => 'form-control form-control-lg',
-						'name' => 'date',
-						'type' => 'date',
-						'value'=>set_value('date')); 
+				$data = array(
+				'class' => 'form-control form-control-lg',
+				'name' => 'date',
+				'type' => 'date',
+				'value'=>set_value('date')); 
 
-					echo form_input($data); ?>
+				echo form_input($data); ?>
 			</div>
 			<div class="form-group pr-5">
 				<?php 
 
-					$data = array(
-						'class' => 'btn btn-dark btn-lg',
-						'name' => 'submit',
-						'value' => 'VALIDER');
+				$data = array(
+				'class' => 'btn btn-dark btn-lg',
+				'name' => 'submit',
+				'value' => 'VALIDER');
 
-					echo form_submit($data); ?>
+				echo form_submit($data); ?>
 			</div>
 				<?php echo form_close();?>
 			<div>
