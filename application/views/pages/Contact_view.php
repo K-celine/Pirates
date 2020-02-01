@@ -1,7 +1,7 @@
 <!-- ici Page Contact-->
 <div class="container mw-100" id="container_contact">
-	<div class="row align-items-center" id="nous_contacter">
-		<div class="col-7 p-5">
+	<div class="row pt-5" id="nous_contacter">
+		<div class="col-7 pt-5 pl-5">
 			<h5><i class="fas fa-envelope"></i> NOUS CONTACTER</h5><br>
 			<form method="post" action="<?php echo base_url();?>pages/contact">
 				<?php echo validation_errors("<p class='alert alert-danger'>"); ?>
@@ -25,10 +25,10 @@
   				 <button type="submit" class="btn btn-warning btn-lg">ENVOYER</button>
 			</form>
 		</div>	
-		<div class="col-5 p-5">
+		<div class="col-5 pt-5 pl-5">
 			<h5><i class="fas fa-mobile-alt"></i> AUTRES CONTACTS</h5><br>
 			<address>
-				<ul>
+				<ul class="autres_contacts">
 					<li><strong>6U: </strong>BAZIN Christophe - <a href="tel:+13115552368">06 21 04 55 36</a></li><br>
 					<li><strong>9U: </strong>BAZIN Christophe - <a href="tel:+13115552368">06 21 04 55 36</a></li><br>
 					<li><strong>12U: </strong>François BONNET: <a href="tel:+13115552368"> 06 74 68 74 19</a></li><br>

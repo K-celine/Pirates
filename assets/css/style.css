@@ -153,6 +153,10 @@ header{
 	color:#da3730;
 }
 
+#admin_logo, #compte_logo, #deco_logo{
+	display: none;
+}
+
 /*_____________________________________ FIN HEADER ___________________________________________*/
 
 /*_______________________________________  HOME  ___________________________________________*/
@@ -211,9 +215,8 @@ header{
 
 #prochains_matchs span{
 	color: #5a5a57;
-	font-size:2rem;
-	padding:0 7.5rem 5rem 7.5rem;
 	display:inline-block;
+	font-size:2rem;
 }
 #prochains_matchs p{
 	color: #5a5a57;
@@ -227,6 +230,10 @@ header{
 #savoir_plus:hover{
 	color:#da3730;
 	transition: all 1s ease;
+}
+
+.btn_home_tab{
+	display:none;
 }
 
 #buttons_home{
@@ -354,7 +361,12 @@ header{
 /*_______________________________________  FIN PAGE INFO MATCHS  _________________________________________*/
 
 /*__________________________________________  PAGE CLUB  ____________________________________________*/
-
+#container_club p, #container_club li{
+	font-size: 1.3rem;
+}
+#container_club th{
+	font-size: 1.5rem;
+}
 #container_club .mx-auto{
 	width:60%; 
 }
@@ -366,7 +378,7 @@ header{
 
 #palmares, #coach{
 	background-image: url(../images/club/pirates_club5.jpg);
-	background-size: contain;
+	background-size: cover;
 	background-attachment: fixed;
 }
 
@@ -440,15 +452,11 @@ header{
 
 /*___________________________________________  PAGE MEDIA  ______________________________________________*/
 /*********************CHAT****************************/
-#container_media span{
-	font-family: monospace;
-	font-size: 1.5rem;
-}
 
 .message{
-	background-color: #231e20;
+	background-color: #7e7e7e;
 	border-radius: 1rem;
-	color: #f1ba4d;
+	color: black;
 	
 }
 /*********************FINCHAT****************************/
@@ -501,7 +509,7 @@ header{
 }
 
 #nous_contacter{
-	min-height:50rem;
+	min-height:45rem;
 }
 
 #nous_contacter a{
@@ -512,7 +520,9 @@ header{
 #nous_contacter a:hover{
 	color:#f1ba4d;
 }
-
+.autres_contacts{
+	padding-left:1.6rem;
+}
 /*__________________________________________  FIN PAGE CONTACT  ____________________________________________*/
 /******************************SHOP/HOME********************************/
 /*#container_home_shop a{
@@ -644,5 +654,208 @@ footer legend{
 }	
 
 /*____________________________________________  FIN FOOTER  _______________________________________________*/
+
+/*_________________________________________  RESPONSIVE DESIGN TABLETTE___________________________________________*/
+
+@media screen and (max-width: 1280px)
+{
+/****************HEADER********************/
+header{
+	flex-direction: column;
+}
+
+h1{
+	margin: 0;
+}
+
+.logoPirates{
+	width: 20rem;
+}	
+#admin, #compte, #deco{
+	display:none;
+}
+
+#admin_logo, #compte_logo, #deco_logo{
+	display:inline;
+}
+
+#compte_logo i:hover, #deco_logo i:hover{
+	color:white;
+}
+
+#admin_logo i{
+	color:#da3730;
+}
+
+#admin_logo i:hover{
+	color:white;
+}
+/****************FOOTER********************/
+#foot{
+	flex-direction: column;
+}
+
+footer fieldset{
+	margin:3rem;
+}
+
+.logoPirates2{
+	margin-top:2rem;
+	margin-bottom: 3rem;
+	width:25rem;
+}	
+
+/****************HOME********************/
+
+#carousel_home{
+	display: none;
+}
+.btn_home{
+	display:none;
+}
+/*#buttons_home{
+	text-align: center;
+}*/
+
+/*#buttons_home a{
+	border-style: none;
+	/*background-color: #f1ba4d;
+	letter-spacing: 0.3rem;
+	padding:0.3rem;
+	font-size: 1.3rem;
+	/*color: #231e20;
+}*/
+
+.btn_home_tab{
+	display:block;
+}
+
+/*#prochains_matchs{
+	background-color: #231e20;
+	text-align:center;
+}
+
+#prochains_matchs h6{
+	letter-spacing: 0.583rem;
+	color:#f1ba4d;
+	border: 0.2rem solid #f1ba4d ;
+	padding:2rem;
+	border-radius:0.5rem;
+	margin: 0 3rem 2rem 3rem;
+}
+
+#prochains_matchs strong{
+	color: #e1e1de;
+	font-size:3rem;
+}
+
+#prochains_matchs span{
+	color: #5a5a57;
+	display:inline-block;
+	font-size:2rem;
+}
+#prochains_matchs p{
+	color: #5a5a57;
+}
+
+#savoir_plus{
+	color: #f1ba4d;
+	text-decoration: none;
+}
+
+#savoir_plus:hover{
+	color:#da3730;
+	transition: all 1s ease;
+}
+
+
+
+
+
+#logo{
+	margin:2rem 2rem 5rem 2rem;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+}
+/*__________________________________________  FIN RESPONSIVE DESIGN TABLETTE ________________________________________*/
+
+/*_________________________________________  RESPONSIVE DESIGN SMARTPHONE___________________________________________*/
+@media screen and (max-width: 599px)
+{
+   
+
+/*.logoPirates{
+	width: 30rem;
+}
+
+.menu ul{
+	flex-direction: column;
+	
+}
+
+.menu>ul>li>a{
+	border-style:none;
+	font-size: 2rem;
+	padding-top:1rem;
+}
+.sous-menu ul{
+	display:none;
+}
+.sous-menu a {
+	display: none;
+}
+.sous_menu>ul>li{
+    display: none;  
+}
+
+
+
+
+nav.menu a{
+	border-style:none;
+}*/
+
+
+}
+
+/*__________________________________________  FIN RESPONSIVE DESIGN SMARTPHONE ________________________________________*/
+
+
+
+
+/*____________________________________________  RESPONSIVE DESIGN  _______________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*____________________________________________  FIN RESPONSIVE DESIGN  _______________________________________________*/
 
 

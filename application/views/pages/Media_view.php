@@ -9,9 +9,9 @@
 			<?php echo form_open('pages/chat?task=write', $attributes); ?>
 			<section class="chat">
 				<div class="messages">
-					<div class="message">
-						<span class="date"> 10:10</span>
-						<span class="author"> Lior</span> :
+					<div class="message p-5">
+						<span class="date"> <b>10:10</b></span>
+						<span class="author"><b> Lior</b></span> :
 						<span class="content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis incidunt eligendi voluptatibus culpa error dolores dicta velit impedit, nobis nulla. </span>
 					</div>
 				</div>
@@ -31,7 +31,7 @@
  						<?php echo form_label('CONTENU');
 
  						$data = array(
-  							'class' => 'form-control',
+  							'class' => 'form-control form-control-lg',
   							'name' => 'content',
   							'id'=> 'content',
   							'placeholder' =>'Votre texte ici !');

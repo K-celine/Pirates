@@ -58,7 +58,7 @@ function postMessage(event)
 }
 
 
-document.querySelector('form').addEventListener('submit' , postMessage);
+document.querySelector('#chat_form').addEventListener('submit' , postMessage);
 
 
 

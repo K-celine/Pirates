@@ -157,8 +157,8 @@
 	</div>
 	<div class="row align-items-center" id="planning">
 		<div class="col-12">
-			<div class="table-responsive">
 				<h5>PLANNING DES ENTRAINEMENTS</h5>
+				<div class="table-responsive">
 				<table class="table table-bordered table-striped">
 					<thead class=" bg-warning">
 						<tr>
@@ -167,7 +167,7 @@
 							<th scope="col">Groupe des 9U</th>
 							<th scope="col">Groupe des 12U</th>
 							<th scope="col">Groupe des 15U</th>
-							<th scope="col">Groupe des 18U/Séniors</th>
+							<th scope="col">Groupe des 18U Séniors</th>
 							<th scope="col">Softball Féminin</th>
 						</tr>
 					</thead>
@@ -228,8 +228,8 @@
 						</tr>
 					</tbody>
 				</table>
-				<em>L'entrainement de  musculation est au Stade Bessou, face à la Gare du Nord, Av Clémenceau.</em>
 			</div>
+			<em>L'entrainement de  musculation est au Stade Bessou, face à la Gare du Nord, Av Clémenceau.</em>
 		</div>
 	</div>
 	<div class="row" id="terrain">

@@ -61,9 +61,12 @@
 </div>
 <div class="row align-items-center">
 	<div class="col-12" id="buttons_home">
-		<a href="<?php echo base_url();?>matchs/infos/#booking">RESERVER UNE PLACE</a>
-		<a href="<?php echo base_url();?>matchs/infos/#resultats">VOIR LES RESULTATS</a>
-		<a href="<?php echo base_url();?>matchs/infos/#standing">VOIR LE CLASSEMENT</a>
+		<a class="btn_home" href="<?php echo base_url();?>matchs/infos/#booking">RESERVER UNE PLACE</a>
+		<a class="btn_home_tab" href="<?php echo base_url();?>matchs/infos/#booking"><i class="fas fa-ticket-alt"></i><small>RESERVATION</small></a>
+		<a class="btn_home" href="<?php echo base_url();?>matchs/infos/#resultats">VOIR LES RESULTATS</a>
+		<a class="btn_home_tab" href="<?php echo base_url();?>matchs/infos/#resultats"><i class="fas fa-medal"></i><small>RESULTATS</small></a>
+		<a class="btn_home" href="<?php echo base_url();?>matchs/infos/#standing">VOIR LE CLASSEMENT</a>
+		<a class="btn_home_tab" href="<?php echo base_url();?>matchs/infos/#standing"><i class="fas fa-trophy"></i><small>CLASSEMENT</small></a>
 	</div>
 </div>
 <div class="container mw-100" id="container_home">
@@ -71,13 +74,22 @@
 		<div class="col-4" id="prochains_matchs">
 			<div class="mx-auto">
 				<h6>PROCHAINS MATCHS</h6><br>
-				<span>HOME</span>
-				<span>VISITOR</span><br>
+				<div class="row p-5">
+					<div class="col">
+						<span>HOME</span>
+					</div>
+				<div class="col">
+					<span>VISITOR</span>
+				</div>
+				</div>
+				
+				
+				
 				<?php foreach($matchs as $match): ?>
 				<p><?php echo date('d/m/Y H:i', strtotime($match->match_datetime)); ?></p>	
-				<img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="" style="width:15rem"/>
+				<img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="" style="width:30%"/>
 				<strong>VS</strong>
-				<img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="" style="width:15rem"/>
+				<img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="" style="width:30%"/>
 				
 				<?php endforeach; ?>
 			</div>	
@@ -87,7 +99,7 @@
 			<?php foreach($actus as $actu): ?>
 			<div class="row mb-5">
 				<div class="col-4" id="img_actu">
-					<img class="img_actu" src="<?php echo base_url()?>assets/images/actu/<?php echo $actu->photo; ?>" alt="<?php echo $actu->photo;?>" style="width:30rem"/>
+					<img class="img_actu" src="<?php echo base_url()?>assets/images/actu/<?php echo $actu->photo; ?>" alt="<?php echo $actu->photo;?>" style="width:100%"/>
 				</div>
 				<div class="col-8" id="content_actu">
 					<h5 class="pl-3"><i class="far fa-newspaper"></i> <?php echo $actu->title; ?></h5>
