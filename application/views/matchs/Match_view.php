@@ -6,10 +6,10 @@
 		</div>
 	</div>
 	<div class="row align-items-center" id="booking">
-		<div class="col-3">
+		<div class="col-xl-3 col-lg-12">
 			<h5>RESERVATION</h5>
 		</div>
-		<div class="col-9"id="seat_form">
+		<div class="col-xl-9 col-lg-12"id="seat_form">
 			<form method="post" action="<?php echo base_url();?>matchs/booking" target=_blank>
 				<div class="form-group" >
     				<label for="choice_matchs">MATCHS : </label>
@@ -57,19 +57,19 @@
 			<?php foreach($scores as $score): ?>
 			<ul id="score">
 				<li><?php echo date('d/m/Y H:i', strtotime($score->match_datetime)); ?></li>
-				<li><?php echo $score->name_home ?><img id="logo" src="<?php echo base_url()?><?php echo $score->image_home; ?>" alt="" style="width:7rem"/></li>
+				<li><?php echo $score->name_home ?><img id="logo" src="<?php echo base_url()?><?php echo $score->image_home; ?>" alt="image_home" style="width:7rem"/></li>
 				<li><?php echo $score->score_home ?></li>
-				<li><?php echo $score->name_visitor ?><img id="logo" src="<?php echo base_url()?><?php echo $score->image_visitor; ?>" alt="" style="width:7rem"/></li>
+				<li><?php echo $score->name_visitor ?><img id="logo" src="<?php echo base_url()?><?php echo $score->image_visitor; ?>" alt="image_visitor" style="width:7rem"/></li>
 				<li><?php echo $score->score_visitor ?></li>
 			</ul>
 			<?php endforeach; ?>
 		</div>
 	</div>
 	<div class="row align-items-center" id="standing">
-		<div class="col-3">
+		<div class="col-xl-3 col-lg-12">
 			<h5>CLASSEMENT</h5>
 		</div>
-		<div class="col-9" >
+		<div class="col-xl-9 col-lg-12" >
 			<ul id="standing_titre">
 				<li>TEAM</li>
 				<li>WIN</li>

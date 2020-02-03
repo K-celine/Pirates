@@ -6,13 +6,13 @@
 		</div>
 	</div>
 	<div class="row align-items-center" id="histoire">
-		<div class="col-7">
+		<div class="col-xl-7 col-lg-12">
 			<div class="mx-auto">
 				<h6>Histoire du club</h6><br>
 				<p>Né en 1987 grâce à l’impulsion d’un garçon discret mais passionné par ce sport, le club de Baseball de Béziers fondé par Jean-Pierre BENEZECH, a su séduire assez de licenciés pour s’engager en championnat dès le début de l’aventure (uniquement Sénoirs au départ, puis Cadets et Juniors dans les années 90 et pour finir, la création d'une section de Softball). Les joueurs ont toujours su porter fièrement les couleurs du Club des Pirates et ont pu évoluer au niveau Régional et National.</p>
 			</div>	
 		</div>
-		<div class="col-5 p-0">
+		<div class="col-xl-5 col-lg-12 p-0">
 			<img class="img-fluid" src="<?php echo base_url()?>assets/images/club/pirates_club2.jpg" alt="Pirates_baseball_team93">
 		</div>
 	</div>
@@ -105,11 +105,71 @@
 				</div>
 			</div>
 		</div>
-	</div>		
+	</div>
+	<div class="row p-5" id="palmares_tablette"	>
+		<div class="card mb-3">
+			<img src="<?php echo base_url()?>assets/images/club/pirates_club_palm5.png" class="card-img-top" alt="pirates_club_palm5">
+			<div class="card-body">
+				<h6 class="card-title">Baseball Senior</h6>
+				<ul class="card-text">
+					<li>2018 <i class="fas fa-medal"></i>  Vice-champion de France N1</li>
+					<li>2016 <i class="fas fa-trophy"></i> Champion d‘Occitanie</li>
+					<li>2016 <i class="fas fa-trophy"></i> Champion L.R°</li>
+					<li>2015 <i class="fas fa-medal"></i>  Vice-champion de France N2</li>
+					<li>2013 <i class="fas fa-trophy"></i> Champion L.R°</li>
+					<li>2012 <i class="fas fa-trophy"></i> Champion L.R°</li>
+					<li>2002 <i class="fas fa-trophy"></i> Champion de France N2</li>
+					<li>2002 <i class="fas fa-trophy"></i> Champion L.R°</li>
+					<li>2000 <i class="fas fa-trophy"></i> Champion L.R°</li>
+					<li>1998 <i class="fas fa-trophy"></i> Champion L.R°</li>
+					<li>1994 <i class="fas fa-trophy"></i> Champion L.R°</li>
+					<li>1991 <i class="fas fa-trophy"></i> Champion L.R°</li>
+				</ul>
+				<p class="card-text"><small class="text-muted">° : Languedoc-Roussillon</small></p>
+				<h6 class="card-title">Baseball 12U</h6>
+				<ul class="card-text">
+					<li>2019 <i class="fas fa-trophy"></i> Champion d’Occitanie</li>
+				</ul>	
+				<h6 class="card-title">Baseball 9U</h6>
+				<ul class="card-text"> 
+					<li>2019 <i class="fas fa-medal"></i>  Vice-champion d'Occitanie</li>
+					<li>2017 <i class="fas fa-trophy"></i> Champion d’Occitanie</li>
+				</ul>
+				<h6 class="card-title">Softball Féminin</h6>
+				<ul class="card-text">
+					<li>2019 <i class="fas fa-trophy"></i> Championne d'Occitanie</li>
+				</ul>
+				<h6 class="card-title">Softball Mixte</h6>
+				<ul class="card-text">	
+					<li>2019 <i class="fas fa-trophy"></i> Champion Winter Series</li>
+					<li>2019 <i class="fas fa-trophy"></i> Champion du TDP</li>
+					<li>2018 <i class="fas fa-trophy"></i> Champion Winter Series</li>
+					<li>2017 <i class="fas fa-trophy"></i> Champion Winter Series</li>
+					<li>2015 <i class="fas fa-trophy"></i> Champion du TDP </li>
+					<li>2015 <i class="fas fa-trophy"></i> Champion Winter Series</li>
+					<li>2014 <i class="fas fa-trophy"></i> Champion du TDP </li>
+					<li>2014 <i class="fas fa-trophy"></i> Champion Winter Series</li>
+					<li>2013 <i class="fas fa-baseball-ball"></i> Vainqueur tournoi d’Eysines</li>
+					<li>2012 <i class="fas fa-trophy"></i> Champion du TDP </li>
+					<li>2012 <i class="fas fa-trophy"></i> Champion Seventeen Series</li>
+					<li>2012 <i class="fas fa-baseball-ball"></i> Vainqueur tournoi de Poitiers</li>
+					<li>2011 <i class="fas fa-trophy"></i> Champion Seventeen Series</li>
+					<li>2011 <i class="fas fa-baseball-ball"></i> Vainqueur tournoi de Nevers</li>
+					<li>2011 <i class="fas fa-baseball-ball"></i> Vainqueur tournoi de Nevers</li>
+					<li>2010 <i class="fas fa-baseball-ball"></i> Vainqueur tournoi de Nevers</li>
+					<li>2009 <i class="fas fa-trophy"></i> Champion Seventeen Series</li>
+					<li>2008 <i class="fas fa-trophy"></i> Champion Seventeen Series</li>
+					<li>2007 <i class="fas fa-trophy"></i> Champion Winter Series</li>
+					<li>2006 <i class="fas fa-trophy"></i> Champion Winter Series</li>
+					<li>2004 <i class="fas fa-trophy"></i> Champion Winter Series</li>
+				</ul>
+			</div>
+		</div>	
+	</div>
 	<div class="row align-items-center" id="organigramme">
-		<div class="col-7">
+		<div class="col-xl-7 col-lg-12">
 			<div class="mx-auto">
-				<h5>Organigramme</h5><br>
+				<h5>Organigramme</h5>
 				<p><strong>Le Comité Directeur</strong></p>
 				<ul>
 					<li>BONNET François : Président</li>
@@ -125,30 +185,30 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-5 p-0">
+		<div class="col-xl-5 col-lg-12 p-0">
 			<img class="img-fluid" src="<?php echo base_url()?>assets/images/club/pirates_club4.jpg" alt="Pirates_baseball_organigramme">
 		</div>
 	</div>
 	<div class="row align-items-center" id="coach">
-		<div class="col-sm">
+		<div class="col-xl-3">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach1.jpg" alt="BAZIN_Christophe">
 			<p><b>BAZIN Christophe</b></p>
 			<p>Coaching 6U 9U</p>
 			<p>06.21.04.55.36</p>
 		</div>
-		<div class="col-sm">
+		<div class="col-xl-3">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach2.jpg" alt="RUF_Caroline">
 			<p><b>RUF Caroline</b></p>
 			<p>Coaching 6U 9U</p>
 			<p>06 86 78 55 35</p>
 		</div>
-		<div class="col-sm">
+		<div class="col-xl-3">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach3.jpg" alt="OBERMAYER_Bryan">
 			<p><b>OBERMAYER Bryan</b></p>
 			<p>Coaching 12U 15U</p>
 			<p>06 69 90 59 32</p>
 		</div>
-		<div class="col-sm">
+		<div class="col-xl-3">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach4.jpg" alt="BEZOMBES_Laura">
 			<p><b>BEZOMBES Laura</b></p>
 			<p>Coaching équipe féminine</p>
@@ -157,8 +217,8 @@
 	</div>
 	<div class="row align-items-center" id="planning">
 		<div class="col-12">
-				<h5>PLANNING DES ENTRAINEMENTS</h5>
-				<div class="table-responsive">
+			<h5>PLANNING DES ENTRAINEMENTS</h5>
+			<div class="table-responsive">
 				<table class="table table-bordered table-striped">
 					<thead class=" bg-warning">
 						<tr>
@@ -229,7 +289,7 @@
 					</tbody>
 				</table>
 			</div>
-			<em>L'entrainement de  musculation est au Stade Bessou, face à la Gare du Nord, Av Clémenceau.</em>
+			<small><em>L'entrainement de  musculation est au Stade Bessou, face à la Gare du Nord, Av Clémenceau.</em></small>
 		</div>
 	</div>
 	<div class="row" id="terrain">

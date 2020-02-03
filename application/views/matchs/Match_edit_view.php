@@ -1,10 +1,10 @@
 <!-- ici Match_edit_view -->
 <div id="container_edit_match">
 	<div class="row row align-items-center p-5">
-		<div class="col-3 pl-5">
-			<h3><i class="far fa-plus-square"></i> CREER UN NOUVEAU MATCH</h3>
+		<div class="col-xl-3 col-lg-12 pl-5">
+			<h5><i class="fas fa-pen"></i> EDITION D'UN MATCH</h5>
 		</div>
-		<div class="col-9">
+		<div class="col-xl-9 col-lg-12">
 <form method="post" action="<?php echo base_url();?>matchs/edit_match/<?php echo $one_match->id;?>">
   <div class="form-group">
 			<div class="input-group mb-3">
@@ -89,16 +89,16 @@
 				<?php 
 
 					$data = array(
-						'class' => 'btn btn-dark btn-lg',
+						'class' => 'btn btn-warning btn-lg',
 						'name' => 'submit',
-						'value' => 'VALIDER');
+						'value' => 'EDITER');
 
 					echo form_submit($data); ?>
 			</div>
 		</div>
 	</form>
 <div>
-				<a class="btn btn-danger" href="<?php echo base_url()?>users/admin">ANNULER</a>
+				<a class="btn btn-danger btn-lg" href="<?php echo base_url()?>users/admin">ANNULER</a>
 			</div>	
 
 			</div>

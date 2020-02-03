@@ -1,7 +1,7 @@
 <!-- ici Page Team-->
 <div class="container mw-100" id="container_team">
 	<div class="row align-items-center">
-		<div class="col-12 m-5">
+		<div class="col-12">
 			<div class="mx-auto">
 				<h4>TEAM SENIOR</h4>
 				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_Senior.jpg" alt="Pirates_baseball_team_Senior">
@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<div class="row align-items-center">
-		<div class="col-12 m-5">
+		<div class="col-12">
 			<div class="mx-auto">
 				<h4>TEAM SENIOR DH</h4>
 				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_SeniorDH.jpg" alt="Pirates_baseball_team_SeniorDH">
@@ -19,7 +19,7 @@
 		</div>
 	</div>	
 	<div class="row align-items-center">
-		<div class="col-12 m-5">
+		<div class="col-12">
 			<div class="mx-auto">
 				<h4>TEAM 15 U</h4>
 				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_15U.jpg" alt="Pirates_baseball_team_15U">
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 	<div class="row align-items-center">
-		<div class="col-12 m-5">
+		<div class="col-12">
 			<div class="mx-auto">
 				<h4>TEAM 12 U</h4>
 				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_12U.jpg" alt="Pirates_baseball_team_12U">
@@ -37,7 +37,7 @@
 		</div>
 	</div>
 	<div class="row align-items-center">
-		<div class="col-12 m-5">
+		<div class="col-12">
 			<div class="mx-auto">
 				<h4>TEAM 9 U</h4>
 				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_9U.jpg" alt="Pirates_baseball_team_9U">
@@ -46,7 +46,7 @@
 		</div>
 	</div>
 	<div class="row align-items-center">
-		<div class="col-12 m-5">
+		<div class="col-12">
 			<div class="mx-auto">
 				<h4>TEAM SOFTBALL FEMININ</h4>
 				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_SoftballFem.jpg" alt="Pirates_baseball_team_SoftballFem">
@@ -55,7 +55,7 @@
 		</div>
 	</div>	
 	<div class="row align-items-center">
-		<div class="col-12 m-5">
+		<div class="col-12">
 			<div class="mx-auto">
 				<h4>TEAM SOFTBALL MIXTE</h4>
 				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_SoftballMixte.jpg" alt="Pirates_baseball_team_SoftballMixte">

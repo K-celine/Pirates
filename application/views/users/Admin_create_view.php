@@ -1,10 +1,10 @@
 <!-- ici Admin_create_view_view-->
 <div id="container_create_admin">
-	<div class="row row align-items-center p-5">
-		<div class="col-3 pl-5">
-			<h2><i class="fas fa-hand-peace"></i>CREATION D'UN ADMIN</h2>
+	<div class="align-items-center p-5">
+		<div class="col-xl-3 col-lg-12 pl-5">
+			<h5><i class="fas fa-user-shield"></i> CREATION D'UN NOUVEL ADMIN</h5>
 		</div>
-		<div class="col-9">
+		<div class="col-xl-9 col-lg-12">
 			<?php $attributes = array('id' => 'register_form', 'class' => 'form_horizontal'); ?>
 
 			<?php echo validation_errors("<p class='alert alert-danger'>"); ?>
@@ -15,12 +15,12 @@
 				
 				<?php 
 
-				echo form_label('Email');
+				echo form_label('EMAIL');
 
 				$data = array(
 					'class' => 'form-control form-control-lg',
 					'name' => 'email',
-					'placeholder' => 'INSCRIRE email'
+					'placeholder' => 'Inscrire email'
 				);
 
 				echo form_input($data); ?>
@@ -32,7 +32,7 @@
 				<?php 
 
 				$data = array(
-					'class' => 'btn btn-dark btn-lg',
+					'class' => 'btn btn-warning btn-lg',
 					'name' => 'submit',
 					'value' => 'CREER ADMIN'	
 				);
@@ -46,7 +46,7 @@
 			<?php echo form_close();?>
 
 <div>
-				<a class="btn btn-danger" href="<?php echo base_url()?>users/admin">ANNULER</a>
+				<a class="btn btn-danger btn-lg" href="<?php echo base_url()?>users/admin">ANNULER</a>
 			</div>	
 
 		</div>

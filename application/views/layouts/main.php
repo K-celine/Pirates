@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Le site officiel des Pirates, l'équipe de baseball de Béziers"/>
 	<title>Les Pirates - Baseball Club Béziers</title>
 	<script src="https://kit.fontawesome.com/b913c81d17.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -137,7 +138,7 @@
 						</div>
 						<div>
 							<nav>
-								<legend>SUIVEZ-NOUS SUR : 
+								<legend >SUIVEZ-NOUS SUR : 
 
 
 
@@ -145,7 +146,7 @@
 									<a href="https://www.instagram.com/frenchbaseballsoftball/"><i class="fab fa-instagram"></i></a>
 									<a href="https://twitter.com/ffbs_baseball"><i class="fab fa-twitter-square"></i></a>
 
-								</lengend>
+								</legend>
 							</nav>
 
 

@@ -11,7 +11,7 @@ body{
 
 h2, h3, h4, h5, label{
 	text-transform:uppercase;	
-}*/
+}
 
 h2{
 	font-size: 4rem;
@@ -52,6 +52,7 @@ label{
 }
 .fas:hover, .far:hover{
 	color:#231e20;
+	transition:1s ease;
 }
 
 .success , .fail, .admin-success{
@@ -71,6 +72,7 @@ label{
 	color:#1f5d19;
 	background-color: rgba(22, 110, 22,0.3);
 	text-align: center;
+	margin-top: 2rem;
 }
 
 #container_actu p,#container_club p, #container_club li, #container_club th, #container_club td,#container_team p{
@@ -232,7 +234,7 @@ header{
 	transition: all 1s ease;
 }
 
-.btn_home_tab{
+.btn_home_tab, .btn_home_smart{
 	display:none;
 }
 
@@ -261,7 +263,9 @@ header{
 	margin:2rem 2rem 5rem 2rem;
 }
 
-
+.home_img_tablette{
+	display:none;
+}
 /*_______________________________________  FIN HOME  ___________________________________________*/
 
 /*_______________________________________  CREER UN COMPTE  _________________________________________*/
@@ -376,7 +380,7 @@ header{
 	overflow:scroll;
 }
 
-#palmares, #coach{
+#palmares, #palmares_tablette, #coach{
 	background-image: url(../images/club/pirates_club5.jpg);
 	background-size: cover;
 	background-attachment: fixed;
@@ -385,6 +389,10 @@ header{
 #palmares ul{
 	list-style-type: none; 
 	padding-left:0.1rem;
+}
+
+#palmares_tablette{
+	display: none;
 }
 
 #chiffre_cle{
@@ -408,6 +416,11 @@ header{
 	color: white;
 
 }	
+
+#organigramme h5{
+	padding-bottom: 3rem;
+}
+
 #coach, #planning{
 	padding:2rem;
 	text-align:center;
@@ -446,6 +459,11 @@ header{
 	width:70%; 
 	border-radius: 1rem;
 	border: 4mm ridge rgba(80, 80, 79, .6);
+}
+
+#container_team h4{
+	margin: 3rem;
+
 }
 
 /*__________________________________________  FIN PAGE TEAM  ____________________________________________*/
@@ -586,6 +604,7 @@ header{
 	height: 10rem;
 	padding-top: 4rem;
 }
+
 /*__________________________________________  FIN PAGE ADMIN  ____________________________________________*/
 
 /*____________________________________________  FOOTER  _______________________________________________*/
@@ -657,7 +676,7 @@ footer legend{
 
 /*_________________________________________  RESPONSIVE DESIGN TABLETTE___________________________________________*/
 
-@media screen and (max-width: 1280px)
+@media screen and (max-width: 1200px)
 {
 /****************HEADER********************/
 header{
@@ -667,7 +686,13 @@ header{
 h1{
 	margin: 0;
 }
+.menu>ul>li>a{
+	border-style:none;
+}
 
+.menu ul{
+	padding-left: 1rem;
+}
 .logoPirates{
 	width: 20rem;
 }	
@@ -690,6 +715,7 @@ h1{
 #admin_logo i:hover{
 	color:white;
 }
+
 /****************FOOTER********************/
 #foot{
 	flex-direction: column;
@@ -713,149 +739,283 @@ footer fieldset{
 .btn_home{
 	display:none;
 }
-/*#buttons_home{
-	text-align: center;
-}*/
-
-/*#buttons_home a{
-	border-style: none;
-	/*background-color: #f1ba4d;
-	letter-spacing: 0.3rem;
-	padding:0.3rem;
-	font-size: 1.3rem;
-	/*color: #231e20;
-}*/
 
 .btn_home_tab{
 	display:block;
+	font-size: 1.4rem;
 }
 
-/*#prochains_matchs{
+.btn_home_tab .fas:hover{
+	color:#da3730;	
+}
+.home_img_tablette{
+	display:block;
+}
+
+.success , .fail{
 	background-color: #231e20;
 	text-align:center;
+	margin:0;
 }
 
 #prochains_matchs h6{
-	letter-spacing: 0.583rem;
+	margin-top: 2rem;
+}
+#actus h2{
+	text-align: center;
+	font-size: 3rem;
+}
+
+/****************ACTU********************/
+
+#one_actu h4{
+	margin-top: 2rem;
+}
+
+#one_actu{
+	min-height:50rem;
+}
+
+/****************CLUB********************/
+
+#histoire h6, #organigramme h5{
+	margin-top: 2rem;
+}
+
+#chiffre_cle{
+	display: none;
+}
+
+#palmares_tablette{
+	display: block;
+}
+
+#palmares{
+	display: none;
+}
+
+.img-thumbnail{
+	width: 50%;
+}
+
+/****************TEAM********************/
+
+#container_team p{
+	text-align:center;
+	margin: 2rem 1rem 3rem 1rem;
+}
+
+#container_team img{
+	width:90%; 
+}
+
+/****************CONTACT********************/
+
+.autres_contacts, #nous_trouver{
+margin-bottom: 3rem;
+}
+
+#nous_rejoindre .far, #nous_trouver h5{
+	margin-top: 3rem;	
+}
+iframe{
+	width: 100%;
+}
+/****************MATCHS********************/
+
+#scores, #standing{
+	padding: 2rem 2rem;
+}
+
+#score img{
+	display: none;
+}
+
+#score_titre, #score, #standing_titre, #stand{
+	font-size: 1.5rem;
+	padding-left: 0;
+}
+
+#standing h5{
+	margin-top: 3rem;
+	margin-bottom: 4rem;
+}
+
+#standing{
+	justify-content: space-between;
+}
+
+/****************PAGE ADMIN********************/
+
+.menu_admin a{
+	letter-spacing: 0.2rem;
+	font-size: 1.5rem;
+	border-radius: 0.5rem;
+	background-color: #231e20;
+	margin: 1rem 1.5rem;
+	padding: 1.5rem;
 	color:#f1ba4d;
-	border: 0.2rem solid #f1ba4d ;
-	padding:2rem;
-	border-radius:0.5rem;
-	margin: 0 3rem 2rem 3rem;
+
 }
 
-#prochains_matchs strong{
-	color: #e1e1de;
-	font-size:3rem;
+.menu_admin{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
+}
+#container_admin nav{
+	background-color: transparent;
 }
 
-#prochains_matchs span{
-	color: #5a5a57;
-	display:inline-block;
-	font-size:2rem;
-}
-#prochains_matchs p{
-	color: #5a5a57;
-}
-
-#savoir_plus{
-	color: #f1ba4d;
-	text-decoration: none;
+#container_admin h6{
+	background-color: #231e20;
+	border-radius: 0.5rem;
+	text-align: center;
+	padding: 0.6rem;
+	margin: 3rem;
+	color:#537556;
 }
 
-#savoir_plus:hover{
-	color:#da3730;
-	transition: all 1s ease;
+.admin_match img{
+	display: none;
 }
 
+#container_admin li{
+	font-size: 1.5rem;
+}
 
+/****************ADMIN: EDIT ACTU/MATCH CREATE ACTU/ADMIN/MATCH********************/
 
+#container_create_actu h5, #container_admin_actu h5, #container_create_admin h5, 
+#container_create_match h5, #container_edit_match h5, #container_edit_stand h5, #container_register h5{
+	text-align: center;
+	margin-bottom: 2rem;
+}
 
-
-#logo{
-	margin:2rem 2rem 5rem 2rem;
-}*/
-
-
-
-
-
-
-
-
-
-
-
+#container_create_match input, #container_edit_match input{
+	font-size: 1.3rem;
+}
 
 }
 /*__________________________________________  FIN RESPONSIVE DESIGN TABLETTE ________________________________________*/
 
 /*_________________________________________  RESPONSIVE DESIGN SMARTPHONE___________________________________________*/
-@media screen and (max-width: 599px)
+@media screen and (max-width: 575px)
 {
-   
 
-/*.logoPirates{
+/****************HEADER********************/
+
+.logoPirates{
 	width: 30rem;
-}
+}	
 
 .menu ul{
+	min-height: 30rem;
 	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
 	
 }
 
 .menu>ul>li>a{
-	border-style:none;
 	font-size: 2rem;
-	padding-top:1rem;
 }
-.sous-menu ul{
-	display:none;
-}
-.sous-menu a {
+
+.sous_menu{
 	display: none;
 }
-.sous_menu>ul>li{
-    display: none;  
+
+#compte_logo{
+	padding:0;
+}
+
+/****************FOOTER********************/
+footer{
+	min-height: 50rem;
+}
+legend {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+/****************HOME********************/
+
+.btn_home_tab{
+	display: none;
+}
+
+.btn_home_smart{
+	display:block;
+}
+.btn_home_smart .fas:hover{
+	color:#da3730;
+}
+
+/****************CLUB********************/
+
+#palmares_tablette h6{
+	font-size: 1.5rem;
+}
+
+#organigramme ul{
+	padding-left: 0;
+	margin-bottom: 3rem;
+
+}
+
+#organigramme ul li{
+	font-size: 1.1rem;
 }
 
 
+/****************CONTACT********************/
 
+.autres_contacts li{
+	font-size: 1.4rem;
+}
 
-nav.menu a{
-	border-style:none;
-}*/
+/****************PAGE ADMIN********************/
+
+#container_admin h5{
+	padding-top: 3rem;
+}
+
+#container_admin h6{
+	margin: 1.5rem 0rem 3rem 0;
+}
+
+.menu_admin{
+	flex-direction: column;
+}
+
+.actu_smart, .message_smart, .booking_smart, .profil_smart{
+	display: none;
+}
+
+.admin_actu, .admin_profil, .admin_newsletter, .admin_match, .admin_message, .admin_booking{
+	padding-left: 0;
+}
+
+.admin_match:nth-child(2){
+	display: none;
+}
+
+#container_admin li{
+	font-size: 1.3rem;
+}
+
+/****************ADMIN: EDIT ACTU/MATCH CREATE ACTU/ADMIN/MATCH********************/
+
+#container_create_actu h5, #container_admin_actu h5, #container_create_admin h5, 
+#container_create_match h5, #container_edit_match h5, #container_edit_stand h5, #container_register h5{
+	font-size: 1.6rem;
+}
 
 
 }
-
 /*__________________________________________  FIN RESPONSIVE DESIGN SMARTPHONE ________________________________________*/
 
-
-
-
-/*____________________________________________  RESPONSIVE DESIGN  _______________________________________________*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*____________________________________________  FIN RESPONSIVE DESIGN  _______________________________________________*/
 
 
