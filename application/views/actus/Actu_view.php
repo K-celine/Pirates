@@ -1,5 +1,8 @@
 <!-- ici Actu_view -->
 <div class="container" id="container_actu">
+	<div>
+		<a id="retour" class="invisible" href="#top"></a>
+	</div>
 	<div class="row align-items-center" >
 		<div class="col-12 p-5">
 			<div class="row mb-5">
@@ -15,4 +18,3 @@
 		</div>
 	</div>
 </div>		
-		

@@ -16,9 +16,9 @@ public function post_comment($data)
 public function get_comment()
 	{
 
-	$this->db->order_by('date_created','asc');
+	$this->db->order_by('date_created','desc');
 
-	$this->db->limit(20);
+	$this->db->limit(10);
 
 	$query = $this->db->get('chat');
 

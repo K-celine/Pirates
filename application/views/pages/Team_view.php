@@ -1,11 +1,14 @@
-<!-- ici Page Team-->
+<!-- ici Team_view-->
 <div class="container mw-100" id="container_team">
+	<div>
+		<a id="retour" class="invisible" href="#top"></a>
+	</div>
 	<div class="row align-items-center">
 		<div class="col-12">
 			<div class="mx-auto">
-				<h4>TEAM SENIOR</h4>
+				<h4 id="team1">TEAM SENIOR</h4>
 				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_Senior.jpg" alt="Pirates_baseball_team_Senior">
-				<p>Franck Bonneville, Saville Hervieux, Germain Dufour, Charles Aubé, Chappell Guibord, Emmanuel Duval, Lucien Rémy, Georges Dujardin, Moïse Bonnot, Djeferson Cellier, Stanislas Quint, Isaac Bousquet, Maxime Dimont </p>
+				<p>Franck Bonneville, Saville Hervieux, Germain Dufour, Charles Aubé, Chappell Guibord, Emmanuel Duval, Lucien Rémy, Georges Dujardin, Moïse Bonnot, Djeferson Cellier, Stanislas Quint, Isaac Bousquet, Maxime Dimont</p>
 			</div>
 		</div>
 	</div>
@@ -48,7 +51,7 @@
 	<div class="row align-items-center">
 		<div class="col-12">
 			<div class="mx-auto">
-				<h4>TEAM SOFTBALL FEMININ</h4>
+				<h4 id="team6">TEAM SOFTBALL FEMININ</h4>
 				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_SoftballFem.jpg" alt="Pirates_baseball_team_SoftballFem">
 				<p>Célia Daucourt, Thérèse Clérisseau, Elise Loupert, Abélia Badeaux, Bérengère Delafose, Alexia Bombelles, Émilienne Neri, Laëtitia Boudreaux</p>
 			</div>	

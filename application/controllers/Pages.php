@@ -94,23 +94,18 @@ class Pages extends CI_Controller
 			);
 		
 			$data = $this->security->xss_clean($data);
+			$data = html_escape($data);
+			
+				if(!$data['author'] || !$data['content']){
 
-			if(!$data['author'] || !$data['content']){
 
-			//$this->session->set_flashdata('comment_failed' , "comment failed ! ");
+					echo json_encode(["status" =>"error"]);
 
-      		//redirect("/");
-	//echo json_encode(["status" =>"error" , "message"=>'one field or many are not blabla!']);
+				}else{
+					$this->media_model->post_comment($data);
+					echo json_encode(["status" =>"succes"]);
 
-			}else{
-				$this->media_model->post_comment($data);
-
-				//$this->session->set_flashdata('comment_created' , "comment created ! ");
-
-      		//redirect("/");
-				//echo json_encode(["status" =>"success" , "message"=>'comment ok!']);
-			}
-    	
+    			}
 
     		}else{
     			

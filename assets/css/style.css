@@ -79,11 +79,43 @@ label{
 	font-family:monospace;
 }
 
+a#retour{
+  border-radius:0.3rem;
+  padding:1.5rem;
+  font-size:1.5rem;
+  text-align:center;
+  color:#fff;
+  background:rgba(241, 186, 77, 0.5);
+  position:fixed;
+  right:2rem;
+  opacity:1;
+  z-index:99999;
+  transition:all ease-in 0.2s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-decoration: none;
+}
+a#retour:before{ content: "\25b2"; }
+a#retour:hover{
+  background:rgba(241, 186, 77, 1);
+  transition:all ease-in 0.2s;
+}
+a#retour.invisible{
+  bottom:-3.5rem;
+  opacity:0;
+  transition:all ease-in 0.5s;
+}
+
+a#retour.visible{
+  bottom:2rem;
+  opacity:1;
+   transition:all ease-in 0.5s;
+
+}
 /*_____________________________________ FIN GLOBAL ___________________________________________*/
 
 
 /*_____________________________________ HEADER ___________________________________________*/
-
 
 header{	
 	background-color: #231e20;
@@ -263,7 +295,7 @@ header{
 	margin:2rem 2rem 5rem 2rem;
 }
 
-.home_img_tablette{
+#home_img_tablette{
 	display:none;
 }
 /*_______________________________________  FIN HOME  ___________________________________________*/
@@ -469,15 +501,50 @@ header{
 /*__________________________________________  FIN PAGE TEAM  ____________________________________________*/
 
 /*___________________________________________  PAGE MEDIA  ______________________________________________*/
-/*********************CHAT****************************/
 
-.message{
-	background-color: #7e7e7e;
-	border-radius: 1rem;
-	color: black;
+#container_media{
+	color:white;
+	background-image: url(../images/media/pirates_media_fond.jpg);
+	background-size:cover;
+	background-attachment: fixed;
+}
+
+#container_media h4{
+	text-align: center;
+	padding-top: 2rem;
+}
+.messages{
+	/*background-color: rgba(105,105,105, 0.7);*/
+	background-color: rgba(241, 186, 77, 0.75);
+	/*background-color: rgba(255,255,255, 0.5);*/
+	border-radius: 0.5rem;
+	color:black;
+	padding: 2rem;
 	
 }
-/*********************FINCHAT****************************/
+.content{
+	color:#303030;
+}
+
+.grid {
+  text-align: center;
+  max-width: 95vw;
+  margin: 2.5vw auto;
+  max-width: 100%;
+}
+
+.grid-item {
+  padding: 5px;
+  box-sizing: border-box;
+    display:inline;
+    width: 33%;
+      max-width: 100%;
+}
+.grid-item img{
+  max-width: 100%;
+}
+
+
 /*__________________________________________  FIN PAGE MEDIA  ____________________________________________*/
 
 /*__________________________________________  PAGE CONTACT  ____________________________________________*/
@@ -678,6 +745,9 @@ footer legend{
 
 @media screen and (max-width: 1200px)
 {
+	 .grid-item {
+    width: 33.333%;
+  }
 /****************HEADER********************/
 header{
 	flex-direction: column;
@@ -1012,8 +1082,10 @@ legend {
 #container_create_match h5, #container_edit_match h5, #container_edit_stand h5, #container_register h5{
 	font-size: 1.6rem;
 }
+/****************MEDIA********************/
 
-
+.grid-item {
+    width: 50%;
 }
 /*__________________________________________  FIN RESPONSIVE DESIGN SMARTPHONE ________________________________________*/
 

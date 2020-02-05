@@ -1,5 +1,8 @@
-<!-- ici Page Club-->
+<!-- ici Club_view-->
 <div class="container mw-100" id="container_club">
+	<div>
+		<a id="retour" class="invisible" href="#top"></a>
+	</div>
 	<div class="row">
 		<div class="col-12 p-0">
 			<img class="img-fluid" src="<?php echo base_url()?>assets/images/club/pirates_club1.jpg" alt="Pirates_baseball_gants">

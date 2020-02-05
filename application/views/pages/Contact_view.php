@@ -1,28 +1,31 @@
-<!-- ici Page Contact-->
+<!-- ici Contact_view-->
 <div class="container mw-100" id="container_contact">
+	<div>
+		<a id="retour" class="invisible" href="#top"></a>
+	</div>
 	<div class="row pt-xl-5" id="nous_contacter">
 		<div class="col-xl-7 pt-5 pl-5 col-lg-12">
 			<h5><i class="fas fa-envelope"></i> NOUS CONTACTER</h5><br>
 			<form method="post" action="<?php echo base_url();?>pages/contact">
 				<?php echo validation_errors("<p class='alert alert-danger'>"); ?>
- 				<div class="row form-group">
-    				<div class="col">
-      					<input type="text" class="form-control form-control-lg" name="last_name" placeholder="Nom">
-    				</div>
-    				<div class="col">
-      					<input type="text" class="form-control form-control-lg" name="first_name" placeholder="Prenom">
-    				</div>
-  				</div>
-  				<div class="form-group">
-    				<input type="email" class="form-control form-control-lg" name="email" placeholder="Email">
-  				</div>
-  				<div class="form-group">
-    				<input type="text" class="form-control form-control-lg" name="subject_message" placeholder="Objet">
-  				</div>
-  				<div class="form-group">
-    				<textarea class="form-control form-control-lg" name="content_message" placeholder="Votre message..." rows="5"></textarea>
-  				</div>
-  				 <button type="submit" class="btn btn-warning btn-lg">ENVOYER</button>
+				<div class="row form-group">
+					<div class="col">
+						<input type="text" class="form-control form-control-lg" name="last_name" placeholder="Nom">
+					</div>
+					<div class="col">
+						<input type="text" class="form-control form-control-lg" name="first_name" placeholder="Prenom">
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="email" class="form-control form-control-lg" name="email" placeholder="Email">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control form-control-lg" name="subject_message" placeholder="Objet">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control form-control-lg" name="content_message" placeholder="Votre message..." rows="5"></textarea>
+				</div>
+				<button type="submit" class="btn btn-warning btn-lg">ENVOYER</button>
 			</form>
 		</div>	
 		<div class="col-xl-5 pt-5 pl-5 col-lg-12">
@@ -74,17 +77,4 @@
 			</address>
 		</div>
 	</div>
-</div>	
-	
-
-
-
-
-
-
-
-
-
-
-
 </div>
