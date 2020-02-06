@@ -40,9 +40,9 @@
 			<li><a href="<?php echo base_url();?>pages/media">MEDIA</a>
 				<div class="sous_menu">
 					<ul>
+						<li><a href="<?php echo base_url();?>pages/media/#presse">PRESSE</a></li>
 						<li><a href="<?php echo base_url();?>pages/media/#galerie">GALERIE</a></li>
 						<li><a href="<?php echo base_url();?>pages/media/#chat">CHAT</a></li>
-						<li><a href="<?php echo base_url();?>pages/media/#presse">PRESSE</a></li>
 					</ul>
 				</div>
 			</li>

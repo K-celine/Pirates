@@ -22,12 +22,10 @@ $number_seat= $info_book->number_seat;
 $html = '
 
 <h3 style="text-align:center">RESERVATION : </h3>
-<div style=" border:0.7px solid black;">
+<div style="border:0.7px solid black; background-color: #FFFFF0;">
 <p>&nbsp;<img src="'.base_url().'assets/images/home/logos/Pirates.png" alt="logoPirates" width="90"/></p>
-<h2>&nbsp;Ticket n° '.$book_id.' </b>&nbsp;&nbsp;&nbsp;&nbsp;<b>Réservé par :'.$last_name.' '.$first_name.'</h2>
-<p>&nbsp;<b>Username : </b> '.$username.'&nbsp;&nbsp;&nbsp;&nbsp; <b> Adresse Email : </b> '.$email.'</p>
-<p>&nbsp;<b>Date et Heure du Match :</b> '.$match_datetime.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Nombre de places :</b> '.$number_seat.'</p>
-<p>&nbsp;<b>Equipe à domicile :</b> ' .$name_home.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Equipe visiteur: </b> '.$name_visitor.'</p>
+<h3>&nbsp;TICKET N° '.$book_id.'&nbsp;&nbsp;&nbsp;&nbsp;PROPRIETAIRE :&nbsp;'.$last_name.' '.$first_name.'&nbsp;&nbsp;&nbsp;NOMBRE DE PLACES :&nbsp;'.$number_seat.'</h3>
+<p>&nbsp;<b>MATCH DU :&nbsp;</b>'.$match_datetime.'&nbsp;&nbsp;&nbsp;<b>HOME :&nbsp;</b>'.$name_home.'&nbsp;&nbsp;&nbsp;&nbsp;<b>VISITOR :&nbsp;</b>'.$name_visitor.'</p>
 </div>
 ';
 $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);

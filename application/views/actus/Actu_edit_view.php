@@ -13,12 +13,12 @@
 			echo form_open('actus/edit_actu/'.$one_actu->id.'' , $attributes);?>
 			<div class="form-group">
 				<?php echo form_label('TITRE');
-				$data = array('class' => 'form-control form-control-lg','name' => 'title','value' => 	$one_actu->title); 
+				$data = array('class' => 'form-control form-control-lg','name' => 'title','value' => $one_actu->title); 
 				echo form_input($data); ?>
 			</div>
 			<div class="form-group">
 				<?php echo form_label('CONTENU');
-				$data = array('class' => 'form-control form-control-lg','name' => 'content','value' => $one_actu->content); 
+				$data = array('class' => 'form-control form-control-lg','name' => 'content', 'value' => $one_actu->content); 
 				echo form_textarea($data); ?>
 			</div>
 			<div class="form-group">

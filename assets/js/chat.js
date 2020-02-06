@@ -28,11 +28,13 @@ function getMessages()
 		messages.innerHTML = html;
 		messages.scrollTop = messages.scrollHeight;
 	}
-
-	
 }
 
 getMessages();
+
+/**********************DONNEES**************************/
+/**********************FONCTION**************************/
+
 
 
 function postMessage(event)
@@ -59,7 +61,7 @@ function postMessage(event)
 			
 
 			if(reponse['status'] == 'error'){
-					alert("fuck you");
+					alert("Veuillez remplir le champ 'contenu'");
 
 			}else{
 			
@@ -75,6 +77,8 @@ function postMessage(event)
 
 }
 
+
+/**********************CODE PRINCIPAL**************************/
 
 document.querySelector('#chat_form').addEventListener('submit' , postMessage);
 

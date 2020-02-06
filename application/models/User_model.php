@@ -1,138 +1,118 @@
 <?php 
 
 
-class User_model extends CI_Model {
+	class User_model extends CI_Model {
 
 
-	public function create_user()
-	{
+		public function create_user($data)
+		{
 
-		$pass_encrypted = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
+			$this->db->where('email', $this->input->post('email'));
 
-		$data = array(
+			$email_exist = $this->db->get('users');
 
-			'first_name' 	=> $this->input->post('first_name'),
-			'last_name' 	=> $this->input->post('last_name'),
-			'email'		 	=> $this->input->post('email'),
-			'username' 	 	=> $this->input->post('username'),
-			'password'	 	=> $pass_encrypted,
-			'news_subscribe'=> $this->input->post('news_subscribe')
-		);
+			$result = $email_exist->row();
 
-		$data = $this->security->xss_clean($data);
+			if(isset($result)){
 
-		$this->db->where('email', $this->input->post('email'));
-		$email_exist = $this->db->get('users');
-		$result = $email_exist->row();
-
-		if(isset($result)){
-
-			$this->session->set_flashdata('registration_failed', "VOUS AVEZ DEJA UN COMPTE AVEC CETTE ADRESSE EMAIL !");
+				$this->session->set_flashdata('registration_failed', "VOUS AVEZ DEJA UN COMPTE AVEC CETTE ADRESSE EMAIL !");
         
-        	redirect('home/index');
-		}else{
+        		redirect('home/index');
+			}else{
 
-			$insert_data = $this->db->insert('users', $data);
+				$insert_data = $this->db->insert('users', $data);
 
-			if($data['news_subscribe'] == 1){
+				if($data['news_subscribe'] == 1){
 
-				$data_news = array(
+					$data_news = array(
 			
-				'email_subscribe'	=> $this->input->post('email'),
-			
-				);
-				$data_news = $this->security->xss_clean($data_news);
+					'email_subscribe'	=> $this->input->post('email'));
 				
+					$data_news = $this->security->xss_clean($data_news);
 
-			$insert_data_news = $this->db->insert('newsletter', $data_news);
-			
+					$insert_data_news = $this->db->insert('newsletter', $data_news);
+				}
+
+				return $insert_data;
 			}
+		}
 
+
+		public function login_user($email, $password)
+		{
 		
+			$this->db->where('email', $email);
 
-		return $insert_data;
-	}
+			$result = $this->db->get('users');
 
-}
-	public function login_user($email, $password)
-	{
+			$db_password = $result->row(5)->password;
+
+			if(password_verify($password, $db_password)) {
+
+				return $result->row();
+			}else{
+
+				return false;
+			}
+		}
+
+
+		public function get_list_sub_newsletter()
+		{
+
+			$query = $this->db->get('newsletter');
 		
-		$this->db->where('email', $email);
+			return $query->result();
+		}
 
-		$result = $this->db->get('users');
 
-		$db_password = $result->row(5)->password;
+		public function get_list_booking()
+		{
+			
+			$this->db->join('users', "users.id = booking.user_id" );
+		
+			$this->db->join('matchs', "matchs.id = booking.match_id");
 
-		if(password_verify($password, $db_password)) {
+			$query = $this->db->get('booking');
+		
+			return $query->result();
+		}
 
-			return $result->row();
-		}else{
 
-			return false;
+		public function get_list_admin()
+		{
+
+			$this->db->where('role =' , 1);
+
+			$query = $this->db->get('users');
+		
+			return $query->result();
+		}
+
+
+		public function edit_admin($id_user)
+		{
+		
+			$this->db->where('id' , $id_user);
+
+			$this->db->set('role' , 0);
+
+			$this->db->update('users');
+
+			return true;
+		}
+
+
+		public function create_admin($email)
+		{
+	
+			$this->db->where('email', $email);
+
+			$this->db->set('role' , 1);
+
+			$this->db->update('users');
+
+			return true;
 		}
 	}
-
-	public function get_list_sub_newsletter()
-	{
-
-		$query = $this->db->get('newsletter');
-		
-		return $query->result();
-	}
-
-	public function get_list_booking()
-	{
-		$this->db->join('users', "users.id = booking.user_id" );
-		$this->db->join('matchs', "matchs.id = booking.match_id");
-
-
-		$query = $this->db->get('booking');
-		
-		return $query->result();
-	}
-
-	public function get_list_admin()
-	{
-
-		$this->db->where('role =' , 1);
-
-		$query = $this->db->get('users');
-		
-		return $query->result();
-	}
-
-	public function edit_admin($id_user)
-	{
-		
-		$this->db->where('id' , $id_user);
-
-		$this->db->set('role' , 0);
-
-		$this->db->update('users');
-
-		return true;
-
-	}
-
-	public function create_admin($email)
-	{
-	
-		
-		$this->db->where('email', $email);
-
-		$this->db->set('role' , 1);
-
-		$this->db->update('users');
-
-		return true;
-	
-	}
-	
-	
-	
-
-
-
-}
-
 ?>

@@ -139,7 +139,7 @@
 					</div>
 					<div class="col-8" id="content_actu">
 						<h5 class="pl-3"><i class="far fa-newspaper"></i> <?php echo $actu->title; ?></h5>
-						<p class="p-3"> <?php echo substr($actu->content,0, 100) ?>...</p>
+						<p class="pl-3"> <?php echo substr($actu->content,0, 99) ?>...</p>
 						<p class="pl-3"><a id="savoir_plus" href="<?php echo base_url()?>home/actu/<?php echo $actu->id; ?> "><small><em>en savoir plus...</em> </small></a></p>
 						<p class="pl-3"><small><?php echo date('d/m/Y', strtotime($actu->date)) ; ?></small></p>	
 					</div>

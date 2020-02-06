@@ -114,7 +114,6 @@ a#retour.visible{
 }
 /*_____________________________________ FIN GLOBAL ___________________________________________*/
 
-
 /*_____________________________________ HEADER ___________________________________________*/
 
 header{	
@@ -144,6 +143,7 @@ header{
 .menu>ul>li:hover .sous_menu>ul{
     display: flex;  
 }
+
 .menu>ul>li>a:hover{
 	color:#f1ba4d;	
 }
@@ -252,6 +252,7 @@ header{
 	display:inline-block;
 	font-size:2rem;
 }
+
 #prochains_matchs p{
 	color: #5a5a57;
 }
@@ -309,7 +310,7 @@ header{
 
 /*_______________________________________  FIN CREER UN COMPTE  _________________________________________*/
 
-/*_______________________________________  PAGE INFO MATCHS  _________________________________________*/
+/*_______________________________________  MATCHS  _________________________________________*/
 
 #score_titre, #score{
 	border: 1px solid #404040;
@@ -394,15 +395,18 @@ header{
 	background-image: url(../images/club/pirates_club5.jpg);
 }
 
-/*_______________________________________  FIN PAGE INFO MATCHS  _________________________________________*/
+/*_________________________________________  FIN MATCHS  ___________________________________________*/
 
-/*__________________________________________  PAGE CLUB  ____________________________________________*/
+/*_____________________________________________  CLUB  _____________________________________________*/
+
 #container_club p, #container_club li{
 	font-size: 1.3rem;
 }
+
 #container_club th{
 	font-size: 1.5rem;
 }
+
 #container_club .mx-auto{
 	width:60%; 
 }
@@ -469,10 +473,9 @@ header{
 	color:#da3730;
 }
 
-/*__________________________________________  FIN PAGE CLUB  ____________________________________________*/
+/*__________________________________________  FIN CLUB  ____________________________________________*/
 
-/*__________________________________________  PAGE TEAM  ____________________________________________*/
-
+/*___________________________________________   TEAM  ______________________________________________*/
 
 #container_team{
 	color:white;
@@ -495,12 +498,11 @@ header{
 
 #container_team h4{
 	margin: 3rem;
-
 }
 
-/*__________________________________________  FIN PAGE TEAM  ____________________________________________*/
+/*__________________________________________  FIN  TEAM  ____________________________________________*/
 
-/*___________________________________________  PAGE MEDIA  ______________________________________________*/
+/*___________________________________________   MEDIA  ______________________________________________*/
 
 #container_media{
 	color:white;
@@ -511,43 +513,66 @@ header{
 
 #container_media h4{
 	text-align: center;
-	padding-top: 2rem;
 }
+
+#gallery h4{
+	padding-left: 45%;
+	padding-top: 5rem;
+}
+
 .messages{
-	/*background-color: rgba(105,105,105, 0.7);*/
 	background-color: rgba(241, 186, 77, 0.75);
-	/*background-color: rgba(255,255,255, 0.5);*/
 	border-radius: 0.5rem;
 	color:black;
 	padding: 2rem;
-	
 }
+
 .content{
 	color:#303030;
 }
 
-.grid {
-  text-align: center;
-  max-width: 95vw;
-  margin: 2.5vw auto;
-  max-width: 100%;
+.grid,.grid-item1 img,.grid-item2 img,.grid-item3 img{
+	max-width: 100%;
 }
 
-.grid-item {
-  padding: 5px;
-  box-sizing: border-box;
-    display:inline;
-    width: 33%;
-      max-width: 100%;
+.grid-item1, .grid-item2, .grid-item3{
+	padding: 5px;
+	box-sizing: border-box;
+	display:inline;
+	width: 33%;
+	max-width: 100%;
+	position: relative;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
 }
-.grid-item img{
-  max-width: 100%;
+
+.selected1, .selected2, .selected3{
+	z-index: 1;
+	-webkit-transform: scale(1.7);
+	background: rgba(0, 0, 0, 0.5);
 }
 
+.selected1{
+	transform: scale(1.7) translateX(25rem);
+}
 
-/*__________________________________________  FIN PAGE MEDIA  ____________________________________________*/
+.selected2{
+	transform: scale(1.7);
+}
 
-/*__________________________________________  PAGE CONTACT  ____________________________________________*/
+.selected3{
+	transform: scale(1.7) translateX(-25rem);
+}
+
+#gallery{
+	background-color: #231e20;
+}
+
+/*__________________________________________  FIN MEDIA  ____________________________________________*/
+
+/*__________________________________________  CONTACT  ______________________________________________*/
 
 #nous_trouver, #nous_rejoindre{
 	text-align: center;
@@ -561,6 +586,7 @@ header{
 #nous_rejoindre h4{
 	color: white;
 }
+
 #nous_rejoindre .far{
 	font-size:8rem;
 	margin-bottom:5rem;
@@ -605,32 +631,14 @@ header{
 #nous_contacter a:hover{
 	color:#f1ba4d;
 }
+
 .autres_contacts{
 	padding-left:1.6rem;
 }
-/*__________________________________________  FIN PAGE CONTACT  ____________________________________________*/
-/******************************SHOP/HOME********************************/
-/*#container_home_shop a{
-	text-decoration: none;
-	color:#f1ba4d;
-}
-#container_home_shop a:hover{
-	color:#da3730;
-}
 
-#title_shop h5, #container_admin h5 {
-	padding: 3rem;
-}
+/*__________________________________________  FIN CONTACT  ____________________________________________*/
 
-#title_shop .fas{
-	color:#f1ba4d;
-}*/
-
-
-
-/**************************** FIN SHOP/HOME*****************************/
-
-/*__________________________________________  PAGE ADMIN ____________________________________________*/
+/*____________________________________________   ADMIN _______________________________________________*/
 
 .admin_newsletter , .admin_book , .admin_actu, .admin_profil, .admin_match{
 	display:flex;
@@ -672,7 +680,7 @@ header{
 	padding-top: 4rem;
 }
 
-/*__________________________________________  FIN PAGE ADMIN  ____________________________________________*/
+/*__________________________________________  FIN  ADMIN  ____________________________________________*/
 
 /*____________________________________________  FOOTER  _______________________________________________*/
 
@@ -745,10 +753,8 @@ footer legend{
 
 @media screen and (max-width: 1200px)
 {
-	 .grid-item {
-    width: 33.333%;
-  }
 /****************HEADER********************/
+
 header{
 	flex-direction: column;
 }
@@ -756,6 +762,7 @@ header{
 h1{
 	margin: 0;
 }
+
 .menu>ul>li>a{
 	border-style:none;
 }
@@ -763,9 +770,11 @@ h1{
 .menu ul{
 	padding-left: 1rem;
 }
+
 .logoPirates{
 	width: 20rem;
-}	
+}
+
 #admin, #compte, #deco{
 	display:none;
 }
@@ -785,8 +794,8 @@ h1{
 #admin_logo i:hover{
 	color:white;
 }
-
 /****************FOOTER********************/
+
 #foot{
 	flex-direction: column;
 }
@@ -800,12 +809,12 @@ footer fieldset{
 	margin-bottom: 3rem;
 	width:25rem;
 }	
-
 /****************HOME********************/
 
 #carousel_home{
 	display: none;
 }
+
 .btn_home{
 	display:none;
 }
@@ -818,6 +827,7 @@ footer fieldset{
 .btn_home_tab .fas:hover{
 	color:#da3730;	
 }
+
 .home_img_tablette{
 	display:block;
 }
@@ -831,11 +841,11 @@ footer fieldset{
 #prochains_matchs h6{
 	margin-top: 2rem;
 }
+
 #actus h2{
 	text-align: center;
 	font-size: 3rem;
 }
-
 /****************ACTU********************/
 
 #one_actu h4{
@@ -845,7 +855,6 @@ footer fieldset{
 #one_actu{
 	min-height:50rem;
 }
-
 /****************CLUB********************/
 
 #histoire h6, #organigramme h5{
@@ -867,7 +876,6 @@ footer fieldset{
 .img-thumbnail{
 	width: 50%;
 }
-
 /****************TEAM********************/
 
 #container_team p{
@@ -878,7 +886,27 @@ footer fieldset{
 #container_team img{
 	width:90%; 
 }
+/****************MEDIA**********************/
 
+.selected1, .selected2, .selected3{
+	-webkit-transform: scale(2);
+}
+
+.selected1{
+	transform: scale(2) translateX(10rem);
+}
+
+.selected2{
+	transform: scale(2);
+}
+
+.selected3{
+	transform: scale(2) translateX(-10rem);
+}
+
+#gallery h4 {
+    padding-left: 40%;
+} 
 /****************CONTACT********************/
 
 .autres_contacts, #nous_trouver{
@@ -888,6 +916,7 @@ margin-bottom: 3rem;
 #nous_rejoindre .far, #nous_trouver h5{
 	margin-top: 3rem;	
 }
+
 iframe{
 	width: 100%;
 }
@@ -914,7 +943,6 @@ iframe{
 #standing{
 	justify-content: space-between;
 }
-
 /****************PAGE ADMIN********************/
 
 .menu_admin a{
@@ -925,15 +953,14 @@ iframe{
 	margin: 1rem 1.5rem;
 	padding: 1.5rem;
 	color:#f1ba4d;
-
 }
 
 .menu_admin{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	
 }
+
 #container_admin nav{
 	background-color: transparent;
 }
@@ -954,7 +981,6 @@ iframe{
 #container_admin li{
 	font-size: 1.5rem;
 }
-
 /****************ADMIN: EDIT ACTU/MATCH CREATE ACTU/ADMIN/MATCH********************/
 
 #container_create_actu h5, #container_admin_actu h5, #container_create_admin h5, 
@@ -968,12 +994,9 @@ iframe{
 }
 
 }
-/*__________________________________________  FIN RESPONSIVE DESIGN TABLETTE ________________________________________*/
-
 /*_________________________________________  RESPONSIVE DESIGN SMARTPHONE___________________________________________*/
 @media screen and (max-width: 575px)
 {
-
 /****************HEADER********************/
 
 .logoPirates{
@@ -985,7 +1008,6 @@ iframe{
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	
 }
 
 .menu>ul>li>a{
@@ -999,17 +1021,17 @@ iframe{
 #compte_logo{
 	padding:0;
 }
-
 /****************FOOTER********************/
+
 footer{
 	min-height: 50rem;
 }
+
 legend {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 }
-
 /****************HOME********************/
 
 .btn_home_tab{
@@ -1019,10 +1041,10 @@ legend {
 .btn_home_smart{
 	display:block;
 }
+
 .btn_home_smart .fas:hover{
 	color:#da3730;
 }
-
 /****************CLUB********************/
 
 #palmares_tablette h6{
@@ -1032,20 +1054,37 @@ legend {
 #organigramme ul{
 	padding-left: 0;
 	margin-bottom: 3rem;
-
 }
 
 #organigramme ul li{
 	font-size: 1.1rem;
 }
+/****************MEDIA**********************/
 
+.selected1{
+	transform: scale(2) translateX(6rem);
+}
 
+.selected2{
+	transform: scale(2);
+}
+
+.selected3{
+	transform: scale(2) translateX(-6rem);
+}
+
+#gallery h4 {
+    padding-left: 35%;
+}
+
+.messages{
+	font-size: 1.4rem;
+}
 /****************CONTACT********************/
 
 .autres_contacts li{
 	font-size: 1.4rem;
 }
-
 /****************PAGE ADMIN********************/
 
 #container_admin h5{
@@ -1075,19 +1114,10 @@ legend {
 #container_admin li{
 	font-size: 1.3rem;
 }
-
 /****************ADMIN: EDIT ACTU/MATCH CREATE ACTU/ADMIN/MATCH********************/
 
 #container_create_actu h5, #container_admin_actu h5, #container_create_admin h5, 
 #container_create_match h5, #container_edit_match h5, #container_edit_stand h5, #container_register h5{
 	font-size: 1.6rem;
 }
-/****************MEDIA********************/
-
-.grid-item {
-    width: 50%;
-}
-/*__________________________________________  FIN RESPONSIVE DESIGN SMARTPHONE ________________________________________*/
-
-
 

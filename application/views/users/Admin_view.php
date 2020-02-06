@@ -47,7 +47,7 @@
 	</p>
 	<div class="row align-items-center p-5 mw-100">
 		<div class="col-xl-3 col-lg-12 pl-5">
-			<h6>GESTION DES ACTUS</h6>
+			<h6 id="admin_actu">GESTION DES ACTUS</h6>
 		</div>
 		<div class="col-xl-9 col-lg-12">
 			<ul class="admin_actu">
@@ -70,7 +70,7 @@
 	</div>
 	<div class="row align-items-center p-5 mw-100">
 		<div class="col-xl-3 col-lg-12 pl-5">
-			<h6>GESTION DES PROFILS</h6>
+			<h6 id="admin_profil">GESTION DES PROFILS</h6>
 		</div>
 		<div class="col-xl-9 col-lg-12">
 			<ul class="admin_profil">
@@ -93,7 +93,7 @@
 	</div>
 	<div class="row align-items-center p-5 mw-100">
 		<div class="col-xl-3 col-lg-12 pl-5">
-			<h6>GESTION DE LA NEWSLETTER</h6>
+			<h6 id="admin_newsletter">GESTION DE LA NEWSLETTER</h6>
 		</div>
 		<div class="col-xl-9 col-lg-12">
 			<ul class="admin_newsletter">
@@ -115,7 +115,7 @@
 	</div>
 	<div class="row align-items-center p-5 mw-100">	
 		<div class="col-xl-3 col-lg-12 pl-5">
-			<h6>GESTION DES MATCHS</h6>
+			<h6 id="admin_match">GESTION DES MATCHS</h6>
 		</div>
 		<div class="col-xl-9 col-lg-12">
 			<ul class="admin_match">
@@ -144,7 +144,7 @@
 	</div>
 	<div class="row align-items-center p-5 mw-100">
 		<div class="col-xl-3 col-lg-12 pl-5">
-			<h6>GESTION DU CLASSEMENT</h6>
+			<h6 id="admin_standing">GESTION DU CLASSEMENT</h6>
 		</div>
 		<div class="col-xl-9 col-lg-12">
 			<ul class="admin_actu">
@@ -167,7 +167,7 @@
 	</div>
 	<div class="row align-items-center p-5 mw-100">
 		<div class="col-xl-3 col-lg-12 pl-5">
-			<h6>GESTION DES MESSAGES </h6>
+			<h6 id="admin_message">GESTION DES MESSAGES </h6>
 		</div>
 		<div class="col-xl-9 col-lg-12">
 			<ul class="admin_actu">
@@ -190,7 +190,7 @@
 	</div>
 	<div class="row align-items-center p-5 mw-100">
 		<div class="col-xl-3 col-lg-12 pl-5">
-			<h6>APERCU DES RESERVATIONS</h6>
+			<h6 id="admin_booking">APERCU DES RESERVATIONS</h6>
 		</div>
 		<div class="col-xl-9 col-lg-12">
 			<ul class="admin_book">

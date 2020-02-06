@@ -1,31 +1,33 @@
 <?php 
 
 
-class Home_model extends CI_Model
-{
-
-
-	public function get_actus()
+	class Home_model extends CI_Model
 	{
 
-		$query = $this->db->get('actus');
+
+		public function get_actus()
+		{
+
+			$this->db->order_by('date','desc');
 		
-		return $query->result();
-	}
+			$query = $this->db->get('actus');
+		
+			return $query->result();
+		}
 	
-	public function get_one_actu($id_actu)
-	{
+		public function get_one_actu($id_actu)
+		{
 
-		$this->db->where('id', $id_actu);
+			$this->db->where('id', $id_actu);
 
-		$query = $this->db->get('actus');
+			$query = $this->db->get('actus');
 		
-		return $query->row();
-	}
+			return $query->row();
+		}
 
 
-	public function subscribe_newsletter()
-	{
+		public function subscribe_newsletter()
+		{
 		$email = $this->input->post('email_newsletter');
 		$email = $this->security->xss_clean($email);
 		$data = array(
