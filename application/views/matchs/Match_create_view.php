@@ -13,7 +13,8 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="inputGroupSelect01">DATE ET HEURE </label>
                         </div>
-                        <input type="datetime-local" name="match_datetime" value="2020-01-31T14:00" min="2020-01-01T11:00" max="2021-12-31T14:00">
+                        <input type="date" name="match_date">
+                        <input type="time" name="match_time">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">

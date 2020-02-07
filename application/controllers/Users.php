@@ -1,7 +1,7 @@
 <?php 
 
-  class Users extends CI_Controller 
-  {
+    class Users extends CI_Controller
+    {
 
         public function register() 
         {
@@ -37,6 +37,11 @@
 
                     $this->session->set_flashdata('user_registered', " COMPTE CREE AVEC SUCCES ! ");
           
+                    redirect('home/index');
+                }else{
+
+                    $this->session->set_flashdata('registration_failed', "VOUS AVEZ DEJA UN COMPTE AVEC CETTE ADRESSE EMAIL !");
+        
                     redirect('home/index');
                 }
             }

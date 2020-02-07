@@ -3,7 +3,6 @@
     class Matchs extends CI_Controller 
     {
 
-
         public function infos()
 	   {
             
@@ -18,9 +17,9 @@
 
     
 	   public function create_match()
-	   {
-
-            $this->form_validation->set_rules('match_datetime', 'Date et Heure du Match', 'htmlspecialchars|required');
+	   {    
+            $this->form_validation->set_rules('match_date', 'Date du Match', 'htmlspecialchars|required');
+            $this->form_validation->set_rules('match_time', 'Heure du Match', 'htmlspecialchars|required');
             $this->form_validation->set_rules('name_home', 'Team Home', 'htmlspecialchars|required');
             $this->form_validation->set_rules('name_visitor', 'Team Visitor', 'htmlspecialchars|required');
             $this->form_validation->set_rules('image_home', 'Logo Home', 'htmlspecialchars|required');
@@ -34,10 +33,14 @@
 
         	   $this->load->view('layouts/main', $data);
             }else{
+ 
+                $date_match = $this->input->post('match_date');
+                $time_match = $this->input->post('match_time');
+                $datetime_match= $date_match.' '.$time_match.':00';
 
                 $data = array(
 
-                'match_datetime' => $this->input->post('match_datetime'),
+                'match_datetime' =>  $datetime_match,
                 'name_home' => $this->input->post('name_home'),
                 'name_visitor' => $this->input->post('name_visitor'),
                 'image_home' => $this->input->post('image_home'),
@@ -150,12 +153,44 @@
     
             $this->load->library('Pdf');
 
-            $this->match_model->post_booking();
+            if(!$this->session->userdata('logged_in')){
 
-            $data['info_match']= $this->match_model->get_one_match($this->input->post('match_id'));
-            $data['info_book']= $this->match_model->get_one_book($this->input->post('match_id'));
+                $this->session->set_flashdata('booking_failed' , "CONNEXION NECESSAIRE POUR EFFECTUER UNE RESERVATION ");
 
-            $this->load->view('matchs/Pdf_booking_view', $data);
+                redirect("home/index");
+            }else{
+
+                $data = array(
+
+                'number_seat' => $this->input->post('number_seat'),
+                'match_id' => $this->input->post('match_id'),
+                'user_id' => $this->session->userdata('id'));
+            
+                $data = $this->security->xss_clean($data);
+
+                if($this->match_model->post_booking($data)){
+
+                    $data['info_match']= $this->match_model->get_one_match($this->input->post('match_id'));
+                    $data['info_book']= $this->match_model->get_one_book($this->input->post('match_id'));
+
+                    $this->load->view('matchs/Pdf_booking_view', $data);
+                }else{
+
+                    $this->session->set_flashdata('booking_failed2' , "VOUS AVEZ DEJA RESERVE POUR CE MATCH ");
+            
+                    redirect("home/index");
+                } 
+            }
         }
     }
 ?>
+
+
+
+
+
+
+
+
+
+

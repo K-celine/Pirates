@@ -113,7 +113,7 @@
 				<div class="user_inputs">
 					<div class="form-group">
 						<?php echo form_label('AUTEUR');
-						$data = array('class' => 'form-control form-control-lg','name' => 'author','id' => 'author', 'value' => $this->session->userdata('username'));
+						$data = array('disabled' =>'disabled','class' => 'form-control form-control-lg','name' => 'author','id' => 'author', 'value' => $this->session->userdata('username'));
 						echo form_input($data); ?>
 					</div>
 					<div class="form-group">

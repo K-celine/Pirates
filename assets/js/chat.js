@@ -1,21 +1,26 @@
 "use strict";
 
 
+/**********************DONNEES**************************/
+var requeteAjax;
+var reponse;
+
+/**********************FONCTIONS**************************/
+
+
 function getMessages()
 {
 
-	var requeteAjax = new XMLHttpRequest();
+	requeteAjax = new XMLHttpRequest();
 	requeteAjax.open('GET', 'http://localhost:8888/Pirates/pages/chat');
 	requeteAjax.responseType = 'json';
 	requeteAjax.send();
 
-	//la réponse : 
-
 	requeteAjax.onload = function()
 	{
- 		var resultat= requeteAjax.response;
+ 		reponse= requeteAjax.response;
 
- 		var html = resultat.reverse().map(function(comment){
+ 		var html = reponse.reverse().map(function(comment){
 
   		return `
   				<p><b> ${comment.date_created.substring(11, 16)} ${comment.author}</b></p>
@@ -30,26 +35,18 @@ function getMessages()
 	}
 }
 
-getMessages();
-
-/**********************DONNEES**************************/
-/**********************FONCTION**************************/
-
-
 
 function postMessage(event)
 {
 
 	event.preventDefault();
 
-	var author = document.querySelector('#author');
 	var content = document.querySelector('#content');
 
 	var data = new FormData();
-	data.append('author' , author.value);
 	data.append('content' , content.value);
 
-	var requeteAjax = new XMLHttpRequest();
+	requeteAjax = new XMLHttpRequest();
 	requeteAjax.open('POST' , 'http://localhost:8888/Pirates/pages/chat?task=write');
 	requeteAjax.responseType = 'json';
 
@@ -57,7 +54,7 @@ function postMessage(event)
 	requeteAjax.onload = function()
 	{
 
-			var reponse = requeteAjax.response;
+			reponse = requeteAjax.response;
 			
 
 			if(reponse['status'] == 'error'){
@@ -68,17 +65,17 @@ function postMessage(event)
 			getMessages();
 			content.value='';
 
-			}
-
-
+		}
 	}
 
 	requeteAjax.send(data);
-
 }
 
 
 /**********************CODE PRINCIPAL**************************/
+
+
+getMessages();
 
 document.querySelector('#chat_form').addEventListener('submit' , postMessage);
 

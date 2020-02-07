@@ -4,7 +4,6 @@
 	class Home_model extends CI_Model
 	{
 
-
 		public function get_actus()
 		{
 
@@ -15,6 +14,7 @@
 			return $query->result();
 		}
 	
+
 		public function get_one_actu($id_actu)
 		{
 
@@ -29,23 +29,19 @@
 		public function subscribe_newsletter($data)
 		{
 		
-		$this->db->where('email_subscribe', $data['email_subscribe']);
-		$email_exist = $this->db->get('newsletter');
-		$result = $email_exist->row();
+			$this->db->where('email_subscribe', $data['email_subscribe']);
+			$email_exist = $this->db->get('newsletter');
+			$result = $email_exist->row();
 
-		if(isset($result)){
+			if(isset($result)){
 
-			return false;
-		}else{
+				return false;
+			}else{
 
-			$insert_query = $this->db->insert('newsletter', $data);
+				$insert_query = $this->db->insert('newsletter', $data);
 
-		return $insert_query;
+				return $insert_query;
+			}
 		}
-		
 	}
-
-}
-		
-
- ?>
+?>

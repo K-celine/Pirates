@@ -3,7 +3,6 @@
 	class Home extends CI_Controller 
 	{
 
-
 		public function index()
 		{
 
@@ -39,15 +38,10 @@
       			$this->load->view('layouts/main', $data);
 			}else{
 
-$email = $this->input->post('email_newsletter');
-		$email = $this->security->xss_clean($email);
-		$data = array(
-
-			'email_subscribe' => $email
-		);
-
-
-
+				$email = $this->input->post('email_newsletter');
+				$email = $this->security->xss_clean($email);
+		
+				$data = array('email_subscribe' => $email);
 
     			if($this->home_model->subscribe_newsletter($data)){
 
@@ -57,7 +51,7 @@ $email = $this->input->post('email_newsletter');
         		}else{
         			$this->session->set_flashdata('newsletter_failed', "VOUS ETES DEJA INSCRIT A LA NEWSLETTER");
         
-        	redirect('home/index');
+        			redirect('home/index');
         		}
         	}
         }

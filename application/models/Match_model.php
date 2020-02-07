@@ -4,7 +4,6 @@
 	class Match_model extends CI_Model
 	{
 
-
 		public function get_matchs()
 		{
 			$date = date('Y-m-d H:i:s');
@@ -112,73 +111,35 @@
 		}
 
 		
-		public function post_booking()
+		public function post_booking($data)
 		{
 
-			if(!$this->session->userdata('logged_in')){
+			$booked = $this->db->group_start()->where('match_id' , 
+			$data['match_id'])->where('user_id' , 
+			$this->session->userdata('id'))->group_end()->get('booking');
 
-				$this->session->set_flashdata('booking_failed' , "CONNEXION NECESSAIRE POUR EFFECTUER UNE RESERVATION ");
+			$user_book = $booked->row();
 
-              	redirect("home/index");
+			if(isset($user_book)){
+
+				return false;
 			}else{
 
-			$data = array(
+				$insert_query = $this->db->insert('booking', $data);
 
-			'number_seat' => $this->input->post('number_seat'),
-			'match_id' => $this->input->post('match_id'),
-			'user_id' => $this->session->userdata('id'));
-			
-			$data = $this->security->xss_clean($data);
-
-		$booked = $this->db
-		->group_start()->where('match_id' , $data['match_id'])
-		->where('user_id' , $this->session->userdata('id'))->group_end()->get('booking');
-
-		$user_book = $booked->row();
-
-		if(isset($user_book)){
-
-			$this->session->set_flashdata('booking_failed2' , "VOUS AVEZ DEJA RESERVE POUR CE MATCH ");
-			redirect("home/index");
-
-		}else{
-
-$insert_query = $this->db->insert('booking', $data);
-
-		
-
-$this->session->set_flashdata('booking_ok' , "OK BOOK ! ");
-
-
-return $insert_query;
-
-
-
-
-
-		}
-
-		
-
+				return $insert_query;
+			}
 		}
 		
-	}
-	public function get_one_book($id_match)
-	{
+		public function get_one_book($id_match)
+		{	
 
-		$booked = $this->db
-          			->group_start()
-                ->where('match_id', $id_match)
-                ->where('user_id', $this->session->userdata('id'))
-         		->group_end()
-    			->get('booking');
+			$booked = $this->db->group_start()->where('match_id', 
+			$id_match)->where('user_id', $this->session->userdata('id'))->group_end()->get('booking');
 
-  $user_book = $booked->row();
+  			$user_book = $booked->row();
 
-  return $user_book;
-	}
-
-}
-		
-
- ?>
+  			return $user_book;
+  		}
+  	}
+?>

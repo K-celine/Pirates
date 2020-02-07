@@ -3,7 +3,6 @@
   class Actus extends CI_Controller 
     {
 
-
     	public function create_actu()
     	{
       		$this->form_validation->set_rules('title', 'Titre', 'trim|htmlspecialchars|required|min_length[2]');

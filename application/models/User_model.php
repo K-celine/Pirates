@@ -15,9 +15,7 @@
 
 			if(isset($result)){
 
-				$this->session->set_flashdata('registration_failed', "VOUS AVEZ DEJA UN COMPTE AVEC CETTE ADRESSE EMAIL !");
-        
-        		redirect('home/index');
+				return false;
 			}else{
 
 				$insert_data = $this->db->insert('users', $data);
