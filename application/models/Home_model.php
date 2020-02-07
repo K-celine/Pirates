@@ -26,23 +26,16 @@
 		}
 
 
-		public function subscribe_newsletter()
+		public function subscribe_newsletter($data)
 		{
-		$email = $this->input->post('email_newsletter');
-		$email = $this->security->xss_clean($email);
-		$data = array(
-
-			'email_subscribe' => $email
-		);
-		$this->db->where('email_subscribe', $email);
+		
+		$this->db->where('email_subscribe', $data['email_subscribe']);
 		$email_exist = $this->db->get('newsletter');
 		$result = $email_exist->row();
 
 		if(isset($result)){
 
-			$this->session->set_flashdata('newsletter_failed', "VOUS ETES DEJA INSCRIT A LA NEWSLETTER");
-        
-        	redirect('home/index');
+			return false;
 		}else{
 
 			$insert_query = $this->db->insert('newsletter', $data);

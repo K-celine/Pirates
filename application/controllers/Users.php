@@ -10,7 +10,7 @@
             $this->form_validation->set_rules('last_name', 'Nom', 'htmlspecialchars|trim|required|min_length[2]|alpha');
             $this->form_validation->set_rules('email', 'Email', 'htmlspecialchars|trim|required|valid_email');
             $this->form_validation->set_rules('username', 'Pseudo', 'htmlspecialchars|trim|required|min_length[3]');
-            $this->form_validation->set_rules('password', 'Mot de passe', 'htmlspecialchars|trim|required|min_length[3]');
+            $this->form_validation->set_rules('password', 'Mot de passe', 'htmlspecialchars|trim|required|min_length[8]|regex_match[#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])#]');
             $this->form_validation->set_rules('confirm_password', 'Confirmation du mot de passe', 'htmlspecialchars|trim|required|matches[password]');
             $this->form_validation->set_rules('news_suscribe', 'Souscription', 'htmlspecialchars');
 

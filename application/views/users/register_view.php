@@ -35,6 +35,7 @@
 				<?php echo form_label('MOT DE PASSE');
 				$data = array('class' => 'form-control form-control-lg','name' => 'password','placeholder' => 'INSCRIRE MOT DE PASSE'); 
 				echo form_password($data); ?>
+				<small class="form-text text-muted">Votre mot de passe doit contenir un minimum de 8 caractères, 1 majuscule et 1 chiffre.</small>
 			</div>
 			<div class="form-group pr-5">
 				<?php echo form_label('CONFIRMER MOT DE PASSE'); 

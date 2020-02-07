@@ -15,7 +15,7 @@ function getMessages()
 	{
  		var resultat= requeteAjax.response;
 
- 		var html = resultat.map(function(comment){
+ 		var html = resultat.reverse().map(function(comment){
 
   		return `
   				<p><b> ${comment.date_created.substring(11, 16)} ${comment.author}</b></p>

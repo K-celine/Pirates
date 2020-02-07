@@ -39,11 +39,25 @@
       			$this->load->view('layouts/main', $data);
 			}else{
 
-    			if($this->home_model->subscribe_newsletter()){
+$email = $this->input->post('email_newsletter');
+		$email = $this->security->xss_clean($email);
+		$data = array(
+
+			'email_subscribe' => $email
+		);
+
+
+
+
+    			if($this->home_model->subscribe_newsletter($data)){
 
         			$this->session->set_flashdata('newsletter_subscribed', "INSCRIPTION A LA NEWSLETTER AVEC SUCCES !");
         
         			redirect('home/index');
+        		}else{
+        			$this->session->set_flashdata('newsletter_failed', "VOUS ETES DEJA INSCRIT A LA NEWSLETTER");
+        
+        	redirect('home/index');
         		}
         	}
         }
