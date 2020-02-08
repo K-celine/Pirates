@@ -122,9 +122,9 @@
 				</div>
 				<?php foreach($matchs as $match): ?>
 					<p><?php echo date('d/m/Y H:i', strtotime($match->match_datetime)); ?></p>	
-					<img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="" style="width:30%"/>
+					<img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="image_team_home"/>
 					<strong>VS</strong>
-					<img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="" style="width:30%"/>
+					<img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="image_team_visitor"/>
 				<?php endforeach; ?>
 			</div>
 			<div class="col-xl-8 col-lg-12 p-5" id="actus">

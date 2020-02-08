@@ -35,61 +35,61 @@
 		<div class="col-12 p-5">
 			<div class="grid">
 				<div class="grid-item1">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/6.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/6.jpg" alt="Pirates-baseball-beziers-gallery-6"/>
 				</div>
 				<div class="grid-item2">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/1.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/1.jpg" alt="Pirates-baseball-beziers-gallery-1"/>
 				</div>
 				<div class="grid-item3">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/8.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/8.jpg" alt="Pirates-baseball-beziers-gallery-8"/>
 				</div>
 				<div class="grid-item1">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/3.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/3.jpg" alt="Pirates-baseball-beziers-gallery-3"/>
 				</div>
 				<div class="grid-item3">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/11.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/11.jpg" alt="Pirates-baseball-beziers-gallery-11"/>
 				</div>
 				<div class="grid-item2">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/12.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/12.jpg" alt="Pirates-baseball-beziers-gallery-12"/>
 				</div>
 				<div class="grid-item1">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/14.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/14.jpg" alt="Pirates-baseball-beziers-gallery-14"/>
 				</div>
 				<div class="grid-item2">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/10.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/10.jpg" alt="Pirates-baseball-beziers-gallery-10"/>
 				</div>
 				<div class="grid-item3">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/20.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/20.jpg" alt="Pirates-baseball-beziers-gallery-20"/>
 				</div>
 				<div class="grid-item2">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/15.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/15.jpg" alt="Pirates-baseball-beziers-gallery-15"/>
 				</div>
 				<div class="grid-item3">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/17.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/17.jpg" alt="Pirates-baseball-beziers-gallery-17"/>
 				</div>
 				<div class="grid-item1">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/13.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/13.jpg" alt="Pirates-baseball-beziers-gallery-13"/>
 				</div>
 				<div class="grid-item2">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/7.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/7.jpg" alt="Pirates-baseball-beziers-gallery-7"/>
 				</div>
 				<div class="grid-item2">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/2.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/2.jpg" alt="Pirates-baseball-beziers-gallery-2"/>
 				</div>
 				<div class="grid-item3">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/16.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/16.jpg" alt="Pirates-baseball-beziers-gallery-16"/>
 				</div>
 				<div class="grid-item1">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/18.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/18.jpg" alt="Pirates-baseball-beziers-gallery-18"/>
 				</div>
 				<div class="grid-item2">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/22.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/22.jpg" alt="Pirates-baseball-beziers-gallery-22"/>
 				</div>
 				<div class="grid-item3">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/9.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/9.jpg" alt="Pirates-baseball-beziers-gallery-9"/>
 				</div>
 				<div class="grid-item1">
-					<img src="<?php echo base_url()?>assets/images/media/gallery/21.jpg"/>
+					<img src="<?php echo base_url()?>assets/images/media/gallery/21.jpg" alt="Pirates-baseball-beziers-gallery-21"/>
 				</div>	
 			</div>
 		</div>

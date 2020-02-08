@@ -52,7 +52,7 @@
 		<div class="col-12">
 			<div class="mx-auto">
 				<h4 id="team6">TEAM SOFTBALL FEMININ</h4>
-				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_SoftballFem.jpg" alt="Pirates_baseball_team_SoftballFem">
+				<img class="img-fluid" src="<?php echo base_url()?>assets/images/team/pirates_team_SoftballFem.jpg" alt="Pirates_baseball_team_SoftballFeminin">
 				<p>Célia Daucourt, Thérèse Clérisseau, Elise Loupert, Abélia Badeaux, Bérengère Delafose, Alexia Bombelles, Émilienne Neri, Laëtitia Boudreaux</p>
 			</div>	
 		</div>
