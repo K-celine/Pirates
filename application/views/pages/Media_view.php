@@ -98,7 +98,7 @@
 		<div class="col-xl-3 col-lg-12 p-5">
 			<h4 id="chat">CHAT</h4>
 			<?php if($this->session->userdata('logged_in') == FALSE): ?>
-				<p class="fail"><small><em>Pour participer, vous devez être connecté</em></small></p>
+				<p class="p-chat"><small><em>Pour participer, vous devez être connecté</em></small></p>
 			<?php endif; ?>
 		</div>
 		<div class="col-xl-9 col-lg-12 p-5">

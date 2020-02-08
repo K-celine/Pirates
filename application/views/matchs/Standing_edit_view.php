@@ -3,8 +3,8 @@
 	<div>
 		<a id="retour" class="invisible" href="#top"></a>
 	</div>
-	<div class="row mw-100 align-items-center p-5">
-		<div class="col-xl-3 col-lg-12 pl-5">
+	<div class="row align-items-center m-0 mw-100 p-3">
+		<div class="col-xl-3 col-lg-12">
 			<h5><i class="fas fa-pen"></i> EDITION DU CLASSEMENT</h5>
 		</div>
 		<div class="col-xl-9 col-lg-12">

@@ -41,15 +41,21 @@ h6{
 	letter-spacing: 0.5rem;
 	color: #231e20;
 }
+
 label{
 	font-size: 1.5rem;
 	letter-spacing: 0.5rem;
 	text-transform:uppercase;
 }
 
+input{
+	font-size:1.3rem;
+}
+
 .fas, .far{
 	color:#f1ba4d;
 }
+
 .fas:hover, .far:hover{
 	color:#231e20;
 	transition:1s ease;
@@ -64,6 +70,7 @@ label{
 	color:#1f5d19;
 	text-transform:uppercase;
 }
+
 .fail{
 	color:#B22222;
 }
@@ -301,6 +308,13 @@ header{
 }
 /*_______________________________________  FIN HOME  ___________________________________________*/
 
+/*_______________________________________  ACTU  ___________________________________________*/
+
+#one_actu h4{
+	margin-top: 2rem;
+}
+/*_______________________________________  FIN ACTU  ___________________________________________*/
+
 /*_______________________________________  CREER UN COMPTE  _________________________________________*/
 
 .form-check-input-newsletter{
@@ -411,6 +425,9 @@ header{
 	width:60%; 
 }
 
+#histoire p{
+	margin-bottom: 2rem;
+}
 #container_club .card-body{
 	height:27rem;
 	overflow:scroll;
@@ -531,6 +548,13 @@ header{
 	color:#303030;
 }
 
+.p-chat{
+	color:#B22222;
+	background-color: rgba(255, 255, 255,0.35);
+	border-radius: 0.5rem;	
+	text-align: center;
+}
+
 .grid,.grid-item1 img,.grid-item2 img,.grid-item3 img{
 	max-width: 100%;
 }
@@ -640,7 +664,7 @@ header{
 
 /*____________________________________________   ADMIN _______________________________________________*/
 
-.admin_newsletter , .admin_book , .admin_actu, .admin_profil, .admin_match{
+.admin_newsletter , .admin_booking , .admin_actu, .admin_profil, .admin_match, .admin_standing, .admin_message{
 	display:flex;
 	justify-content: space-between;
 	border-bottom: 0.2rem solid #f1ba4d ;
@@ -714,6 +738,7 @@ footer input[type=email]{
   border-radius:0.5rem;
   border:0.1rem solid #332e30;
   color: white;
+  max-width: 100%;
 }
 
 footer input[type=submit]{
@@ -828,28 +853,40 @@ footer fieldset{
 	color:#da3730;	
 }
 
-.home_img_tablette{
+#home_img_tablette{
 	display:block;
+}
+
+#container_p{
+	background-color: #231e20;
+	border:1px solid red;
 }
 
 .success , .fail{
 	background-color: #231e20;
+	border-radius: 0rem;
 	text-align:center;
 	margin:0;
 }
 
-#prochains_matchs h6{
-	margin-top: 2rem;
+#prochains_matchs{
+	padding-top: 2rem;	
 }
 
 #actus h2{
 	text-align: center;
 	font-size: 3rem;
 }
+
+#content_actu h5{
+	font-size: 1.7rem;
+	margin-top: 2rem;
+}
 /****************ACTU********************/
 
 #one_actu h4{
 	margin-top: 2rem;
+	font-size: 2rem;
 }
 
 #one_actu{
@@ -966,11 +1003,8 @@ iframe{
 }
 
 #container_admin h6{
-	background-color: #231e20;
-	border-radius: 0.5rem;
 	text-align: center;
-	padding: 0.6rem;
-	margin: 3rem;
+	padding: 2rem;
 	color:#537556;
 }
 
@@ -1045,6 +1079,15 @@ legend {
 .btn_home_smart .fas:hover{
 	color:#da3730;
 }
+
+#home_img_tablette{
+	display:none;
+}
+/****************ACTU********************/
+
+#one_actu h4{
+	font-size: 1.5rem;
+}
 /****************CLUB********************/
 
 #palmares_tablette h6{
@@ -1085,6 +1128,11 @@ legend {
 .autres_contacts li{
 	font-size: 1.4rem;
 }
+/****************COMPTE********************/
+
+.form-check-input-newsletter{
+	margin: 0;
+}
 /****************PAGE ADMIN********************/
 
 #container_admin h5{
@@ -1092,18 +1140,18 @@ legend {
 }
 
 #container_admin h6{
-	margin: 1.5rem 0rem 3rem 0;
+	margin: 3rem 0rem 1.5rem 0;
 }
 
 .menu_admin{
 	flex-direction: column;
 }
 
-.actu_smart, .message_smart, .booking_smart, .profil_smart{
+/*.actu_smart, .message_smart, .booking_smart{
 	display: none;
-}
+}*/
 
-.admin_actu, .admin_profil, .admin_newsletter, .admin_match, .admin_message, .admin_booking{
+.admin_actu, .admin_profil, .admin_newsletter, .admin_match, .admin_message, .admin_booking, .admin_standing{
 	padding-left: 0;
 }
 

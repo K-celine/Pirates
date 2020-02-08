@@ -74,45 +74,43 @@
 			<a class="btn_home_smart" href="<?php echo base_url();?>matchs/infos/#standing"><abbr title="Voir le classement"><i class="fas fa-trophy"></i></abbr></a>	
 		</div>
 	</div>
-	<div class="row mw-100 align-items-center p-0" id="home_img_tablette">
-		<div class="col-12">
-			<img class="img-fluid mw-100" src="<?php echo base_url()?>assets/images/home/pirates_home_slide1.jpg" alt="Pirates_baseball_home">
-			<p class="success">
-				<?php if($this->session->flashdata('newsletter_subscribed')):?>
-					<?php echo 	$this->session->flashdata('newsletter_subscribed');?>
-				<?php endif; ?>
-				<?php if($this->session->flashdata('message_sent')):?>
-					<?php echo 	$this->session->flashdata('message_sent');?>
-				<?php endif; ?>
-				<?php if($this->session->flashdata('user_registered')):?>
-					<?php echo 	$this->session->flashdata('user_registered');?>
-				<?php endif; ?>
-				<?php if($this->session->flashdata('loggin_ok')): ?>
-					<?php echo $this->session->flashdata('loggin_ok');?> 
-				<?php endif; ?>
-			</p>
-			<p class="fail">
-				<?php if($this->session->flashdata('newsletter_failed')):?>
-					<?php echo 	$this->session->flashdata('newsletter_failed');?>
-				<?php endif; ?>
-				<?php if($this->session->flashdata('loggin_failed')):?>
-					<?php echo 	$this->session->flashdata('loggin_failed');?>
-				<?php endif; ?>
-				<?php if($this->session->flashdata('registration_failed')):?>
-					<?php echo 	$this->session->flashdata('registration_failed');?>
-				<?php endif; ?>
-				<?php if($this->session->flashdata('booking_failed')):?>
-					<?php echo 	$this->session->flashdata('booking_failed');?>
-				<?php endif; ?>
-				<?php if($this->session->flashdata('booking_failed2')):?>
-					<?php echo 	$this->session->flashdata('booking_failed2');?>
-				<?php endif; ?>
-			</p>	
-		</div>
+	<div class="container mw-100 p-0" id="home_img_tablette">
+		<img class="img-fluid" src="<?php echo base_url()?>assets/images/home/pirates_home_slide1.jpg" alt="Pirates_baseball_home">
+		<p class="success">
+			<?php if($this->session->flashdata('newsletter_subscribed')):?>
+				<?php echo 	$this->session->flashdata('newsletter_subscribed');?>
+			<?php endif; ?>
+			<?php if($this->session->flashdata('message_sent')):?>
+				<?php echo 	$this->session->flashdata('message_sent');?>
+			<?php endif; ?>
+			<?php if($this->session->flashdata('user_registered')):?>
+				<?php echo 	$this->session->flashdata('user_registered');?>
+			<?php endif; ?>
+			<?php if($this->session->flashdata('loggin_ok')): ?>
+				<?php echo $this->session->flashdata('loggin_ok');?> 
+			<?php endif; ?>
+		</p>
+		<p class="fail">
+			<?php if($this->session->flashdata('newsletter_failed')):?>
+				<?php echo 	$this->session->flashdata('newsletter_failed');?>
+			<?php endif; ?>
+			<?php if($this->session->flashdata('loggin_failed')):?>
+				<?php echo 	$this->session->flashdata('loggin_failed');?>
+			<?php endif; ?>
+			<?php if($this->session->flashdata('registration_failed')):?>
+				<?php echo 	$this->session->flashdata('registration_failed');?>
+			<?php endif; ?>
+			<?php if($this->session->flashdata('booking_failed')):?>
+				<?php echo 	$this->session->flashdata('booking_failed');?>
+			<?php endif; ?>
+			<?php if($this->session->flashdata('booking_failed2')):?>
+				<?php echo 	$this->session->flashdata('booking_failed2');?>
+			<?php endif; ?>
+		</p>
 	</div>
-	<div class="row mw-100" id="container_home">
-		<div class="col-xl-4 col-lg-12" id="prochains_matchs">
-			<div class="mx-auto">
+	<div id="container_home">
+		<div class="row mw-100 m-0">
+			<div class="col-xl-4 col-lg-12" id="prochains_matchs">
 				<h6>PROCHAINS MATCHS</h6><br>
 				<div class="row mw-100 p-5">
 					<div class="col">
@@ -128,25 +126,23 @@
 					<strong>VS</strong>
 					<img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="" style="width:30%"/>
 				<?php endforeach; ?>
-			</div>	
-		</div>
-		<div class="col-xl-8 col-lg-12 p-5" id="actus">
-			<h2 class="pb-3">ACTUS</h2>
-			<?php foreach($actus as $actu): ?>
+			</div>
+			<div class="col-xl-8 col-lg-12 p-5" id="actus">
+				<h2 class="pb-3">ACTUS</h2>
+				<?php foreach($actus as $actu): ?>
 				<div class="row mw-100 mb-5">
-					<div class="col-4" id="img_actu">
+					<div class="col-xl-4 col-lg-12" id="img_actu">
 						<img class="img_actu" src="<?php echo base_url()?>assets/images/actu/<?php echo $actu->photo; ?>" alt="<?php echo$actu->photo;?>" style="width:100%"/>
 					</div>
-					<div class="col-8" id="content_actu">
-						<h5 class="pl-3"><i class="far fa-newspaper"></i> <?php echo $actu->title; ?></h5>
-						<p class="pl-3"> <?php echo substr($actu->content,0, 99) ?>...</p>
-						<p class="pl-3"><a id="savoir_plus" href="<?php echo base_url()?>home/actu/<?php echo $actu->id; ?> "><small><em>en savoir plus...</em> </small></a></p>
-						<p class="pl-3"><small><?php echo date('d/m/Y', strtotime($actu->date)) ; ?></small></p>	
+					<div class="col-xl-8 col-lg-12" id="content_actu">
+						<h5 class="pl-xl-3 pl-lg-0"><i class="far fa-newspaper"></i> <?php echo $actu->title; ?></h5>
+						<p class="pl-xl-3 pl-lg-0"> <?php echo substr($actu->content,0, 99) ?>...</p>
+						<p class="pl-xl-3 pl-lg-0"><a id="savoir_plus" href="<?php echo base_url()?>home/actu/<?php echo $actu->id; ?> "><small><em>en savoir plus...</em> </small></a></p>
+						<p class="pl-xl-3 pl-lg-0"><small><?php echo date('d/m/Y', strtotime($actu->date)) ; ?></small></p>	
 					</div>
 				</div>					
-			<?php endforeach; ?>
+				<?php endforeach; ?>
+			</div>
 		</div>
 	</div>
 </div>
-</div>
-

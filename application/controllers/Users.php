@@ -109,6 +109,8 @@
         public function admin()
         {
 
+            if($this->session->userdata('role') == 1){
+
             $data['actus'] = $this->home_model->get_actus();
 
             $data['messages'] = $this->contact_model->get_list_messages();
@@ -126,6 +128,11 @@
             $data['main_view'] = "users/admin_view";
 
             $this->load->view('layouts/main', $data);
+           
+           }else{
+            
+              redirect('home/index');
+           } 
         }
     
 
