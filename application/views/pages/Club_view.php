@@ -16,7 +16,7 @@
 			</div>	
 		</div>
 		<div class="col-xl-5 col-lg-12 p-0">
-			<img class="img-fluid" src="<?php echo base_url()?>assets/images/club/pirates_club2.jpg" alt="Pirates_baseball_team93">
+			<img id="img_team" class="img-fluid" src="<?php echo base_url()?>assets/images/club/pirates_club2.jpg" alt="Pirates_baseball_team93">
 		</div>
 	</div>
 	<div class="row align-items-center p-0" id="chiffre_cle">	
@@ -171,7 +171,7 @@
 	</div>
 	<div class="row align-items-center" id="organigramme">
 		<div class="col-xl-7 col-lg-12">
-			<div class="mx-auto">
+			<div id="orga" class="mx-auto">
 				<h5>Organigramme</h5>
 				<p><strong>Le Comité Directeur</strong></p>
 				<ul>
@@ -203,19 +203,19 @@
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach2.jpg" alt="RUF_Caroline">
 			<p><b>RUF Caroline</b></p>
 			<p>Coaching 6U 9U</p>
-			<p>06 86 78 55 35</p>
+			<p>06.86.78.55.35</p>
 		</div>
 		<div class="col-xl-3">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach3.jpg" alt="OBERMAYER_Bryan">
 			<p><b>OBERMAYER Bryan</b></p>
 			<p>Coaching 12U 15U</p>
-			<p>06 69 90 59 32</p>
+			<p>06.69.90.59.32</p>
 		</div>
 		<div class="col-xl-3">
 			<img class="img-thumbnail border border-warning rounded-circle" src="<?php echo base_url()?>assets/images/club/pirates_club_coach4.jpg" alt="BEZOMBES_Laura">
 			<p><b>BEZOMBES Laura</b></p>
 			<p>Coaching équipe féminine</p>
-			<p>06 24 75 59 64</p>
+			<p>06.24.75.59.64</p>
 		</div> 
 	</div>
 	<div class="row align-items-center" id="planning">

@@ -112,7 +112,7 @@
 		<div class="row mw-100 m-0">
 			<div class="col-xl-4 col-lg-12" id="prochains_matchs">
 				<h6>PROCHAINS MATCHS</h6><br>
-				<div class="row mw-100 p-5">
+				<div class="row mw-100 m-0 p-5">
 					<div class="col">
 						<span>HOME</span>
 					</div>
@@ -127,10 +127,10 @@
 					<img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="image_team_visitor"/>
 				<?php endforeach; ?>
 			</div>
-			<div class="col-xl-8 col-lg-12 p-5" id="actus">
-				<h2 class="pb-3">ACTUS</h2>
+			<div class="col-xl-8 col-lg-12 p-3" id="actus">
+				<h2 class="p-3">ACTUS</h2>
 				<?php foreach($actus as $actu): ?>
-				<div class="row mw-100 mb-5">
+				<div class="row mw-100 m-0 mb-5">
 					<div class="col-xl-4 col-lg-12" id="img_actu">
 						<img class="img_actu" src="<?php echo base_url()?>assets/images/actu/<?php echo $actu->photo; ?>" alt="<?php echo$actu->photo;?>" style="width:100%"/>
 					</div>

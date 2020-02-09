@@ -780,7 +780,7 @@ footer legend{
 
 /*_________________________________________  RESPONSIVE DESIGN TABLETTE___________________________________________*/
 
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 1199px)
 {
 /****************HEADER********************/
 
@@ -887,6 +887,10 @@ footer fieldset{
 	margin-top: 2rem;
 }
 
+img#logo{
+	width: 25%;
+}
+
 /****************ACTU********************/
 
 #one_actu h4{
@@ -917,6 +921,17 @@ footer fieldset{
 
 .img-thumbnail{
 	width: 50%;
+}
+#img_team{
+	min-width: 100%;
+}
+
+#orga{
+	border: 1px solid lightgrey;
+	border-radius: 0.5rem;
+	padding-bottom: 2rem;
+	padding-left: 2rem;
+	margin: 1rem;
 }
 /****************TEAM********************/
 
@@ -1034,7 +1049,7 @@ iframe{
 
 }
 /*_________________________________________  RESPONSIVE DESIGN SMARTPHONE___________________________________________*/
-@media screen and (max-width: 575px)
+@media screen and (max-width: 719px)
 {
 /****************HEADER********************/
 
@@ -1062,14 +1077,8 @@ iframe{
 }
 /****************FOOTER********************/
 
-footer{
-	min-height: 50rem;
-}
-
-legend {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+#suivre{
+	display:none;
 }
 /****************HOME********************/
 

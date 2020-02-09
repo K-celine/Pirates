@@ -17,6 +17,17 @@
 		<h1 class="logo" id="top"><a href="<?php echo base_url();?>"><img class="logoPirates" src="<?php echo base_url()?>assets/images/pirates_logo1.jpg" alt="logo_Pirates_baseball"/></a></h1>
 	<nav class="menu">
 		<ul>
+			<li><a href="<?php echo base_url();?>home/index">HOME</a>
+				<div class="sous_menu">
+					<ul>
+						<li><a href="<?php echo base_url();?>/home/#prochains_matchs">PROCHAIN MATCH</a></li>
+						<li><a href="<?php echo base_url();?>/home/#actus">ACTU</a></li>
+						<li><a href="<?php echo base_url();?>matchs/infos/#booking">RESERVATION</a></li>
+						<li><a href="<?php echo base_url();?>matchs/infos/#resultats">RESULTAT</a></li>
+						<li><a href="<?php echo base_url();?>matchs/infos/#standing">CLASSEMENT</a></li>
+					</ul>
+				</div>
+			</li>
 			<li><a href="<?php echo base_url();?>pages/club">CLUB</a>
 				<div class="sous_menu">
 					<ul>
@@ -138,7 +149,7 @@
 						</div>
 						<div>
 							<nav>
-								<legend >SUIVEZ-NOUS SUR : 
+								<legend><span id="suivre">SUIVEZ-NOUS SUR : </span>
 
 
 

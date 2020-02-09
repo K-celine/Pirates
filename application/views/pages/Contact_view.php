@@ -34,10 +34,10 @@
 				<ul class="autres_contacts">
 					<li><strong>6U: </strong>BAZIN Christophe - <a href="tel:+13115552368">06 21 04 55 36</a></li><br>
 					<li><strong>9U: </strong>BAZIN Christophe - <a href="tel:+13115552368">06 21 04 55 36</a></li><br>
-					<li><strong>12U: </strong>François BONNET: <a href="tel:+13115552368"> 06 74 68 74 19</a></li><br>
-					<li><strong>15U: </strong>Brian OBERMAYR: <a href="tel:+13115552368"> 06 69 90 59 32</a></li><br>
-					<li><strong>Softball: </strong>Laura BESOMBES: <a href="tel:+13115552368"> 06 24 75 59 64</a></li><br>
-					<li><strong>Juniors/Seniors: </strong>Lionel TEIXIDOR: <a href="tel:+13115552368">06 10 94 13 54</a></li>
+					<li><strong>12U: </strong>BONNET François - <a href="tel:+13115552368"> 06 74 68 74 19</a></li><br>
+					<li><strong>15U: </strong>OBERMAYER Brian - <a href="tel:+13115552368"> 06 69 90 59 32</a></li><br>
+					<li><strong>Softball: </strong>BESOMBES Laura - <a href="tel:+13115552368"> 06 24 75 59 64</a></li><br>
+					<li><strong>Juniors/Seniors: </strong>TEIXIDOR Lionel - <a href="tel:+13115552368">06 10 94 13 54</a></li>
 				</ul>	
 			</address>
 		</div>
