@@ -195,11 +195,13 @@
 				<li>LISTE DES RESERVATIONS : </li>	
 			</ul>
 			<ul class="admin_booking">
-				<li>MATCH</li>
+				<li class="smart">NOM D'UTILISATEUR</li>
+				<li>TEAM VS TEAM</li>
 				<li>NOMBRE DE PLACE</li>
 			</ul>
 			<?php foreach($list_book as $book): ?>
 			<ul class="admin_booking">
+			    	<li class="smart"><?php echo $book->username; ?></li>
 				<li><?php echo $book->name_home; ?> VS <?php echo $book->name_visitor; ?></li>
 				<li><?php echo $book->number_seat; ?></li>
 			</ul>
@@ -207,7 +209,6 @@
 		</div>
 	</div>
 </div>
-
 
 
 

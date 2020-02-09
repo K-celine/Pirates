@@ -121,7 +121,7 @@
 					</div>
 				</div>
 				<?php foreach($matchs as $match): ?>
-					<p><?php echo date('d/m/Y H:i', strtotime($match->match_datetime)); ?></p>	
+					<p><?php echo date('l d/m/Y H:i', strtotime($match->match_datetime)); ?></p>	
 					<img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="image_team_home"/>
 					<strong>VS</strong>
 					<img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="image_team_visitor"/>

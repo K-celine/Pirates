@@ -1209,9 +1209,14 @@ img#logo{
 	font-size: 1.3rem;
 }
 /****************ADMIN: EDIT ACTU/MATCH CREATE ACTU/ADMIN/MATCH********************/
+.smart{
+	display:none;
+}
 
 #container_create_actu h5, #container_admin_actu h5, #container_create_admin h5, 
 #container_create_match h5, #container_edit_match h5, #container_edit_stand h5, #container_register h5{
 	font-size: 1.6rem;
+}
+
 }
 

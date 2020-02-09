@@ -94,10 +94,15 @@
     	
     		if($this->input->get('task')== 'write'){
 
+    			$censure = array('anal','anus','ass','batard','bitch', 'bougnoul', 'branlette ', 'chatte','cock', 'couille','couilles', 'cul','bite', 'gode', 'juif', 'fellation', 'fuck', 'hitler' , 'nichon', 'nichons', 'nigger', 'nigga' , 'penis', 'merde' , 'pussy', 'putain', 'rebeu', 'sale', 'sales','seins', 'sex', 'shit', 'sh1t', 'slut', 'sperme', 'twat', 'vagin');
+   
+
+   				$content = word_censor($this->input->post('content'), $censure, 'censuré'); 
+
     			$data = array(
 
 				'author' => $this->session->userdata('username'),
-				'content' => $this->input->post('content'));
+				'content' => $content);
 		
 				$data = $this->security->xss_clean($data);
 				$data = html_escape($data);
