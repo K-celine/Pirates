@@ -760,6 +760,11 @@ footer legend{
 	color:white;
 }
 
+footer legend .fab{
+	font-size: 3.5rem;
+	margin-left: 0.5rem;
+}
+
 .fab{
 	color:white;
 	font-size: 4rem;
@@ -1093,10 +1098,41 @@ iframe{
 .btn_home_smart .fas:hover{
 	color:#da3730;
 }
+
+#orga{
+	border-style: none;
+	padding: 0rem;
+}
+
+#container_club .mx-auto{
+	width: 90%;
+}
 /****************ACTU********************/
 
 #one_actu h4{
 	font-size: 1.5rem;
+}
+
+/****************MATCH********************/
+
+#score_titre, #score{
+	font-size: 1rem;
+}
+
+#standing_titre, #stand{
+	font-size: 1.3rem;
+}
+
+#standing{
+	padding: 1rem;
+}
+
+#standing h5{
+	margin-top:0.5rem;
+}
+
+#resultats span{
+	font-size: 3rem;
 }
 /****************CLUB********************/
 
