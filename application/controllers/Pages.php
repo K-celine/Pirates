@@ -94,10 +94,10 @@
     	
     		if($this->input->get('task')== 'write'){
 
-    			$censure = array('anal','anus','ass','batard','bitch', 'bougnoul', 'branlette ', 'chatte','cock', 'couille','couilles', 'cul','bite', 'gode', 'juif', 'fellation', 'fuck', 'hitler' , 'nichon', 'nichons', 'nigger', 'nigga' , 'penis', 'merde' , 'pussy', 'putain', 'rebeu', 'sale', 'sales','seins', 'sex', 'shit', 'sh1t', 'slut', 'sperme', 'twat', 'vagin');
+    			$censure = array('anal','anus','ass','batard','bitch', 'bougnoul', 'branlette ', 'chatte','cock', 'couille','couilles', 'cul','bite', 'enculé', 'encule', 'enculés', 'gode', 'juif', 'fellation', 'fuck', 'hitler' , 'nichon', 'nichons', 'nigger', 'nigga' , 'penis', 'merde' , 'pussy', 'putain', 'rebeu', 'sale', 'salaud' ,'sales','salopard','seins', 'sex', 'shit', 'sh1t', 'slut', 'sperme', 'twat', 'vagin');
    
 
-   				$content = word_censor($this->input->post('content'), $censure, 'censuré'); 
+   				$content = word_censor($this->input->post('content'), $censure, '#&!$@#&!'); 
 
     			$data = array(
 
