@@ -103,14 +103,24 @@
 
 		public function create_admin($email)
 		{
-	
-			$this->db->where('email', $email);
+		    
+		    	$this->db->where('email', $email);
+		    	$query = $this->db->get('users');
+		    	$result= $query->row();
+	      
+	        if(isset($result)){
+	            
+	            $this->db->where('email', $email);
+	    
+	    	    $this->db->set('role' , 1);
 
-			$this->db->set('role' , 1);
+			    $this->db->update('users');
 
-			$this->db->update('users');
-
-			return true;
-		}
-	}
+			    return true;
+	    	}else{
+		
+                return false;
+		
+		    }
+	}    }
 ?>

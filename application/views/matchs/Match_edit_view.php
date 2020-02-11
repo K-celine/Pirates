@@ -12,16 +12,16 @@
                 <div class="form-group">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">DATE ET HEURE </label>
+                            <label class="input-group-text" for="match_datetime">DATE ET HEURE </label>
                         </div>
-                        <input type="datetime-local" name="match_datetime" value="<?php echo $one_match->match_datetime;?>" min="2020-01-01T11:00" max="2021-12-31T14:00">
+                        <input type="datetime-local" id="match_datetime" name="match_datetime" value="<?php echo $one_match->match_datetime;?>" min="2020-01-01T11:00" max="2021-12-31T14:00">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">TEAM HOME</label>
+                            <label class="input-group-text" for="name_home">TEAM HOME</label>
                         </div>
-                        <select name="name_home" class="custom-select" id="inputGroupSelect01">
-                            <option value="<?php echo $one_match->name_home;?>"selected><?php echo $one_match->name_home;?></option>
+                        <select name="name_home" class="custom-select" id="name_home">
+                            <option value="<?php echo $one_match->name_home;?>" selected><?php echo $one_match->name_home;?></option>
                             <option value="Pirates">Pirates</option>
                             <option value="Barracudas">Barracudas</option>
                             <option value="BlueJays">BlueJays</option>
@@ -32,10 +32,10 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">TEAM VISITOR</label>
+                            <label class="input-group-text" for="name_visitor">TEAM VISITOR</label>
                         </div>
-                        <select  name="name_visitor"class="custom-select" id="inputGroupSelect01">
-                            <option value="<?php echo $one_match->name_visitor;?>"selected><?php echo $one_match->name_visitor;?></option>
+                        <select  name="name_visitor" class="custom-select" id="name_visitor">
+                            <option value="<?php echo $one_match->name_visitor;?>" selected><?php echo $one_match->name_visitor;?></option>
                             <option value="Pirates">Pirates</option>
                             <option value="Barracudas">Barracudas</option>
                             <option value="BlueJays">BlueJays</option>
@@ -46,10 +46,10 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">LOGO HOME</label>
+                            <label class="input-group-text" for="image_home">LOGO HOME</label>
                         </div>
-                        <select name="image_home" class="custom-select" id="inputGroupSelect01">
-                            <option value="<?php echo $one_match->image_home;?>"selected><?php echo $one_match->name_home;?></option>
+                        <select name="image_home" class="custom-select" id="image_home">
+                            <option value="<?php echo $one_match->image_home;?>" selected><?php echo $one_match->name_home;?></option>
                             <option value="assets/images/home/logos/Pirates.png">Pirates</option>
                             <option value="assets/images/home/logos/Barracudas.png">Barracudas</option>
                             <option value="assets/images/home/logos/BlueJays.png">BlueJays</option>
@@ -60,10 +60,10 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">LOGO VISITOR</label>
+                            <label class="input-group-text" for="image_visitor">LOGO VISITOR</label>
                         </div>
-                        <select name="image_visitor" class="custom-select" id="inputGroupSelect01">
-                            <option value="<?php echo $one_match->image_visitor;?>"selected><?php echo $one_match->name_visitor;?></option>
+                        <select name="image_visitor" class="custom-select" id="image_visitor">
+                            <option value="<?php echo $one_match->image_visitor;?>" selected><?php echo $one_match->name_visitor;?></option>
                             <option value="assets/images/home/logos/Pirates.png">Pirates</option>
                             <option value="assets/images/home/logos/Barracudas.png">Barracudas</option>
                             <option value="assets/images/home/logos/BlueJays.png">BlueJays</option>
@@ -74,13 +74,13 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">SCORE HOME</label>
+                            <label class="input-group-text" for="score_home">SCORE HOME</label>
                         </div>
                         <input value="<?php echo $one_match->score_home;?>" type="number" id="score_home" name="score_home" min="0" max="25">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">SCORE VISITOR</label>
+                            <label class="input-group-text" for="score_visitor">SCORE VISITOR</label>
                         </div>
                         <input value="<?php echo $one_match->score_visitor;?>" type="number" id="score_visitor" name="score_visitor" min="0" max="25">
                     </div>

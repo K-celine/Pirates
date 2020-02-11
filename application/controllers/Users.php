@@ -17,6 +17,7 @@
             if($this->form_validation->run() == FALSE){
 
                 $data['main_view'] = 'users/register_view';
+
                 $this->load->view('layouts/main', $data);
             }else{
 
@@ -56,11 +57,10 @@
 
             if($this->form_validation->run() == FALSE){
 
-                $data = array('errors' => validation_errors());
+                $this->session->set_flashdata('loggin_failed', "ECHEC DE CONNEXION : EMAIL OU MOT DE PASSE INCORRECT ");
 
-                $this->session->set_flashdata($data);
-        
                 redirect('home/index');
+                
             }else{
 
                 $email = $this->input->post('email');
@@ -84,6 +84,7 @@
                     'logged_in' => true);
 
                     $this->session->set_userdata($user_data);
+
                     $this->session->set_flashdata('loggin_ok', 'BONJOUR '.$this->session->userdata('username').' ! ');
           
                     redirect('home/index');
@@ -108,70 +109,95 @@
 
         public function admin()
         {
-
-            if($this->session->userdata('role') == 1){
-
-            $data['actus'] = $this->home_model->get_actus();
-
-            $data['messages'] = $this->contact_model->get_list_messages();
-
-            $data['sub_newsletter'] = $this->user_model->get_list_sub_newsletter();
-
-            $data['list_book'] = $this->user_model->get_list_booking();
-
-            $data['list_admin'] = $this->user_model->get_list_admin();
-
-            $data['list_match'] = $this->match_model->get_list_match();
-
-            $data['standing'] = $this->match_model->get_standing();
-
-            $data['main_view'] = "users/admin_view";
-
-            $this->load->view('layouts/main', $data);
-           
-           }else{
             
-              redirect('home/index');
-           } 
-        }
-    
+            if($this->session->userdata('role')== 1){
+            
+                $data['actus'] = $this->home_model->get_actus();
 
+                $data['messages'] = $this->contact_model->get_list_messages();
+
+                $data['sub_newsletter'] = $this->user_model->get_list_sub_newsletter();
+
+                $data['list_book'] = $this->user_model->get_list_booking();
+
+                $data['list_admin'] = $this->user_model->get_list_admin();
+
+                $data['list_match'] = $this->match_model->get_list_match();
+
+                $data['standing'] = $this->match_model->get_standing();
+
+                $data['main_view'] = "users/admin_view";
+
+                $this->load->view('layouts/main', $data);
+            }else{
+                
+                redirect('home/index');
+            
+            }
+        }
+        
+        
+    
         public function edit_admin($id_user)
         {
-   
-            $this->user_model->edit_admin($id_user);
 
-            $this->session->set_flashdata('admin_edited' , "PROFIL MODIFIE AVEC SUCCES ! ");
+            if($this->session->userdata('role')== 1){
 
-            redirect("users/admin");
+                $this->user_model->edit_admin($id_user);
+
+                $this->session->set_flashdata('admin_edited' , "PROFIL MODIFIE AVEC SUCCES ! ");
+
+                redirect("users/admin");
+            }else{
+                 
+                redirect("home/index");
+            }
         }
-
-
+        
+        
         public function form_create_admin()
         {
+            if($this->session->userdata('role')== 1){
+                
+                 $data['main_view'] = "users/admin_create_view";
 
-            $data['main_view'] = "users/admin_create_view";
+                 $this->load->view('layouts/main', $data);
+            }else{
+           
+                redirect("home/index");
+            }
 
-            $this->load->view('layouts/main', $data);
-        }  
+        }
     
         
         public function create_admin()
         {
 
             $this->form_validation->set_rules('email', 'Email', 'htmlspecialchars|trim|required|valid_email');
+            
+            if($this->form_validation->run() == FALSE){
 
-            $email = $this->input->post('email');
+                $data['main_view'] = 'users/admin_create_view';
+            
+                $this->load->view('layouts/main', $data);
+                
+            }else{
+                $email = $this->input->post('email');
 
-            $email = $this->security->xss_clean($email);
+                $email = $this->security->xss_clean($email);
 
-            $result = $this->user_model->create_admin($email);
+                $result = $this->user_model->create_admin($email);
 
-            if($result){
+                if($result){
 
-                $this->session->set_flashdata('admin_created' , "ADMIN AJOUTE AVEC SUCCES ! ");
+                    $this->session->set_flashdata('admin_created' , "ADMIN AJOUTE AVEC SUCCES ! ");
 
-                redirect("users/admin");
+                    redirect("users/admin");
+                }else{
+                       $this->session->set_flashdata('admin_created_failed' , "POUR ETRE ADMIN, LE USER DOIT DEJA AVOIR UN COMPTE! ");
+                       
+                        redirect("users//form_create_admin");
+                }
             }
         }
     }

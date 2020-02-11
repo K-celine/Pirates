@@ -26,6 +26,9 @@
 						<?php if($this->session->flashdata('newsletter_failed')):?>
 							<?php echo 	$this->session->flashdata('newsletter_failed');?>
 						<?php endif; ?>
+						<?php if($this->session->flashdata('newsletter_failed2')):?>
+							<?php echo 	$this->session->flashdata('newsletter_failed2');?>
+						<?php endif; ?>
 						<?php if($this->session->flashdata('loggin_failed')):?>
 							<?php echo 	$this->session->flashdata('loggin_failed');?>
 						<?php endif; ?>
@@ -46,7 +49,7 @@
 			<div class="carousel-item" id="carousel_item_2">
 				<img src="<?php echo base_url()?>assets/images/home/pirates_home_slide2.jpg" class="d-block w-100" alt="pirates_home_slide2">
 				<div class="carousel-caption d-none d-md-block">
-					<p><a type="button" class="btn" href="<?php echo base_url();?>#prochains_matchs"><strong>VOIR LES PROCHAINS MATCHS</strong></a></p><br>
+					<p><a class="btn" href="<?php echo base_url();?>#prochains_matchs"><strong>VOIR LES PROCHAINS MATCHS</strong></a></p><br>
 					<p><img src="<?php echo base_url()?>assets/images/home/pirates_home_logo2.png" alt="pirates_home_logo2" style="width:45rem"></p>
 				</div>
 			</div>
@@ -56,7 +59,7 @@
 					<h5>12U : CHAMPION D'OCCITANIE 2019</h5>
 					<h5>SOFTBALL FEMININ : CHAMPIONNE D'OCCITANIE 2019</h5>
 					<p><img src="<?php echo base_url()?>assets/images/home/pirates_home_logo1.png" alt="pirates_home_logo1" style="width:30rem"></p>
-					<p><a type="button" class="btn" href="<?php echo base_url();?>pages/club/#palmares"><strong>VOIR LE PALMARES</strong></a></p>
+					<p><a class="btn" href="<?php echo base_url();?>pages/club/#palmares"><strong>VOIR LE PALMARES</strong></a></p>
 				</div>
 			</div> 
 		</div>
@@ -122,9 +125,9 @@
 				</div>
 				<?php foreach($matchs as $match): ?>
 					<p><?php echo date('l d/m/Y H:i', strtotime($match->match_datetime)); ?></p>	
-					<img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="image_team_home"/>
+					<img class="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="image_team_home"/>
 					<strong>VS</strong>
-					<img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="image_team_visitor"/>
+					<img class="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="image_team_visitor"/>
 				<?php endforeach; ?>
 			</div>
 			<div class="col-xl-8 col-lg-12 p-3" id="actus">

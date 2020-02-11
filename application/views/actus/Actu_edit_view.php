@@ -23,12 +23,12 @@
 			</div>
 			<div class="form-group">
 				<?php echo form_label('DATE'); 
-				$data = array('class' => 'form-control form-control-lg','name' => 'date','type' => 'date','value' => $one_actu->date); 
+				$data = array('class' => 'form-control form-control-lg','name' => 'date','type' => 'date', 'required pattern'=>'[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])', 'value' => $one_actu->date); 
 				echo form_input($data); ?>
 			</div>
 			<div class="form-group">
 				<?php echo form_label('CHARGER IMAGE'); 
-				$data = array('class' => 'form-control form-control-lg','name' => 'photo','type' =>'file','value' => $one_actu->photo); 
+				$data = array('class' => 'form-control form-control-lg','name' => 'photo','type' =>'file','required'=>'required','value' => $one_actu->photo); 
 				echo form_input($data); ?>
 			</div>
 			<div class="form-group">

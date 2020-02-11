@@ -103,7 +103,6 @@
 		</div>
 		<div class="col-xl-9 col-lg-12 p-5">
 			<?php $attributes = array('id' => 'chat_form', 'class' => 'form_horizontal');
-			echo validation_errors("<p class = 'alert alert-danger'/p>"); 
 			echo form_open('pages/chat?task=write', $attributes); ?>
 			<section class="chat">
 				<div class="messages">	
@@ -132,16 +131,3 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-

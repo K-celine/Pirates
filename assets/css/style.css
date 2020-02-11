@@ -1,1222 +1,1268 @@
 /*_____________________________________ GLOBAL ___________________________________________*/
 
-html{
-	font-size: 62.5%;
+html {
+    font-size: 62.5%;
 }
 
-body{
-	font-family: 'Mitr', sans-serif;	
-    font-size:1.7rem;
+body {
+    font-family: 'Mitr', sans-serif;
+    font-size: 1.7rem;
 }
 
-h2, h3, h4, h5, label{
-	text-transform:uppercase;	
+h2,
+h3,
+h4,
+h5,
+label {
+    text-transform: uppercase;
 }
 
-h2{
-	font-size: 4rem;
-	letter-spacing: 0.6rem;
-	color:#231e20;	
+h2 {
+    font-size: 4rem;
+    letter-spacing: 0.6rem;
+    color: #231e20;
 }
 
-h3{
-	font-size: 3rem;
-	letter-spacing: 0.595rem;
+h3 {
+    font-size: 3rem;
+    letter-spacing: 0.595rem;
 }
 
-h4{
-	font-size: 2.5rem;
-	letter-spacing: 0.583rem;
-	color: #f1ba4d;
+h4 {
+    font-size: 2.5rem;
+    letter-spacing: 0.583rem;
+    color: #f1ba4d;
 }
 
-h5{
-	font-size: 2rem;
-	letter-spacing: 0.7rem;
-	color: #231e20;
+h5 {
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+    color: #231e20;
 }
 
-h6{
-	font-size: 1.8rem;
-	letter-spacing: 0.5rem;
-	color: #231e20;
+h6 {
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+    color: #231e20;
 }
 
-label{
-	font-size: 1.5rem;
-	letter-spacing: 0.5rem;
-	text-transform:uppercase;
+label {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
 }
 
-input{
-	font-size:1.3rem;
+input {
+    font-size: 1.3rem;
 }
 
-.fas, .far{
-	color:#f1ba4d;
+.fas,
+.far {
+    color: #f1ba4d;
 }
 
-.fas:hover, .far:hover{
-	color:#231e20;
-	transition:1s ease;
+.fas:hover,
+.far:hover {
+    color: #231e20;
+    transition: 1s ease;
 }
 
-.success , .fail, .admin-success{
-	background-color: rgba(255, 255, 255,0.4);
-	border-radius: 0.5rem;	
+.success,
+.fail,
+.admin-success {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0.5rem;
 }
 
-.success{
-	color:#1f5d19;
-	text-transform:uppercase;
+.success {
+    color: #1f5d19;
+    text-transform: uppercase;
 }
 
-.fail{
-	color:#B22222;
+.fail {
+    color: #B22222;
 }
 
-.admin-success{
-	color:#1f5d19;
-	background-color: rgba(22, 110, 22,0.3);
-	text-align: center;
-	margin-top: 2rem;
+.admin-success {
+    color: #1f5d19;
+    background-color: rgba(22, 110, 22, 0.3);
+    text-align: center;
+    margin-top: 2rem;
 }
 
-#container_actu p,#container_club p, #container_club li, #container_club th, #container_club td,#container_team p{
-	font-family:monospace;
+.admin-fail {
+    color: #B22222;
+    background-color: rgba(207, 0, 15, 0.3);
+    margin-top: 2rem;
+    border-radius: 0.5rem;
 }
 
-a#retour{
-  border-radius:0.3rem;
-  padding:1.5rem;
-  font-size:1.5rem;
-  text-align:center;
-  color:#fff;
-  background:rgba(241, 186, 77, 0.5);
-  position:fixed;
-  right:2rem;
-  opacity:1;
-  z-index:99999;
-  transition:all ease-in 0.2s;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  text-decoration: none;
-}
-a#retour:before{ content: "\25b2"; }
-a#retour:hover{
-  background:rgba(241, 186, 77, 1);
-  transition:all ease-in 0.2s;
-}
-a#retour.invisible{
-  bottom:-3.5rem;
-  opacity:0;
-  transition:all ease-in 0.5s;
+#container_actu p,
+#container_club p,
+#container_club li,
+#container_club th,
+#container_club td,
+#container_team p {
+    font-family: monospace;
 }
 
-a#retour.visible{
-  bottom:2rem;
-  opacity:1;
-   transition:all ease-in 0.5s;
+a#retour {
+    border-radius: 0.3rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+    background: rgba(241, 186, 77, 0.5);
+    position: fixed;
+    right: 2rem;
+    opacity: 1;
+    z-index: 99999;
+    transition: all ease-in 0.2s;
+    backface-visibility: hidden;
+    text-decoration: none;
+}
+
+a#retour:before {
+    content: "\25b2";
+}
+
+a#retour:hover {
+    background: rgba(241, 186, 77, 1);
+    transition: all ease-in 0.2s;
+}
+
+a#retour.invisible {
+    bottom: -3.5rem;
+    opacity: 0;
+    transition: all ease-in 0.5s;
+}
+
+a#retour.visible {
+    bottom: 2rem;
+    opacity: 1;
+    transition: all ease-in 0.5s;
 
 }
+
 /*_____________________________________ FIN GLOBAL ___________________________________________*/
 
 /*_____________________________________ HEADER ___________________________________________*/
 
-header{	
-	background-color: #231e20;
-	display: flex;
+header {
+    background-color: #231e20;
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.logoPirates{
-	width:13rem;
+.logoPirates {
+    width: 13rem;
 }
 
-.menu ul{
-	display:flex;
-	list-style-type: none;	
+.menu ul {
+    display: flex;
+    list-style-type: none;
 }
 
-.menu>ul>li>a{
-	text-decoration: none;
-	color: white;
-	letter-spacing: 0.583rem;
-	padding:1.5rem;
-	border:0.05rem solid #231e20;
+.menu>ul>li>a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.583rem;
+    padding: 1.5rem;
+    border: 0.05rem solid #231e20;
 }
 
-.menu>ul>li:hover .sous_menu>ul{
-    display: flex;  
+.menu>ul>li:hover .sous_menu>ul {
+    display: flex;
 }
 
-.menu>ul>li>a:hover{
-	color:#f1ba4d;	
+.menu>ul>li>a:hover {
+    color: #f1ba4d;
 }
 
-.sous_menu ul{
-	flex-flow: column wrap;
-	position: absolute;
-	background:#231e20;
-	z-index:1;
-	border-radius:0.5rem;
-	list-style-type: none;
-	letter-spacing: 0.583rem;
-	padding:1.5rem;
-	display:none;
-	min-height: 12rem;
-	padding-top:2rem;
+.sous_menu ul {
+    flex-flow: column wrap;
+    position: absolute;
+    background: #231e20;
+    z-index: 1;
+    border-radius: 0.5rem;
+    list-style-type: none;
+    letter-spacing: 0.583rem;
+    padding: 1.5rem;
+    display: none;
+    min-height: 12rem;
+    padding-top: 2rem;
 }
 
-.sous_menu a{
-	text-decoration: none;
-	color:white;
-	font-size: 1.3rem;
+.sous_menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
 }
 
-.sous_menu a:hover{
-	color:#f1ba4d;
+.sous_menu a:hover {
+    color: #f1ba4d;
 }
 
-#compte, #deco{
-	color:#f1ba4d;
+#compte,
+#deco {
+    color: #f1ba4d;
 }
 
-#compte:hover , #deco:hover{
-	color:#da3730;
-	transition: all 1s ease;
-	border:0.1rem solid #332e30;
-	border-radius:0.5rem;
+#compte:hover,
+#deco:hover {
+    color: #da3730;
+    transition: all 1s ease;
+    border: 0.1rem solid #332e30;
+    border-radius: 0.5rem;
 }
 
-#admin{
-	color:#da3730;
+#admin {
+    color: #da3730;
 }
 
-#admin_logo, #compte_logo, #deco_logo{
-	display: none;
+#admin_logo,
+#compte_logo,
+#deco_logo {
+    display: none;
 }
 
 /*_____________________________________ FIN HEADER ___________________________________________*/
 
 /*_______________________________________  HOME  ___________________________________________*/
 
-
-#carousel_item_1 h5{
-	border-radius:0.5rem;
-	background-color: rgba(255, 255, 255,0.06);	
+#carousel_item_1 h5 {
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.06);
 }
 
-#carousel_item_3 h5{
-	border-radius:0.5rem;
-	background-color: rgba(255, 255, 255,0.6);
+#carousel_item_3 h5 {
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
-#carousel_item_2 a, #carousel_item_3 a{
-	color:#231e20;
-	text-decoration: none;
-	background-color:#f1ba4d ;
-	border-radius:0.5rem;
+#carousel_item_2 a,
+#carousel_item_3 a {
+    color: #231e20;
+    text-decoration: none;
+    background-color: #f1ba4d;
+    border-radius: 0.5rem;
 }
 
-#carousel_item_2 a{
-	padding: 1.3rem;
-	font-size:1.3rem;
+#carousel_item_2 a {
+    padding: 1.3rem;
+    font-size: 1.3rem;
 }
 
-#carousel_item_3 a{
-	padding: 1.5rem;
-	font-size:1.5rem;	
+#carousel_item_3 a {
+    padding: 1.5rem;
+    font-size: 1.5rem;
 }
 
-#carousel_item_2  a:hover, #carousel_item_3  a:hover{
-	color:#f1ba4d;
-	background-color: #231e20;
+#carousel_item_2 a:hover,
+#carousel_item_3 a:hover {
+    color: #f1ba4d;
+    background-color: #231e20;
 }
 
-#prochains_matchs{
-	background-color: #231e20;
-	text-align:center;
+#prochains_matchs {
+    background-color: #231e20;
+    text-align: center;
 }
 
-#prochains_matchs h6{
-	letter-spacing: 0.583rem;
-	color:#f1ba4d;
-	border: 0.2rem solid #f1ba4d ;
-	padding:2rem;
-	border-radius:0.5rem;
-	margin: 0 3rem 2rem 3rem;
+#prochains_matchs h6 {
+    letter-spacing: 0.583rem;
+    color: #f1ba4d;
+    border: 0.2rem solid #f1ba4d;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin: 0 3rem 2rem 3rem;
 }
 
-#prochains_matchs strong{
-	color: #e1e1de;
-	font-size:3rem;
+#prochains_matchs strong {
+    color: #e1e1de;
+    font-size: 3rem;
 }
 
-#prochains_matchs span{
-	color: #5a5a57;
-	display:inline-block;
-	font-size:2rem;
+#prochains_matchs span {
+    color: #5a5a57;
+    display: inline-block;
+    font-size: 2rem;
 }
 
-#prochains_matchs p{
-	color: #5a5a57;
+#prochains_matchs p {
+    color: #5a5a57;
 }
 
-#savoir_plus{
-	color: #f1ba4d;
-	text-decoration: none;
+#savoir_plus {
+    color: #f1ba4d;
+    text-decoration: none;
 }
 
-#savoir_plus:hover{
-	color:#da3730;
-	transition: all 1s ease;
+#savoir_plus:hover {
+    color: #da3730;
+    transition: all 1s ease;
 }
 
-.btn_home_tab, .btn_home_smart{
-	display:none;
+.btn_home_tab,
+.btn_home_smart {
+    display: none;
 }
 
-#buttons_home{
-	background-color: #231e20;
-	justify-content: space-around;
-	display: flex;
-	padding:2rem;
+#buttons_home {
+    background-color: #231e20;
+    justify-content: space-around;
+    display: flex;
+    padding: 2rem;
 }
 
-#buttons_home a{
-	color:white;
-	letter-spacing: 0.583rem;
-	text-decoration: none;
-	border:0.1rem solid #332e30;
-	border-radius:0.5rem;
-	padding:1.5rem;
+#buttons_home a {
+    color: white;
+    letter-spacing: 0.583rem;
+    text-decoration: none;
+    border: 0.1rem solid #332e30;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
 }
 
-#buttons_home a:hover{
-	color:#da3730;
-	transition: all 1s ease;
+#buttons_home a:hover {
+    color: #da3730;
+    transition: all 1s ease;
 }
 
-#logo{
-	margin:2rem 2rem 5rem 2rem;	
+.logo {
+    margin: 2rem 2rem 5rem 2rem;
 }
 
-img#logo{
-	width: 30%;
+img.logo {
+    width: 30%;
 }
 
-#home_img_tablette{
-	display:none;
+#home_img_tablette {
+    display: none;
 }
+
 /*_______________________________________  FIN HOME  ___________________________________________*/
 
 /*_______________________________________  ACTU  ___________________________________________*/
 
-#one_actu h4{
-	margin-top: 2rem;
+#one_actu h4 {
+    margin-top: 2rem;
 }
+
 /*_______________________________________  FIN ACTU  ___________________________________________*/
 
 /*_______________________________________  CREER UN COMPTE  _________________________________________*/
 
-.form-check-input-newsletter{
-	margin-left: -48rem;
-	margin-top: 1rem;
+.form-check-input-newsletter {
+    margin-left: -48rem;
+    margin-top: 1rem;
 }
 
 /*_______________________________________  FIN CREER UN COMPTE  _________________________________________*/
 
 /*_______________________________________  MATCHS  _________________________________________*/
 
-#score_titre, #score{
-	border: 1px solid #404040;
-	border-radius: 0.5rem;
+#titre_score,
+#content_score {
+    background-color: #231e20;
 }
 
-#standing_titre, #stand{
-	border-bottom: 0.2rem solid #f1ba4d ;
-	color: #231e20;	
+#titre_score,
+#titre_standing {
+    color: #f1ba4d;
+    font-size: 2rem;
 }
 
-#standing_titre, #score_titre{
-	font-size: 2.1rem;
+#content_score {
+    color: #5a5a57;
 }
 
-#standing_titre, #stand, #score_titre, #score{
-	display:flex;
-	justify-content: space-around;
-	list-style-type: none;
-	align-items: center;	
+#scores {
+    padding: 5rem 10rem 5rem 10rem;
+    background-color: #231e20;
 }
 
-#score_titre{
-	color: #f1ba4d;
+#resultat_match {
+    background-color: #6d6d6c;
 }
 
-#score{
-	color: #5a5a57;	
+#booking {
+    background-color: #231e20;
 }
 
-#booking, #scores{
-	background-color:#231e20;
+#seats,
+#choice_matchs {
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
 }
 
-#seats, #choice_matchs{
-	font-size: 1.5rem;
-	border-radius: 0.5rem;
+#booking label,
+#booking h5,
+#resultat_match h5 {
+    margin-top: 2rem;
+    color: #f1ba4d;
 }
 
-#booking label, #booking h5, #resultat_match h5{
-	margin-top: 2rem;
-	color:#f1ba4d;
+#btn_booking {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    border-radius: 0.5rem;
+    background-color: #f1ba4d;
+    color: #231e20;
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 
-#btn_booking{
-	margin-top: 2rem;
-	margin-bottom: 5rem;
-	border-radius: 0.5rem;
-	background-color: #f1ba4d ;
-	color: #231e20;
-	padding: 1rem;
-	font-size:1.5rem;
+#resultats {
+    background-image: url(../images/match/pirates_match_results.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 30rem;
+    text-align: center;
+    letter-spacing: 0.583rem;
 }
 
-#scores{
-	padding: 5rem 10rem 5rem 10rem;
+#resultats span {
+    font-size: 5rem;
+    border: 0.5rem solid #f1ba4d;
+    border-radius: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #231e20;
 }
 
-#resultat_match{
-	background-color: #6d6d6c;
-}
-
-#resultats{
-	background-image: url(../images/match/pirates_match_results.jpg);
-	background-size:cover;
-	background-attachment: fixed;
-	height: 30rem;
-	text-align: center;
-	letter-spacing: 0.583rem;	
-}
-
-#resultats span{
-	font-size: 5rem;
-	border: 0.5rem solid #f1ba4d;
-	border-radius: 0.6rem;
-	background-color: rgba(255, 255, 255,0.3);
-	color:#231e20;
-}
-
-#standing{
-	padding: 5rem;
-	background-image: url(../images/club/pirates_club5.jpg);
+#standing {
+    padding: 5rem;
+    background-image: url(../images/club/pirates_club5.jpg);
 }
 
 /*_________________________________________  FIN MATCHS  ___________________________________________*/
 
 /*_____________________________________________  CLUB  _____________________________________________*/
 
-#container_club li{
-	font-size: 1.3rem;
+#container_club li {
+    font-size: 1.5rem;
 }
 
-#container_club th{
-	font-size: 1.5rem;
+#container_club th {
+    font-size: 1.5rem;
 }
 
-#container_club .mx-auto{
-	width:60%; 
+#container_club .mx-auto {
+    width: 60%;
 }
 
-#histoire p{
-	margin-bottom: 2rem;
-}
-#container_club .card-body{
-	height:27rem;
-	overflow:scroll;
+#histoire p {
+    margin-bottom: 2rem;
 }
 
-#palmares, #palmares_tablette, #coach{
-	background-image: url(../images/club/pirates_club5.jpg);
-	background-size: cover;
-	background-attachment: fixed;
+#container_club .card-body {
+    height: 27rem;
+    overflow: scroll;
 }
 
-#palmares ul{
-	list-style-type: none; 
-	padding-left:0.1rem;
+#palmares,
+#palmares_tablette,
+#coach {
+    background-image: url(../images/club/pirates_club5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-#palmares_tablette{
-	display: none;
+#palmares ul {
+    list-style-type: none;
+    padding-left: 0.1rem;
 }
 
-#chiffre_cle{
-	background-image: url(../images/club/pirates_club3.jpg);
-	background-size:cover;
-	background-attachment: fixed;
-	height: 60rem;
-	text-align: center;
+#palmares_tablette {
+    display: none;
 }
 
-#chiffre_cle span{
-	font-size: 6rem;
-	border: 0.8rem solid #f1ba4d;
-	border-radius: 0.4rem;
-	padding:1.5rem;
-	color:white;
+#chiffre_cle {
+    background-image: url(../images/club/pirates_club3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 60rem;
+    text-align: center;
 }
 
-#chiffre_cle h5{
-	margin-top: 5rem;
-	color: white;
-
-}	
-
-#organigramme h5{
-	padding-bottom: 3rem;
+#chiffre_cle span {
+    font-size: 6rem;
+    border: 0.8rem solid #f1ba4d;
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+    color: white;
 }
 
-#coach, #planning{
-	padding:2rem;
-	text-align:center;
+#chiffre_cle h5 {
+    margin-top: 5rem;
+    color: white;
+
 }
 
-#planning .fas{
-	font-size: 2rem;
-	color:#231e20;
-	color:white;
+#organigramme h5 {
+    padding-bottom: 3rem;
 }
 
-#planning .fas:hover{
-	transition: 1s;
-	color:#da3730;
+#coach,
+#planning {
+    padding: 2rem;
+    text-align: center;
+}
+
+#planning .fas {
+    font-size: 2rem;
+    color: #231e20;
+    color: white;
+}
+
+#planning .fas:hover {
+    transition: 1s;
+    color: #da3730;
+}
+
+#map {
+    width: 100%;
 }
 
 /*__________________________________________  FIN CLUB  ____________________________________________*/
 
 /*___________________________________________   TEAM  ______________________________________________*/
 
-#container_team{
-	color:white;
-	text-align: center;
-	background-image: url(../images/team/pirates_team_fond.jpg);
-	background-size:contain;
-	background-attachment: fixed;
+#container_team {
+    color: white;
+    text-align: center;
+    background-image: url(../images/team/pirates_team_fond.jpg);
+    background-size: contain;
+    background-attachment: fixed;
 }
 
-#container_team p{
-	text-align:center;
-	margin: 2rem 12rem 3rem 12rem;
+#container_team p {
+    text-align: center;
+    margin: 2rem 12rem 3rem 12rem;
 }
 
-#container_team img{
-	width:70%; 
-	border-radius: 1rem;
-	border: 0.5rem ridge rgba(80, 80, 79, .6);
+#container_team img {
+    width: 70%;
+    border-radius: 1rem;
+    border: 0.5rem ridge rgba(80, 80, 79, .6);
 }
 
-#container_team h4{
-	margin: 3rem;
+#container_team h4 {
+    margin: 3rem;
 }
 
 /*__________________________________________  FIN  TEAM  ____________________________________________*/
 
 /*___________________________________________   MEDIA  ______________________________________________*/
 
-#container_media{
-	color:white;
-	background-image: url(../images/media/pirates_media_fond.jpg);
-	background-size:cover;
-	background-attachment: fixed;
+#container_media {
+    color: white;
+    background-image: url(../images/media/pirates_media_fond.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-#container_media h4{
-	text-align: center;
+#container_media h4 {
+    text-align: center;
 }
 
-#gallery h4{
-	padding-left: 45%;
-	padding-top: 5rem;
+#gallery h4 {
+    padding-left: 45%;
+    padding-top: 5rem;
 }
 
-.messages{
-	background-color: rgba(241, 186, 77, 0.75);
-	border-radius: 0.5rem;
-	color:black;
-	padding: 2rem;
+.messages {
+    background-color: rgba(241, 186, 77, 0.75);
+    border-radius: 0.5rem;
+    color: black;
+    padding: 2rem;
 }
 
-.content{
-	color:#303030;
+.content {
+    color: #303030;
 }
 
-.p-chat{
-	color:#B22222;
-	background-color: rgba(255, 255, 255,0.35);
-	border-radius: 0.5rem;	
-	text-align: center;
+.p-chat {
+    color: #B22222;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 0.5rem;
+    text-align: center;
 }
 
-.grid,.grid-item1 img,.grid-item2 img,.grid-item3 img{
-	max-width: 100%;
+.grid,
+.grid-item1 img,
+.grid-item2 img,
+.grid-item3 img {
+    max-width: 100%;
 }
 
-.grid-item1, .grid-item2, .grid-item3{
-	padding: 5px;
-	box-sizing: border-box;
-	display:inline;
-	width: 33%;
-	max-width: 100%;
-	position: relative;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: 1s ease-in-out;
-	transition: 1s ease-in-out;
+.grid-item1,
+.grid-item2,
+.grid-item3 {
+    padding: 5px;
+    box-sizing: border-box;
+    display: inline;
+    width: 33%;
+    max-width: 100%;
+    position: relative;
+    transform: scale(1);
+    transition: 1s ease-in-out;
 }
 
-.selected1, .selected2, .selected3{
-	z-index: 1;
-	-webkit-transform: scale(1.7);
-	background: rgba(0, 0, 0, 0.5);
+.selected1,
+.selected2,
+.selected3 {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.selected1{
-	transform: scale(1.7) translateX(25rem);
+.selected1 {
+    transform: scale(1.7) translateX(25rem);
 }
 
-.selected2{
-	transform: scale(1.7);
+.selected2 {
+    transform: scale(1.7);
 }
 
-.selected3{
-	transform: scale(1.7) translateX(-25rem);
+.selected3 {
+    transform: scale(1.7) translateX(-25rem);
 }
 
-#gallery{
-	background-color: #231e20;
+#gallery {
+    background-color: #231e20;
 }
 
 /*__________________________________________  FIN MEDIA  ____________________________________________*/
 
 /*__________________________________________  CONTACT  ______________________________________________*/
 
-#nous_trouver, #nous_rejoindre{
-	text-align: center;
+#nous_trouver,
+#nous_rejoindre {
+    text-align: center;
 }
 
-#nous_rejoindre{
-	background-color: #231e20;
-	color: white;
+#nous_rejoindre {
+    background-color: #231e20;
+    color: white;
 }
 
-#nous_rejoindre h4{
-	color: white;
+#nous_rejoindre h4 {
+    color: white;
 }
 
-#nous_rejoindre .far{
-	font-size:8rem;
-	margin-bottom:5rem;
+#nous_rejoindre .far {
+    font-size: 8rem;
+    margin-bottom: 5rem;
 }
 
-#nous_rejoindre div:first-child>a{
-	color:#f1ba4d;
+#nous_rejoindre div:first-child>a {
+    color: #f1ba4d;
 }
 
-#nous_rejoindre div:first-child>a:hover{
-	transition:1s ease;
-	color:white;
+#nous_rejoindre div:first-child>a:hover {
+    transition: 1s ease;
+    color: white;
 }
 
-#nous_rejoindre a{
-	text-decoration: none;
-	color: #9a9a9a;
+#nous_rejoindre a {
+    text-decoration: none;
+    color: #9a9a9a;
 }
 
-#nous_rejoindre div:first-child>ul>li>a:hover{
-	transition:1s ease;
-	color:white;
-	font-size: 1.8rem;
+#nous_rejoindre div:first-child>ul>li>a:hover {
+    transition: 1s ease;
+    color: white;
+    font-size: 1.8rem;
 }
 
-#nous_rejoindre ul{
-	margin-top:7rem;
-	list-style-type: none;
-	margin-left:0;
-	padding-left:0;
+#nous_rejoindre ul {
+    margin-top: 7rem;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
-#nous_contacter{
-	min-height:45rem;
+#nous_contacter {
+    min-height: 45rem;
 }
 
-#nous_contacter a{
-	text-decoration: none;
-	color:#537556;
+#nous_contacter a {
+    text-decoration: none;
+    color: #537556;
 }
 
-#nous_contacter a:hover{
-	color:#f1ba4d;
+#nous_contacter a:hover {
+    color: #f1ba4d;
 }
 
-.autres_contacts{
-	padding-left:1.6rem;
+.autres_contacts {
+    padding-left: 1.6rem;
 }
+
+.autres_contacts li {
+    padding-bottom: 2rem;
+}
+
 
 /*__________________________________________  FIN CONTACT  ____________________________________________*/
 
 /*____________________________________________   ADMIN _______________________________________________*/
 
-.admin_newsletter , .admin_booking , .admin_actu, .admin_profil, .admin_match, .admin_standing, .admin_message{
-	display:flex;
-	justify-content: space-between;
-	border-bottom: 0.2rem solid #f1ba4d ;
-	list-style-type: none;
-	align-items: center;
-	color: #231e20;
+.admin_newsletter,
+.admin_booking,
+.admin_actu,
+.admin_profil,
+.admin_match,
+.admin_standing,
+.admin_message {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.2rem solid #f1ba4d;
+    list-style-type: none;
+    align-items: center;
+    color: #231e20;
 }
 
-#btn_sub_newsletter , #btn_book, #btn_create_actu, #btn_create_admin, #btn_create_match{
-	text-decoration: none;
-	border-radius: 0.5rem;
-	background-color: #f1ba4d ;
-	color: #231e20;
-	padding: 1rem;
-	font-size: 1.3rem;
+#btn_sub_newsletter,
+#btn_book,
+#btn_create_actu,
+#btn_create_admin,
+#btn_create_match {
+    text-decoration: none;
+    border-radius: 0.5rem;
+    background-color: #f1ba4d;
+    color: #231e20;
+    padding: 1rem;
+    font-size: 1.3rem;
 }
 
-.menu_admin a{
-	text-decoration: none;
-	color: #231e20;
-	letter-spacing: 0.583rem;
-	padding:1.5rem;
+.menu_admin a {
+    text-decoration: none;
+    color: #231e20;
+    letter-spacing: 0.583rem;
+    padding: 1.5rem;
 }
 
-.menu_admin a:hover{
-	color: #537556;
-	transition: all 1s ease;
+.menu_admin a:hover {
+    color: #537556;
+    transition: all 1s ease;
 }
 
-#container_admin h5,#container_admin nav{
-	text-align:center;
-	background-color: #f1ba4d;
-	
+#container_admin h5,
+#container_admin nav {
+    text-align: center;
+    background-color: #f1ba4d;
+
 }
-#container_admin h5{
-	height: 10rem;
-	padding-top: 4rem;
+
+#container_admin h5 {
+    height: 10rem;
+    padding-top: 4rem;
 }
 
 /*__________________________________________  FIN  ADMIN  ____________________________________________*/
 
 /*____________________________________________  FOOTER  _______________________________________________*/
 
-footer{
-	text-align:center;
+footer {
+    text-align: center;
 }
 
-#foot{
-	background-color: #231e20;
-	display: flex;
+#foot {
+    background-color: #231e20;
+    display: flex;
     align-items: center;
     min-height: 40rem;
 }
 
-footer div{
-	box-sizing: border-box;
-	width:100%;
+footer div {
+    box-sizing: border-box;
+    width: 100%;
 }
 
-footer fieldset{
-	border:0.1rem solid #332e30;
-	border-radius: 0.5rem;
-	margin-left:2rem;
+footer fieldset {
+    border: 0.1rem solid #332e30;
+    border-radius: 0.5rem;
+    margin-left: 2rem;
 }
 
-footer input[type=email]{
-  width: 30rem;
-  padding: 1.2rem 2rem;
-  margin: 0.8rem 0;
-  background-color: #231e20;
-  border-radius:0.5rem;
-  border:0.1rem solid #332e30;
-  color: white;
-  max-width: 100%;
+footer input[type=email] {
+    width: 30rem;
+    padding: 1.2rem 2rem;
+    margin: 0.8rem 0;
+    background-color: #231e20;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #332e30;
+    color: white;
+    max-width: 100%;
 }
 
-footer input[type=submit]{
-  padding: 1.2rem 2rem;
-  margin: 0.8rem 0;
-  background-color: #f1ba4d;
-  border-radius:0.5rem;
-  border:0.1rem solid black;
-  color: black;
+footer input[type=submit] {
+    padding: 1.2rem 2rem;
+    margin: 0.8rem 0;
+    background-color: #f1ba4d;
+    border-radius: 0.5rem;
+    border: 0.1rem solid black;
+    color: black;
 }
 
-footer legend{
-	letter-spacing: 0.4rem;
-	font-size: 1.6rem;
-	color:white;
+footer nav,
+footer legend {
+    letter-spacing: 0.4rem;
+    font-size: 1.6rem;
+    color: white;
 }
 
-footer legend .fab{
-	font-size: 3.5rem;
-	margin-left: 0.5rem;
+footer nav .fab,
+footer legend .fab {
+    font-size: 3.5rem;
+    margin-left: 0.5rem;
 }
 
-.fab{
-	color:white;
-	font-size: 4rem;
-	margin-left:1.2rem;
+.fab {
+    color: white;
+    font-size: 4rem;
+    margin-left: 1.2rem;
 }
 
-.fab:hover{
-	color:#f1ba4d;
-	transition: all 1s ease;
+.fab:hover {
+    color: #f1ba4d;
+    transition: all 1s ease;
 }
 
-.logoPirates2{
+.logoPirates2 {
 
-	width:30rem;
-}	
+    width: 30rem;
+}
 
 /*____________________________________________  FIN FOOTER  _______________________________________________*/
 
 /*_________________________________________  RESPONSIVE DESIGN TABLETTE___________________________________________*/
 
-@media screen and (max-width: 1199px)
-{
-/****************HEADER********************/
+@media screen and (max-width: 1199px) {
+    /****************HEADER********************/
+    header {
+        flex-direction: column;
+    }
 
-header{
-	flex-direction: column;
-}
+    h1 {
+        margin: 0;
+    }
 
-h1{
-	margin: 0;
-}
+    .menu>ul>li>a {
+        border-style: none;
+    }
 
-.menu>ul>li>a{
-	border-style:none;
-}
+    .menu ul {
+        padding-left: 1rem;
+    }
 
-.menu ul{
-	padding-left: 1rem;
-}
+    .logoPirates {
+        width: 20rem;
+    }
 
-.logoPirates{
-	width: 20rem;
-}
+    #admin,
+    #compte,
+    #deco {
+        display: none;
+    }
 
-#admin, #compte, #deco{
-	display:none;
-}
+    #admin_logo,
+    #compte_logo,
+    #deco_logo {
+        display: inline;
+    }
 
-#admin_logo, #compte_logo, #deco_logo{
-	display:inline;
-}
+    #compte_logo i:hover,
+    #deco_logo i:hover {
+        color: white;
+    }
 
-#compte_logo i:hover, #deco_logo i:hover{
-	color:white;
-}
+    #admin_logo i {
+        color: #da3730;
+    }
 
-#admin_logo i{
-	color:#da3730;
-}
+    #admin_logo i:hover {
+        color: white;
+    }
+    /****************FOOTER********************/
+    #foot {
+        flex-direction: column;
+    }
 
-#admin_logo i:hover{
-	color:white;
-}
-/****************FOOTER********************/
+    footer fieldset {
+        margin: 3rem;
+    }
 
-#foot{
-	flex-direction: column;
-}
+    .logoPirates2 {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        width: 25rem;
+    }
+    /****************HOME********************/
+    #carousel_home {
+        display: none;
+    }
 
-footer fieldset{
-	margin:3rem;
-}
+    .btn_home {
+        display: none;
+    }
 
-.logoPirates2{
-	margin-top:2rem;
-	margin-bottom: 3rem;
-	width:25rem;
-}	
-/****************HOME********************/
+    .btn_home_tab {
+        display: block;
+        font-size: 1.4rem;
+    }
 
-#carousel_home{
-	display: none;
-}
+    .btn_home_tab .fas:hover {
+        color: #da3730;
+    }
 
-.btn_home{
-	display:none;
-}
+    #home_img_tablette {
+        display: block;
+    }
 
-.btn_home_tab{
-	display:block;
-	font-size: 1.4rem;
-}
+    #container_p {
+        background-color: #231e20;
+        border: 1px solid red;
+    }
 
-.btn_home_tab .fas:hover{
-	color:#da3730;	
-}
+    .success,
+    .fail {
+        background-color: #231e20;
+        border-radius: 0rem;
+        text-align: center;
+        margin: 0;
+    }
 
-#home_img_tablette{
-	display:block;
-}
+    #prochains_matchs {
+        padding-top: 2rem;
+    }
 
-#container_p{
-	background-color: #231e20;
-	border:1px solid red;
-}
+    #actus h2 {
+        text-align: center;
+        font-size: 3rem;
+    }
 
-.success , .fail{
-	background-color: #231e20;
-	border-radius: 0rem;
-	text-align:center;
-	margin:0;
-}
+    #content_actu h5 {
+        font-size: 1.7rem;
+        margin-top: 2rem;
+    }
 
-#prochains_matchs{
-	padding-top: 2rem;	
-}
+    img.logo {
+        width: 25%;
+    }
 
-#actus h2{
-	text-align: center;
-	font-size: 3rem;
-}
+    /****************ACTU********************/
+    #one_actu h4 {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
 
-#content_actu h5{
-	font-size: 1.7rem;
-	margin-top: 2rem;
-}
+    #one_actu {
+        min-height: 50rem;
+    }
+    /****************CLUB********************/
+    #histoire h6,
+    #organigramme h5 {
+        margin-top: 2rem;
+    }
 
-img#logo{
-	width: 25%;
-}
+    #chiffre_cle {
+        display: none;
+    }
 
-/****************ACTU********************/
+    #palmares_tablette {
+        display: block;
+    }
 
-#one_actu h4{
-	margin-top: 2rem;
-	font-size: 2rem;
-}
+    #palmares {
+        display: none;
+    }
 
-#one_actu{
-	min-height:50rem;
-}
-/****************CLUB********************/
+    .img-thumbnail {
+        width: 50%;
+    }
+    #img_team {
+        min-width: 100%;
+    }
 
-#histoire h6, #organigramme h5{
-	margin-top: 2rem;
-}
+    #orga {
+        border: 1px solid lightgrey;
+        border-radius: 0.5rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        margin: 1rem;
+    }
+    /****************TEAM********************/
+    #container_team p {
+        text-align: center;
+        margin: 2rem 1rem 3rem 1rem;
+    }
 
-#chiffre_cle{
-	display: none;
-}
+    #container_team img {
+        width: 90%;
+    }
+    /****************MEDIA**********************/
+    .selected1 {
+        transform: scale(2) translateX(10rem);
+    }
 
-#palmares_tablette{
-	display: block;
-}
+    .selected2 {
+        transform: scale(2);
+    }
 
-#palmares{
-	display: none;
-}
+    .selected3 {
+        transform: scale(2) translateX(-10rem);
+    }
 
-.img-thumbnail{
-	width: 50%;
-}
-#img_team{
-	min-width: 100%;
-}
+    #gallery h4 {
+        padding-left: 40%;
+    }
+    /****************CONTACT********************/
+    .autres_contacts,
+    #nous_trouver {
+        margin-bottom: 3rem;
+    }
 
-#orga{
-	border: 1px solid lightgrey;
-	border-radius: 0.5rem;
-	padding-bottom: 2rem;
-	padding-left: 2rem;
-	margin: 1rem;
-}
-/****************TEAM********************/
+    #nous_rejoindre .far,
+    #nous_trouver h5 {
+        margin-top: 3rem;
+    }
 
-#container_team p{
-	text-align:center;
-	margin: 2rem 1rem 3rem 1rem;
-}
+    iframe {
+        width: 100%;
+    }
+    /****************MATCHS********************/
+    #scores,
+    #standing {
+        padding: 2rem 2rem;
+    }
 
-#container_team img{
-	width:90%; 
-}
-/****************MEDIA**********************/
+    #standing h5 {
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
 
-.selected1, .selected2, .selected3{
-	-webkit-transform: scale(2);
-}
+    /****************PAGE ADMIN********************/
+    .menu_admin a {
+        letter-spacing: 0.2rem;
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: #231e20;
+        margin: 1rem 1.5rem;
+        padding: 1.5rem;
+        color: #f1ba4d;
+    }
 
-.selected1{
-	transform: scale(2) translateX(10rem);
-}
+    .menu_admin {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-.selected2{
-	transform: scale(2);
-}
+    #container_admin nav {
+        background-color: transparent;
+    }
 
-.selected3{
-	transform: scale(2) translateX(-10rem);
-}
+    #container_admin h6 {
+        text-align: center;
+        padding: 2rem;
+        color: #537556;
+    }
 
-#gallery h4 {
-    padding-left: 40%;
-} 
-/****************CONTACT********************/
+    .admin_match img {
+        display: none;
+    }
 
-.autres_contacts, #nous_trouver{
-margin-bottom: 3rem;
-}
+    #container_admin li {
+        font-size: 1.5rem;
+    }
+    /****************ADMIN: EDIT ACTU/MATCH CREATE ACTU/ADMIN/MATCH********************/
+    #container_create_actu h5,
+    #container_admin_actu h5,
+    #container_create_admin h5,
+    #container_create_match h5,
+    #container_edit_match h5,
+    #container_edit_stand h5,
+    #container_register h5 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
 
-#nous_rejoindre .far, #nous_trouver h5{
-	margin-top: 3rem;	
-}
-
-iframe{
-	width: 100%;
-}
-/****************MATCHS********************/
-
-#scores, #standing{
-	padding: 2rem 2rem;
-}
-
-#score img{
-	display: none;
-}
-
-#score_titre, #score, #standing_titre, #stand{
-	font-size: 1.5rem;
-	padding-left: 0;
-}
-
-#standing h5{
-	margin-top: 3rem;
-	margin-bottom: 4rem;
-}
-
-#standing{
-	justify-content: space-between;
-}
-/****************PAGE ADMIN********************/
-
-.menu_admin a{
-	letter-spacing: 0.2rem;
-	font-size: 1.5rem;
-	border-radius: 0.5rem;
-	background-color: #231e20;
-	margin: 1rem 1.5rem;
-	padding: 1.5rem;
-	color:#f1ba4d;
-}
-
-.menu_admin{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
-#container_admin nav{
-	background-color: transparent;
-}
-
-#container_admin h6{
-	text-align: center;
-	padding: 2rem;
-	color:#537556;
-}
-
-.admin_match img{
-	display: none;
-}
-
-#container_admin li{
-	font-size: 1.5rem;
-}
-/****************ADMIN: EDIT ACTU/MATCH CREATE ACTU/ADMIN/MATCH********************/
-
-#container_create_actu h5, #container_admin_actu h5, #container_create_admin h5, 
-#container_create_match h5, #container_edit_match h5, #container_edit_stand h5, #container_register h5{
-	text-align: center;
-	margin-bottom: 2rem;
-}
-
-#container_create_match input, #container_edit_match input{
-	font-size: 1.3rem;
-}
+    #container_create_match input,
+    #container_edit_match input {
+        font-size: 1.3rem;
+    }
 
 }
+
 /*_________________________________________  RESPONSIVE DESIGN SMARTPHONE___________________________________________*/
-@media screen and (max-width: 719px)
-{
-/****************HEADER********************/
 
-.logoPirates{
-	width: 30rem;
-}	
+@media screen and (max-width: 719px) {
+    /****************HEADER********************/
+    .logoPirates {
+        width: 30rem;
+    }
 
-.menu ul{
-	min-height: 30rem;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
+    .menu ul {
+        min-height: 30rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .menu>ul>li>a {
+        font-size: 2rem;
+    }
+
+    .sous_menu {
+        display: none;
+    }
+
+    #compte_logo {
+        padding: 0;
+    }
+    /****************FOOTER********************/
+    #suivre {
+        display: none;
+    }
+    /****************HOME********************/
+    .btn_home_tab {
+        display: none;
+    }
+
+    .btn_home_smart {
+        display: block;
+    }
+
+    .btn_home_smart .fas:hover {
+        color: #da3730;
+    }
+
+    #orga {
+        border-style: none;
+        padding: 0rem;
+    }
+
+    #container_club .mx-auto {
+        width: 90%;
+    }
+    /****************ACTU********************/
+    #one_actu h4 {
+        font-size: 1.5rem;
+    }
+
+    /****************MATCH********************/
+    #standing {
+        padding: 1rem;
+    }
+
+    #standing h5 {
+        margin-top: 0.5rem;
+    }
+
+    #resultats span {
+        font-size: 3rem;
+    }
+
+    .smart_score {
+        display: none;
+    }
+
+    #content_score,
+    #titre_score {
+        font-size: 1.5rem;
+    }
+
+    /****************CLUB********************/
+    #palmares_tablette h6 {
+        font-size: 1.5rem;
+    }
+
+    #organigramme ul {
+        padding-left: 0;
+        margin-bottom: 3rem;
+    }
+
+    #organigramme ul li {
+        font-size: 1.1rem;
+    }
+
+    img.logo {
+        width: 20%;
+    }
+    /****************MEDIA**********************/
+    .selected1 {
+        transform: scale(2) translateX(6rem);
+    }
+
+    .selected2 {
+        transform: scale(2);
+    }
+
+    .selected3 {
+        transform: scale(2) translateX(-6rem);
+    }
+
+    #gallery h4 {
+        padding-left: 35%;
+    }
+
+    .messages {
+        font-size: 1.4rem;
+    }
+    /****************CONTACT********************/
+    .autres_contacts li {
+        font-size: 1.4rem;
+    }
+    /****************COMPTE********************/
+    .form-check-input-newsletter {
+        margin: 0;
+    }
+    /****************PAGE ADMIN********************/
+    #container_admin h5 {
+        padding-top: 3rem;
+    }
+
+    #container_admin h6 {
+        margin: 3rem 0rem 1.5rem 0;
+    }
+
+    .menu_admin {
+        flex-direction: column;
+    }
+
+    .admin_actu,
+    .admin_profil,
+    .admin_newsletter,
+    .admin_match,
+    .admin_message,
+    .admin_booking,
+    .admin_standing {
+        padding-left: 0;
+    }
+
+    .admin_match:nth-child(2) {
+        display: none;
+    }
+
+    #container_admin li {
+        font-size: 1.3rem;
+    }
+    /****************ADMIN: EDIT ACTU/MATCH CREATE ACTU/ADMIN/MATCH********************/
+    .smart {
+        display: none;
+    }
+
+    #container_create_actu h5,
+    #container_admin_actu h5,
+    #container_create_admin h5,
+    #container_create_match h5,
+    #container_edit_match h5,
+    #container_edit_stand h5,
+    #container_register h5 {
+        font-size: 1.6rem;
+    }
+
 }
-
-.menu>ul>li>a{
-	font-size: 2rem;
-}
-
-.sous_menu{
-	display: none;
-}
-
-#compte_logo{
-	padding:0;
-}
-/****************FOOTER********************/
-
-#suivre{
-	display:none;
-}
-/****************HOME********************/
-
-.btn_home_tab{
-	display: none;
-}
-
-.btn_home_smart{
-	display:block;
-}
-
-.btn_home_smart .fas:hover{
-	color:#da3730;
-}
-
-#orga{
-	border-style: none;
-	padding: 0rem;
-}
-
-#container_club .mx-auto{
-	width: 90%;
-}
-/****************ACTU********************/
-
-#one_actu h4{
-	font-size: 1.5rem;
-}
-
-/****************MATCH********************/
-
-#score_titre, #score{
-	font-size: 1rem;
-}
-
-#standing_titre, #stand{
-	font-size: 1.3rem;
-}
-
-#standing{
-	padding: 1rem;
-}
-
-#standing h5{
-	margin-top:0.5rem;
-}
-
-#resultats span{
-	font-size: 3rem;
-}
-/****************CLUB********************/
-
-#palmares_tablette h6{
-	font-size: 1.5rem;
-}
-
-#organigramme ul{
-	padding-left: 0;
-	margin-bottom: 3rem;
-}
-
-#organigramme ul li{
-	font-size: 1.1rem;
-}
-
-img#logo{
-	width: 20%;
-}
-/****************MEDIA**********************/
-
-.selected1{
-	transform: scale(2) translateX(6rem);
-}
-
-.selected2{
-	transform: scale(2);
-}
-
-.selected3{
-	transform: scale(2) translateX(-6rem);
-}
-
-#gallery h4 {
-    padding-left: 35%;
-}
-
-.messages{
-	font-size: 1.4rem;
-}
-/****************CONTACT********************/
-
-.autres_contacts li{
-	font-size: 1.4rem;
-}
-/****************COMPTE********************/
-
-.form-check-input-newsletter{
-	margin: 0;
-}
-/****************PAGE ADMIN********************/
-
-#container_admin h5{
-	padding-top: 3rem;
-}
-
-#container_admin h6{
-	margin: 3rem 0rem 1.5rem 0;
-}
-
-.menu_admin{
-	flex-direction: column;
-}
-
-.admin_actu, .admin_profil, .admin_newsletter, .admin_match, .admin_message, .admin_booking, .admin_standing{
-	padding-left: 0;
-}
-
-.admin_match:nth-child(2){
-	display: none;
-}
-
-#container_admin li{
-	font-size: 1.3rem;
-}
-/****************ADMIN: EDIT ACTU/MATCH CREATE ACTU/ADMIN/MATCH********************/
-.smart{
-	display:none;
-}
-
-#container_create_actu h5, #container_admin_actu h5, #container_create_admin h5, 
-#container_create_match h5, #container_edit_match h5, #container_edit_stand h5, #container_register h5{
-	font-size: 1.6rem;
-}
-
-}
-

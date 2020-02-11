@@ -68,11 +68,18 @@
 
 		public function message($id_message)
 		{
-			$data['one_message'] = $this->contact_model->get_one_message($id_message);
+		    
+		    if($this->session->userdata('role')== 1){
 
-			$data['main_view'] = "pages/message_view";
+				$data['one_message'] = $this->contact_model->get_one_message($id_message);
 
-			$this->load->view('layouts/main', $data);
+				$data['main_view'] = "pages/message_view";
+
+				$this->load->view('layouts/main', $data);
+		    }else{
+
+        	    redirect("home/index");
+        	}
 		}
 
 
@@ -94,10 +101,9 @@
     	
     		if($this->input->get('task')== 'write'){
 
-    			$censure = array('anal','anus','ass','batard','bitch', 'bougnoul', 'branlette ', 'chatte','cock', 'couille','couilles', 'cul','bite', 'enculé', 'encule', 'enculés', 'gode', 'juif', 'fellation', 'fuck', 'hitler' , 'nichon', 'nichons', 'nigger', 'nigga' , 'penis', 'merde' , 'pussy', 'putain', 'rebeu', 'sale', 'salaud' ,'sales','salopard','seins', 'sex', 'shit', 'sh1t', 'slut', 'sperme', 'twat', 'vagin');
+    			$censure = array('anal','anus','ass','batard','bitch', 'bougnoul', 'branlette ', 'chatte','chier', 'chiant', 'chieur', 'chiasse','cock', 'couille','couilles', 'cul','bite', 'enculé', 'encule', 'enculés', 'gode', 'juif', 'fellation', 'fuck', 'hitler' , 'nichon', 'nichons', 'nigger', 'nigga' , 'pédale', 'pedale','penis', 'pd', 'merde' , 'pussy', 'putain', 'rebeu', 'sale', 'salaud' ,'sales','salopard','seins', 'sex', 'shit', 'sh1t', 'slut', 'sperme', 'tarlouse', 'tapette','twat', 'vagin');
    
-
-   				$content = word_censor($this->input->post('content'), $censure, '#&!$@#&!'); 
+				$content = word_censor($this->input->post('content'), $censure, '#&!$@#&!'); 
 
     			$data = array(
 

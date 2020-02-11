@@ -8,6 +8,11 @@
 			<h5><i class="fas fa-user-shield"></i> CREATION D'UN NOUVEL ADMIN</h5>
 		</div>
 		<div class="col-xl-9 col-lg-12">
+		    <p class="admin-fail">
+		        <?php if($this->session->flashdata('admin_created_failed')):?>
+		        <?php echo $this->session->flashdata('admin_created_failed');?>
+	            <?php endif; ?>
+	        </p>
 			<?php $attributes = array('id' => 'register_form', 'class' => 'form_horizontal');
 			echo validation_errors("<p class='alert alert-danger'>");
 			echo form_open('users/create_admin' , $attributes);?>

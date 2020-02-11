@@ -32,10 +32,12 @@
 
     		$this->form_validation->set_rules('email_newsletter', 'email', 'trim|htmlspecialchars|required|valid_email');
     
+			
 			if($this->form_validation->run() == FALSE){
 
-      			$data['main_view'] = 'home_view';
-      			$this->load->view('layouts/main', $data);
+      			$this->session->set_flashdata('newsletter_failed2', "VOTRE ADRESSE MAIL N'EST PAS VALIDE");
+      				
+      			redirect('home/index');
 			}else{
 
 				$email = $this->input->post('email_newsletter');

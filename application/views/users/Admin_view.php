@@ -128,9 +128,9 @@
 			<?php foreach($list_match as $match): ?>
 			<ul class="admin_match">
 				<li><?php echo date('d/m/Y H:i', strtotime($match->match_datetime)); ?></li>
-				<li><?php echo $match->name_home ?><img id="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="" style="width:5rem"/></li>
+				<li><?php echo $match->name_home ?><img class="logo" src="<?php echo base_url()?><?php echo $match->image_home; ?>" alt="" style="width:5rem"/></li>
 				<li><?php echo $match->score_home ?></li>
-				<li><?php echo $match->name_visitor ?><img id="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="" style="width:5rem"/></li>
+				<li><?php echo $match->name_visitor ?><img class="logo" src="<?php echo base_url()?><?php echo $match->image_visitor; ?>" alt="" style="width:5rem"/></li>
 				<li><?php echo $match->score_visitor ?></li>
 				<li><a href="<?php echo base_url()?>matchs/edit_match/<?php echo $match->id;?>"><i class="fas fa-pen"></i></a> <a href="<?php echo base_url()?>matchs/delete_match/<?php echo $match->id;?>"><i class="fas fa-trash-alt"></i></a></li>
 			</ul>

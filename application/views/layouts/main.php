@@ -9,8 +9,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Heebo|Mitr:300,400,500&display=swap" rel="stylesheet"> 
 	<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/normalize.css" type="text/css"/>
-	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css"/>
+	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
 </head>
 <body>
 	<header>
@@ -92,7 +92,7 @@
 					<form action="<?php echo base_url();?>users/login" method="post">
 						<div class="form-group">
 							<label for="InputEmail1">Adresse Email </label>
-							<input type="email" name="email" class="form-control form-control-lg" id="InputEmail1" aria-describedby="emailHelp">
+							<input type="email" name="email" class="form-control form-control-lg" id="InputEmail1">
 						</div>
 						<div class="form-group">
 							<label for="InputPassword">Mot de passe</label>
@@ -103,7 +103,7 @@
 				</div>
 				<div class="modal-footer">
 					<p><small>Pas encore membre ?</small></p>
-					<a type="button" class="btn btn-lg btn-warning" href="<?php echo base_url();?>users/register">CREER UN COMPTE</a>
+					<a class="btn btn-lg btn-warning" href="<?php echo base_url();?>users/register">CREER UN COMPTE</a>
 				</div>
 			</div>
 		</div>
@@ -112,12 +112,12 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="modal_cookie">POLITIQUE DES PIRATES CONCERNANT LES COOKIES</h5>
+					<h5 class="modal-title">POLITIQUE DES PIRATES CONCERNANT LES COOKIES</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<div class="modal-body"><small>
+				<div class="modal-body">
 					<p>La présente politique de cookies est applicable lors de la consultation de l'ensemble du site des Pirates. Cette politique a pour objet de vous permettre de mieux comprendre comment fonctionnent les cookies susceptibles d'être déposés sur votre ordinateur, votre tablette et votre smartphone lors de votre consultation du site.</p><br>
 					<h6>QU'EST-CE QU'UN COOKIES?</h6>
 					<p>Un cookie, ou témoin de connexion, est un petit fichier texte qui peut être placé sur votre terminal à l'occasion de la consultation d'un site internet ou d'une application et ce, grâce à votre logiciel de navigation. Un fichier cookie permet à son émetteur d'identifier le terminal dans lequel il est enregistré, pendant la durée de validité ou d'enregistrement dudit cookie.</p><br>
@@ -148,7 +148,7 @@
 					<p>Pour FireFox : <a href="http://support.mozilla.org/fr/kb/cookies-informations-sites-enregistrent?redirectlocale=fr&redirectslug=G%C3%A9rer+les+cookies">http://support.mozilla.org/fr/kb/cookies-informations-sites-enregistrent?redirectlocale=fr&redirectslug=G%C3%A9rer+les+cookies</a></p>
 					<p>Pour Opéra : <a href="http://help.opera.com/Windows/10.20/fr/cookies.html">http://help.opera.com/Windows/10.20/fr/cookies.html</a></p><br>
 					<h6>PLUS D'INFORMATIONS SUR LES COOKIES</h6>
-					<p>Pour plus d'informations sur les cookies, vous pouvez vous rendre sur le site de la CNIL, à cette adresse : <a href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser">https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser</a></p></small>
+					<p>Pour plus d'informations sur les cookies, vous pouvez vous rendre sur le site de la CNIL, à cette adresse : <a href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser">https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser</a></p>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -160,12 +160,12 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="modal_mentions">MENTIONS LEGALES ET UTILISATION DES DONNEES PERSONNELLES</h5>
+					<h5 class="modal-title">MENTIONS LEGALES ET UTILISATION DES DONNEES PERSONNELLES</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<div class="modal-body"><small>
+				<div class="modal-body">
 					<h6>Identité</h6>
 					<p>Le site des Pirates (ci-après dénommé le « Site ») est édité et exploité par l'association lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ipsa consectetur magni repellat, saepe voluptatibus consequatur voluptates pariatur! Est, molestias, qui est situé rue lorem à Béziers immatriculée au Journal officiel sous le numéro HRB 000000 B.</p>
 					<p>Représentants légaux : Lorem ipsum, dolor sit amet, consectetur adipisicing, Doloremque ratione</p><br>
@@ -198,7 +198,7 @@
 					<h6>Comment mes données sont-elles protégées ? </h6>
 					<p>Ab nemo consectetur explicabo aut facilis consequatur magnam ipsam voluptate, repellendus, architecto amet nam a! Eveniet vitae recusandae, officiis. Excepturi nostrum nam exercitationem cum laborum magnam quod corporis, aliquam adipisci.</p><br>
 					<h6>Modifications de la présente politique de confidentialité </h6>
-					<p>Ab nemo consectetur explicabo aut facilis consequatur magnam ipsam voluptate, repellendus, architecto amet nam a! Eveniet vitae recusandae, officiis. Excepturi nostrum nam exercitationem cum laborum magnam quod corporis, aliquam adipisci.</p><br></small>
+					<p>Ab nemo consectetur explicabo aut facilis consequatur magnam ipsam voluptate, repellendus, architecto amet nam a! Eveniet vitae recusandae, officiis. Excepturi nostrum nam exercitationem cum laborum magnam quod corporis, aliquam adipisci.</p><br>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -215,7 +215,7 @@
 				<form method="post" action="<?php echo base_url();?>home/subscribe_newsletter">
 					<fieldset>
 						<legend>S'INSCRIRE A LA NEWSLETTER :</legend>
-						<input type="email"name="email_newsletter" placeholder="VOTRE ADRESSE EMAIL" required/>
+						<input type="email" name="email_newsletter" placeholder="VOTRE ADRESSE EMAIL" required/>
 						<input type="submit" value="JE SOUSCRIS!"/>
 					</fieldset>
 				</form>
@@ -225,12 +225,10 @@
 				<a href="#"><img class="logoPirates2" src="<?php echo base_url()?>assets/images/pirates_logo2.jpg" alt="logo_Pirates_baseball"/></a>
 			</div>
 			<div>
-				<nav>
-					<legend><span id="suivre">SUIVEZ-NOUS SUR : </span>
-						<a href="https://fr-fr.facebook.com/bcbpirates"><i class="fab fa-facebook-square"></i></a>
-						<a href="https://www.instagram.com/frenchbaseballsoftball/"><i class="fab fa-instagram"></i></a>
-						<a href="https://twitter.com/ffbs_baseball"><i class="fab fa-twitter-square"></i></a>
-					</legend>
+				<nav><span id="suivre">SUIVEZ-NOUS SUR : </span>
+					<a href="https://fr-fr.facebook.com/bcbpirates"><i class="fab fa-facebook-square"></i></a>
+					<a href="https://www.instagram.com/frenchbaseballsoftball/"><i class="fab fa-instagram"></i></a>
+					<a href="https://twitter.com/ffbs_baseball"><i class="fab fa-twitter-square"></i></a>
 				</nav>
 			</div>
 		</div>
@@ -246,6 +244,5 @@
 	<script type="text/javascript" src="<?php echo base_url()?>assets/js/gallery.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>assets/js/top.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>assets/js/cookie.js"></script>
-
 </body>
 </html>

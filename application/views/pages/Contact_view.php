@@ -32,11 +32,11 @@
 			<h5><i class="fas fa-mobile-alt"></i> AUTRES CONTACTS</h5><br>
 			<address>
 				<ul class="autres_contacts">
-					<li><strong>6U: </strong>BAZIN Christophe - <a href="tel:+13115552368">06 21 04 55 36</a></li><br>
-					<li><strong>9U: </strong>BAZIN Christophe - <a href="tel:+13115552368">06 21 04 55 36</a></li><br>
-					<li><strong>12U: </strong>BONNET François - <a href="tel:+13115552368"> 06 74 68 74 19</a></li><br>
-					<li><strong>15U: </strong>OBERMAYER Brian - <a href="tel:+13115552368"> 06 69 90 59 32</a></li><br>
-					<li><strong>Softball: </strong>BESOMBES Laura - <a href="tel:+13115552368"> 06 24 75 59 64</a></li><br>
+					<li><strong>6U: </strong>BAZIN Christophe - <a href="tel:+13115552368">06 21 04 55 36</a></li>
+					<li><strong>9U: </strong>BAZIN Christophe - <a href="tel:+13115552368">06 21 04 55 36</a></li>
+					<li><strong>12U: </strong>BONNET François - <a href="tel:+13115552368"> 06 74 68 74 19</a></li>
+					<li><strong>15U: </strong>OBERMAYER Brian - <a href="tel:+13115552368"> 06 69 90 59 32</a></li>
+					<li><strong>Softball: </strong>BESOMBES Laura - <a href="tel:+13115552368"> 06 24 75 59 64</a></li>
 					<li><strong>Juniors/Seniors: </strong>TEIXIDOR Lionel - <a href="tel:+13115552368">06 10 94 13 54</a></li>
 				</ul>	
 			</address>
@@ -46,7 +46,7 @@
 		<div class="col-xl-4 col-lg-12">
 			<i class="far fa-file-pdf"></i>
 			<h4>DOSSIER D'INSCRIPTION 2020</h4><br>
-			<a type="button" class="btn btn-outline-warning" href="<?php echo base_url()?>assets/images/contact/pirates_form1.pdf" download="FORMULAIRE INSCRIPTION">TELECHARGER</a><br>
+			<a class="btn btn-outline-warning" href="<?php echo base_url()?>assets/images/contact/pirates_form1.pdf" download="FORMULAIRE INSCRIPTION">TELECHARGER</a><br>
 			<ul>
 				<li><a href="<?php echo base_url()?>assets/images/contact/pirates_form2.pdf" download="AUTORISATION PARENTALE">AUTORISATION PARENTALE</a></li>
 				<li><a href="<?php echo base_url()?>assets/images/contact/pirates_form3.pdf" download="QUESTIONNAIRE QS-SPORT">QUESTIONNAIRE "QS-SPORT"</a></li>
@@ -66,7 +66,7 @@
 			</address>
 		</div>
 		<div class="col-xl-4 col-lg-12">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1440.624790609364!2d3.187142049125791!3d43.33250082872625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaa7c59117f6c3485!2sBaseball%20Club%20Biterrois-Pirates!5e0!3m2!1sfr!2sfr!4v1580754621633!5m2!1sfr!2sfr" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1440.624790609364!2d3.187142049125791!3d43.33250082872625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaa7c59117f6c3485!2sBaseball%20Club%20Biterrois-Pirates!5e0!3m2!1sfr!2sfr!4v1580754621633!5m2!1sfr!2sfr" width="450" height="450" style="border:0;" allowfullscreen=""></iframe>
 		</div>
 		<div class="col-xl-4 col-lg-12 p-0">
 			<h5><i class="fas fa-map-marker-alt"></i>L'ASSOCIATION</h5>
