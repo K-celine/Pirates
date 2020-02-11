@@ -93,6 +93,7 @@ input {
 .admin-fail {
     color: #B22222;
     background-color: rgba(207, 0, 15, 0.3);
+    text-align: center;
     margin-top: 2rem;
     border-radius: 0.5rem;
 }
@@ -1206,7 +1207,7 @@ footer legend .fab {
     }
 
     #gallery h4 {
-        padding-left: 35%;
+        padding-left: 30%;
     }
 
     .messages {
